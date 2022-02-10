@@ -1,0 +1,4 @@
+framework module IdsvrHaapiDriver {
+  header "IdsvrHaapiDriver-Swift.h"
+  requires objc
+}
