@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'IdsvrHaapiDriver'
-  spec.version          = '2.0.0'
+  spec.version          = '2.1.0'
   spec.license          = { :type => "UNLICENSED", :file => "legal.md" }
   spec.homepage         = 'https://curity.io'
   spec.authors          = { 'Cuity' => 'info@curity.io' }
@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   spec.documentation_url = 'https://developer.curity.io/docs/latest/index.html'
   spec.social_media_url = 'https://twitter.com/curityio'
   spec.swift_version = "5.0"
-  spec.source           = { :git => 'https://github.com/curityio/ios-idsvr-haapi-driver-dist', :tag => spec.version }
+  spec.source           = { :git => 'https://github.com/curityio/ios-idsvr-haapi-driver-dist.git', :tag => spec.version }
 
   spec.vendored_frameworks = "IdsvrHaapiDriver.xcframework"
 

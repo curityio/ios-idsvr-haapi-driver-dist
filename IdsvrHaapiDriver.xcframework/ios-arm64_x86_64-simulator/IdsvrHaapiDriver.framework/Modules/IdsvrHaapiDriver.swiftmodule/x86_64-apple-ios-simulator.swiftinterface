@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name IdsvrHaapiDriver
 import Combine
 import CommonCrypto
@@ -10,6 +10,7 @@ import Foundation
 import LocalAuthentication
 import Security
 import Swift
+import _Concurrency
 import os
 @objc @_inheritsConvenienceInitializers public class Haapi : ObjectiveC.NSObject {
   @objc public static var isSupported: Swift.Bool {
@@ -33,22 +34,24 @@ public enum HaapiError : Swift.Error {
   case haapiTokenManagerIsExpired
   case illegalState(message: Swift.String)
 }
-extension HaapiError : Foundation.LocalizedError {
+extension IdsvrHaapiDriver.HaapiError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class Dpop : ObjectiveC.NSObject {
   @objc final public let jwkThumbprint: Swift.String
-  @objc public func createProof(httpMethod: Swift.String, url: Foundation.URL) throws -> Swift.String
-  @objc public func getHeaderValue(httpMethod: Swift.String, url: Foundation.URL) throws -> Swift.String
-  @objc override dynamic public init()
+  @objc @available(swift, obsoleted: 0.1, message: "Use `createProof(httpMethod: String, url: URL, nonce: String?, accessToken: String?)` instead")
+  public func createProof(httpMethod: Swift.String, url: Foundation.URL) throws -> Swift.String
+  @objc public func createProof(httpMethod: Swift.String, url: Foundation.URL, nonce: Swift.String? = nil, accessToken: Swift.String? = nil) throws -> Swift.String
+  @objc @available(swift, obsoleted: 0.1, message: "Use `getHeaderValue(httpMethod: String, url: URL, nonce: String?, accessToken: String?)` instead")
+  public func getHeaderValue(httpMethod: Swift.String, url: Foundation.URL) throws -> Swift.String
+  @objc public func getHeaderValue(httpMethod: Swift.String, url: Foundation.URL, nonce: Swift.String? = nil, accessToken: Swift.String? = nil) throws -> Swift.String
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class HaapiTokenResult : ObjectiveC.NSObject {
   @objc final public let dPopAccessTokenInfo: IdsvrHaapiDriver.DpopAccessTokenInfo?
   @objc final public let error: Swift.Error?
-  @objc override dynamic public init()
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers final public class HaapiTokenManager : ObjectiveC.NSObject {
@@ -65,17 +68,20 @@ extension HaapiError : Foundation.LocalizedError {
     public func build() -> IdsvrHaapiDriver.HaapiTokenManager
     @objc deinit
   }
-  @objc override dynamic public init()
   @objc deinit
 }
-extension HaapiTokenManager {
+extension IdsvrHaapiDriver.HaapiTokenManager {
   @objc final public func createClient(urlSession: Foundation.URLSession? = nil) -> IdsvrHaapiDriver.HaapiClient
-  final public func getHaapiTokenAsync(forceFresh: Swift.Bool = false, callbackDispatchQueue: Dispatch.DispatchQueue = DispatchQueue.main, completionHandler: @escaping (Swift.Result<IdsvrHaapiDriver.DpopAccessTokenInfo, IdsvrHaapiDriver.HaapiError>) -> Swift.Void)
+  final public func getHaapiTokenAsync(forceFresh: Swift.Bool = false, callbackDispatchQueue: Dispatch.DispatchQueue = DispatchQueue.main, dpopNonce: Swift.String? = nil, completionHandler: @escaping (Swift.Result<IdsvrHaapiDriver.DpopAccessTokenInfo, IdsvrHaapiDriver.HaapiError>) -> Swift.Void)
   @objc @available(swift, obsoleted: 1.0)
   final public func getHaapiTokenAsync(forceFresh: Swift.Bool = false, callbackDispatchQueue: Dispatch.DispatchQueue = DispatchQueue.main, completionHandler: @escaping (IdsvrHaapiDriver.DpopAccessTokenInfo?, Swift.Error?) -> Swift.Void)
-  final public func getHaapiToken(forceFresh: Swift.Bool = false) -> Swift.Result<IdsvrHaapiDriver.DpopAccessTokenInfo, IdsvrHaapiDriver.HaapiError>
+  @objc @available(swift, obsoleted: 1.0)
+  final public func getHaapiTokenAsync(forceFresh: Swift.Bool = false, callbackDispatchQueue: Dispatch.DispatchQueue = DispatchQueue.main, dpopNonce: Swift.String? = nil, completionHandler: @escaping (IdsvrHaapiDriver.DpopAccessTokenInfo?, Swift.Error?) -> Swift.Void)
+  final public func getHaapiToken(forceFresh: Swift.Bool = false, dpopNonce: Swift.String? = nil) -> Swift.Result<IdsvrHaapiDriver.DpopAccessTokenInfo, IdsvrHaapiDriver.HaapiError>
   @objc @available(swift, obsoleted: 1.0)
   final public func getHaapiToken(forceFresh: Swift.Bool = false) -> IdsvrHaapiDriver.HaapiTokenResult?
+  @objc @available(swift, obsoleted: 1.0)
+  final public func getHaapiToken(forceFresh: Swift.Bool = false, dpopNonce: Swift.String?) -> IdsvrHaapiDriver.HaapiTokenResult?
   @objc final public func close()
   @objc final public func clearState()
 }
@@ -86,6 +92,8 @@ public enum HttpHeaderNames {
   public static let dpop: Swift.String
   public static let haapiSessionId: Swift.String
   public static let haapiSetSessionId: Swift.String
+  public static let dpopNonce: Swift.String
+  public static let wwwAuthenticate: Swift.String
 }
 public enum MimeTypes : Swift.String {
   case happi
@@ -102,7 +110,7 @@ public enum StorageError : Swift.Error {
   case readError(cause: Swift.Error)
   case deleteError(cause: Swift.Error)
 }
-extension StorageError : Foundation.LocalizedError {
+extension IdsvrHaapiDriver.StorageError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
@@ -124,10 +132,11 @@ public protocol Storage {
   @objc override dynamic public init()
   @objc deinit
 }
-extension URLResponse {
+extension Foundation.URLResponse {
   public func haapiSessionId() -> Swift.String?
+  public func dpopNonce() -> Swift.String?
 }
-extension URLRequest {
+extension Foundation.URLRequest {
   public mutating func addAuthorizationHeader(headerValue: Swift.String)
   public mutating func addDpopHeader(headerValue: Swift.String)
   public mutating func addDpopAccessTokenHeaders(from dpopAccessTokenInfo: IdsvrHaapiDriver.DpopAccessTokenInfo, httpMethod: Swift.String, url: Foundation.URL) throws
@@ -142,7 +151,6 @@ public struct ResponseAndData {
   public func performDataTask(for urlRequest: Foundation.URLRequest, completionHandler: @escaping (Swift.Result<IdsvrHaapiDriver.ResponseAndData, Swift.Error>) -> Swift.Void)
   @available(swift, obsoleted: 1.0)
   @objc public func performDataTask(for urlRequest: Foundation.URLRequest, completionHandler: @escaping (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void)
-  @objc override dynamic public init()
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class AccessToken : ObjectiveC.NSObject {
@@ -152,18 +160,17 @@ public struct ResponseAndData {
   @objc override dynamic public var description: Swift.String {
     @objc get
   }
-  @objc override dynamic public init()
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class DpopAccessTokenInfo : ObjectiveC.NSObject {
   @objc final public let accessToken: IdsvrHaapiDriver.AccessToken
   @objc final public let dpop: IdsvrHaapiDriver.Dpop
+  @objc final public let dpopNonce: Swift.String?
   @objc override dynamic public var description: Swift.String {
     @objc get
   }
   @objc public func dpopHeaderValue(httpMethod: Swift.String, url: Foundation.URL) throws -> Swift.String
   @objc public func authorizationHeaderValue() -> Swift.String
-  @objc override dynamic public init()
   @objc deinit
 }
 @objc @objcMembers public class HaapiTokenManagerBuilder : ObjectiveC.NSObject {
@@ -177,7 +184,6 @@ public struct ResponseAndData {
   @objc @discardableResult
   public func disableDeviceCheckAttestation() -> IdsvrHaapiDriver.HaapiTokenManagerBuilder
   @objc public func build() -> IdsvrHaapiDriver.HaapiTokenManager
-  @objc override dynamic public init()
   @objc deinit
 }
 extension IdsvrHaapiDriver.MimeTypes : Swift.Equatable {}
