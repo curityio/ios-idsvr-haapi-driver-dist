@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
-// swift-module-flags: -target arm64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name IdsvrHaapiDriver
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name IdsvrHaapiDriver
 import Combine
 import CommonCrypto
 import Compression
@@ -20,6 +20,7 @@ import os
   @objc override dynamic public init()
   @objc deinit
 }
+@available(iOS 14, *)
 public enum HaapiError : Swift.Error {
   case communication(message: Swift.String, cause: Swift.Error? = nil)
   case serverError(statusCode: Swift.Int)
@@ -34,12 +35,14 @@ public enum HaapiError : Swift.Error {
   case haapiTokenManagerIsExpired
   case illegalState(message: Swift.String)
 }
+@available(iOS 14, *)
 extension IdsvrHaapiDriver.HaapiError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
 }
-@objc @_hasMissingDesignatedInitializers @objcMembers public class Dpop : ObjectiveC.NSObject {
+@objc @_hasMissingDesignatedInitializers @available(iOS 14, *)
+@objcMembers public class Dpop : ObjectiveC.NSObject {
   @objc final public let jwkThumbprint: Swift.String
   @objc @available(swift, obsoleted: 0.1, message: "Use `createProof(httpMethod: String, url: URL, nonce: String?, accessToken: String?)` instead")
   public func createProof(httpMethod: Swift.String, url: Foundation.URL) throws -> Swift.String
@@ -49,12 +52,14 @@ extension IdsvrHaapiDriver.HaapiError : Foundation.LocalizedError {
   @objc public func getHeaderValue(httpMethod: Swift.String, url: Foundation.URL, nonce: Swift.String? = nil, accessToken: Swift.String? = nil) throws -> Swift.String
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @objcMembers public class HaapiTokenResult : ObjectiveC.NSObject {
+@objc @_hasMissingDesignatedInitializers @available(iOS 14, *)
+@objcMembers public class HaapiTokenResult : ObjectiveC.NSObject {
   @objc final public let dPopAccessTokenInfo: IdsvrHaapiDriver.DpopAccessTokenInfo?
   @objc final public let error: Swift.Error?
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @objcMembers final public class HaapiTokenManager : ObjectiveC.NSObject {
+@objc @_hasMissingDesignatedInitializers @available(iOS 14.0, *)
+@objcMembers final public class HaapiTokenManager : ObjectiveC.NSObject {
   @available(swift, deprecated: 5.0, message: "HaapiTokenManager.Builder will not be supported, please use HaapiTokenManagerBuilder instead")
   public class Builder {
     public init(tokenEndpoint: Foundation.URL, clientId: Swift.String)
@@ -70,6 +75,7 @@ extension IdsvrHaapiDriver.HaapiError : Foundation.LocalizedError {
   }
   @objc deinit
 }
+@available(iOS 14.0, *)
 extension IdsvrHaapiDriver.HaapiTokenManager {
   @objc final public func createClient(urlSession: Foundation.URLSession? = nil) -> IdsvrHaapiDriver.HaapiClient
   final public func getHaapiTokenAsync(forceFresh: Swift.Bool = false, callbackDispatchQueue: Dispatch.DispatchQueue = DispatchQueue.main, dpopNonce: Swift.String? = nil, completionHandler: @escaping (Swift.Result<IdsvrHaapiDriver.DpopAccessTokenInfo, IdsvrHaapiDriver.HaapiError>) -> Swift.Void)
@@ -85,6 +91,7 @@ extension IdsvrHaapiDriver.HaapiTokenManager {
   @objc final public func close()
   @objc final public func clearState()
 }
+@available(iOS 14, *)
 public enum HttpHeaderNames {
   public static let accept: Swift.String
   public static let authorization: Swift.String
@@ -95,6 +102,7 @@ public enum HttpHeaderNames {
   public static let dpopNonce: Swift.String
   public static let wwwAuthenticate: Swift.String
 }
+@available(iOS 14, *)
 public enum MimeTypes : Swift.String {
   case happi
   case json
@@ -105,37 +113,44 @@ public enum MimeTypes : Swift.String {
     get
   }
 }
+@available(iOS 14, *)
 public enum StorageError : Swift.Error {
   case writeError(cause: Swift.Error)
   case readError(cause: Swift.Error)
   case deleteError(cause: Swift.Error)
 }
+@available(iOS 14, *)
 extension IdsvrHaapiDriver.StorageError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
 }
+@available(iOS 14, *)
 public protocol Storage {
   func read(key: Swift.String) throws -> Foundation.Data?
   func write(key: Swift.String, data: Foundation.Data) throws
   func delete(key: Swift.String) throws
 }
-@_hasMissingDesignatedInitializers public class KeychainStorage : IdsvrHaapiDriver.Storage {
+@_hasMissingDesignatedInitializers @available(iOS 14, *)
+public class KeychainStorage : IdsvrHaapiDriver.Storage {
   public func write(key: Swift.String, data: Foundation.Data) throws
   public func read(key: Swift.String) throws -> Foundation.Data?
   public func delete(key: Swift.String) throws
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers public class HaapiDriverLogger : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers @available(iOS 14, *)
+public class HaapiDriverLogger : ObjectiveC.NSObject {
   @objc public static var enabled: Swift.Bool
   @available(*, unavailable)
   @objc override dynamic public init()
   @objc deinit
 }
+@available(iOS 14, *)
 extension Foundation.URLResponse {
   public func haapiSessionId() -> Swift.String?
   public func dpopNonce() -> Swift.String?
 }
+@available(iOS 14, *)
 extension Foundation.URLRequest {
   public mutating func addAuthorizationHeader(headerValue: Swift.String)
   public mutating func addDpopHeader(headerValue: Swift.String)
@@ -143,17 +158,20 @@ extension Foundation.URLRequest {
   public mutating func addHaapiMediaTypeAcceptHeader()
   public mutating func addHaapiSessionIdHeader(_ sessionId: Swift.String)
 }
+@available(iOS 14, *)
 public struct ResponseAndData {
   public let response: Foundation.URLResponse
   public let data: Foundation.Data?
 }
-@objc @_hasMissingDesignatedInitializers public class HaapiClient : ObjectiveC.NSObject {
+@objc @_hasMissingDesignatedInitializers @available(iOS 14.0, *)
+public class HaapiClient : ObjectiveC.NSObject {
   public func performDataTask(for urlRequest: Foundation.URLRequest, completionHandler: @escaping (Swift.Result<IdsvrHaapiDriver.ResponseAndData, Swift.Error>) -> Swift.Void)
   @available(swift, obsoleted: 1.0)
   @objc public func performDataTask(for urlRequest: Foundation.URLRequest, completionHandler: @escaping (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void)
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @objcMembers public class AccessToken : ObjectiveC.NSObject {
+@objc @_hasMissingDesignatedInitializers @available(iOS 14, *)
+@objcMembers public class AccessToken : ObjectiveC.NSObject {
   @objc final public let value: Swift.String
   @objc final public let expiresOn: Foundation.Date
   @objc public func isValid(atTime: Foundation.Date, minTtl: Foundation.TimeInterval) -> Swift.Bool
@@ -162,7 +180,8 @@ public struct ResponseAndData {
   }
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @objcMembers public class DpopAccessTokenInfo : ObjectiveC.NSObject {
+@objc @_hasMissingDesignatedInitializers @available(iOS 14, *)
+@objcMembers public class DpopAccessTokenInfo : ObjectiveC.NSObject {
   @objc final public let accessToken: IdsvrHaapiDriver.AccessToken
   @objc final public let dpop: IdsvrHaapiDriver.Dpop
   @objc final public let dpopNonce: Swift.String?
@@ -173,7 +192,8 @@ public struct ResponseAndData {
   @objc public func authorizationHeaderValue() -> Swift.String
   @objc deinit
 }
-@objc @objcMembers public class HaapiTokenManagerBuilder : ObjectiveC.NSObject {
+@objc @available(iOS 14.0, *)
+@objcMembers public class HaapiTokenManagerBuilder : ObjectiveC.NSObject {
   @objc public init(tokenEndpoint: Foundation.URL, clientId: Swift.String)
   @objc @discardableResult
   public func setName(_ name: Swift.String) -> IdsvrHaapiDriver.HaapiTokenManagerBuilder
@@ -186,6 +206,9 @@ public struct ResponseAndData {
   @objc public func build() -> IdsvrHaapiDriver.HaapiTokenManager
   @objc deinit
 }
+@available(iOS 14, *)
 extension IdsvrHaapiDriver.MimeTypes : Swift.Equatable {}
+@available(iOS 14, *)
 extension IdsvrHaapiDriver.MimeTypes : Swift.Hashable {}
+@available(iOS 14, *)
 extension IdsvrHaapiDriver.MimeTypes : Swift.RawRepresentable {}

@@ -222,7 +222,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 /// A representation of an OAuth Access Token, that includes both the raw value of the token, as well as
 /// relevant properties of the token.
-SWIFT_CLASS("_TtC16IdsvrHaapiDriver11AccessToken")
+SWIFT_CLASS("_TtC16IdsvrHaapiDriver11AccessToken") SWIFT_AVAILABILITY(ios,introduced=14)
 @interface AccessToken : NSObject
 /// The raw value of the Access Token
 @property (nonatomic, readonly, copy) NSString * _Nonnull value;
@@ -250,7 +250,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver11AccessToken")
 @class NSURL;
 
 /// The <code>Dpop</code> class represents the context used for the Demonstrating Proof of Possession protocol used for authenticating requests that prove ownership of a private key
-SWIFT_CLASS("_TtC16IdsvrHaapiDriver4Dpop")
+SWIFT_CLASS("_TtC16IdsvrHaapiDriver4Dpop") SWIFT_AVAILABILITY(ios,introduced=14)
 @interface Dpop : NSObject
 /// The JWK Thumbprint of the DPoP public key
 @property (nonatomic, readonly, copy) NSString * _Nonnull jwkThumbprint;
@@ -331,7 +331,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver4Dpop")
 
 /// A data class that holds an <code>AccessToken</code>, a <code>Dpop</code> instance and also an optional <code>String</code> representation for a <code>Dpop Nonce</code>
 /// when provided by the server.
-SWIFT_CLASS("_TtC16IdsvrHaapiDriver19DpopAccessTokenInfo")
+SWIFT_CLASS("_TtC16IdsvrHaapiDriver19DpopAccessTokenInfo") SWIFT_AVAILABILITY(ios,introduced=14)
 @interface DpopAccessTokenInfo : NSObject
 /// An <code>AccessToken</code> instance
 @property (nonatomic, readonly, strong) AccessToken * _Nonnull accessToken;
@@ -403,7 +403,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isSupported;)
 /// \endcodeThe coupling between the <code>HaapiClient</code> and the <code>HaapiTokenManager</code> is weak, such that the <code>HaapiClient</code> is not aware
 /// when the coupled <code>HaapiTokenManager</code> is destroyed or closed.
 /// It is for this reason that the <code>HaapiClient</code> can return failures caused by a reference to a no-longer valid <code>HaapiTokenManager</code>.
-SWIFT_CLASS("_TtC16IdsvrHaapiDriver11HaapiClient")
+SWIFT_CLASS("_TtC16IdsvrHaapiDriver11HaapiClient") SWIFT_AVAILABILITY(ios,introduced=14.0)
 @interface HaapiClient : NSObject
 /// Let the <code>HaapiClient</code> perform the given request as a HAAPI request asynchronously. The result of the request can be processed
 /// by a completion handler that can be given to this method.
@@ -421,7 +421,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver11HaapiClient")
 
 
 /// Logger configuration wrapper for Haapi Driver.
-SWIFT_CLASS("_TtC16IdsvrHaapiDriver17HaapiDriverLogger")
+SWIFT_CLASS("_TtC16IdsvrHaapiDriver17HaapiDriverLogger") SWIFT_AVAILABILITY(ios,introduced=14)
 @interface HaapiDriverLogger : NSObject
 /// When <code>HaapiDriverLogger.enable</code> is true, internal log statements will be available. Default value is <code>false</code>
 /// warning:
@@ -479,7 +479,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enabled;)
 /// }
 ///
 /// \endcodeThe above example attempts to make a <code>GET</code> request to the authorization endpoint and provides a completing function for further processing of the results.
-SWIFT_CLASS("_TtC16IdsvrHaapiDriver17HaapiTokenManager")
+SWIFT_CLASS("_TtC16IdsvrHaapiDriver17HaapiTokenManager") SWIFT_AVAILABILITY(ios,introduced=14.0)
 @interface HaapiTokenManager : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -489,6 +489,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver17HaapiTokenManager")
 @class NSURLSession;
 @class HaapiTokenResult;
 
+SWIFT_AVAILABILITY(ios,introduced=14.0)
 @interface HaapiTokenManager (SWIFT_EXTENSION(IdsvrHaapiDriver))
 /// Create a <code>HaapiClient</code> instance that uses the <code>HaapiTokenManager</code>’s state (e.g. the HAAPI token and …)  for building outbound requests.
 /// note:
@@ -555,7 +556,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver17HaapiTokenManager")
 /// .build()
 ///
 /// \endcode
-SWIFT_CLASS("_TtC16IdsvrHaapiDriver24HaapiTokenManagerBuilder")
+SWIFT_CLASS("_TtC16IdsvrHaapiDriver24HaapiTokenManagerBuilder") SWIFT_AVAILABILITY(ios,introduced=14.0)
 @interface HaapiTokenManagerBuilder : NSObject
 /// Initialize the <code>Builder</code> with the mandatory <code>tokenEndpoint</code> and <code>clientId</code> parameters
 - (nonnull instancetype)initWithTokenEndpoint:(NSURL * _Nonnull)tokenEndpoint clientId:(NSString * _Nonnull)clientId OBJC_DESIGNATED_INITIALIZER;
@@ -586,7 +587,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver24HaapiTokenManagerBuilder")
 /// Only for <code>Objective-C</code> usage
 /// note:
 /// This object is only returned when using functions of HaapiTokenManger that are only visible in Objective-C
-SWIFT_CLASS("_TtC16IdsvrHaapiDriver16HaapiTokenResult")
+SWIFT_CLASS("_TtC16IdsvrHaapiDriver16HaapiTokenResult") SWIFT_AVAILABILITY(ios,introduced=14)
 @interface HaapiTokenResult : NSObject
 /// An optional data class that holds an <code>AccessToken</code> and <code>Dpop</code> instance.
 @property (nonatomic, readonly, strong) DpopAccessTokenInfo * _Nullable dPopAccessTokenInfo;
@@ -827,7 +828,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 /// A representation of an OAuth Access Token, that includes both the raw value of the token, as well as
 /// relevant properties of the token.
-SWIFT_CLASS("_TtC16IdsvrHaapiDriver11AccessToken")
+SWIFT_CLASS("_TtC16IdsvrHaapiDriver11AccessToken") SWIFT_AVAILABILITY(ios,introduced=14)
 @interface AccessToken : NSObject
 /// The raw value of the Access Token
 @property (nonatomic, readonly, copy) NSString * _Nonnull value;
@@ -855,7 +856,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver11AccessToken")
 @class NSURL;
 
 /// The <code>Dpop</code> class represents the context used for the Demonstrating Proof of Possession protocol used for authenticating requests that prove ownership of a private key
-SWIFT_CLASS("_TtC16IdsvrHaapiDriver4Dpop")
+SWIFT_CLASS("_TtC16IdsvrHaapiDriver4Dpop") SWIFT_AVAILABILITY(ios,introduced=14)
 @interface Dpop : NSObject
 /// The JWK Thumbprint of the DPoP public key
 @property (nonatomic, readonly, copy) NSString * _Nonnull jwkThumbprint;
@@ -936,7 +937,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver4Dpop")
 
 /// A data class that holds an <code>AccessToken</code>, a <code>Dpop</code> instance and also an optional <code>String</code> representation for a <code>Dpop Nonce</code>
 /// when provided by the server.
-SWIFT_CLASS("_TtC16IdsvrHaapiDriver19DpopAccessTokenInfo")
+SWIFT_CLASS("_TtC16IdsvrHaapiDriver19DpopAccessTokenInfo") SWIFT_AVAILABILITY(ios,introduced=14)
 @interface DpopAccessTokenInfo : NSObject
 /// An <code>AccessToken</code> instance
 @property (nonatomic, readonly, strong) AccessToken * _Nonnull accessToken;
@@ -1008,7 +1009,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isSupported;)
 /// \endcodeThe coupling between the <code>HaapiClient</code> and the <code>HaapiTokenManager</code> is weak, such that the <code>HaapiClient</code> is not aware
 /// when the coupled <code>HaapiTokenManager</code> is destroyed or closed.
 /// It is for this reason that the <code>HaapiClient</code> can return failures caused by a reference to a no-longer valid <code>HaapiTokenManager</code>.
-SWIFT_CLASS("_TtC16IdsvrHaapiDriver11HaapiClient")
+SWIFT_CLASS("_TtC16IdsvrHaapiDriver11HaapiClient") SWIFT_AVAILABILITY(ios,introduced=14.0)
 @interface HaapiClient : NSObject
 /// Let the <code>HaapiClient</code> perform the given request as a HAAPI request asynchronously. The result of the request can be processed
 /// by a completion handler that can be given to this method.
@@ -1026,7 +1027,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver11HaapiClient")
 
 
 /// Logger configuration wrapper for Haapi Driver.
-SWIFT_CLASS("_TtC16IdsvrHaapiDriver17HaapiDriverLogger")
+SWIFT_CLASS("_TtC16IdsvrHaapiDriver17HaapiDriverLogger") SWIFT_AVAILABILITY(ios,introduced=14)
 @interface HaapiDriverLogger : NSObject
 /// When <code>HaapiDriverLogger.enable</code> is true, internal log statements will be available. Default value is <code>false</code>
 /// warning:
@@ -1084,7 +1085,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enabled;)
 /// }
 ///
 /// \endcodeThe above example attempts to make a <code>GET</code> request to the authorization endpoint and provides a completing function for further processing of the results.
-SWIFT_CLASS("_TtC16IdsvrHaapiDriver17HaapiTokenManager")
+SWIFT_CLASS("_TtC16IdsvrHaapiDriver17HaapiTokenManager") SWIFT_AVAILABILITY(ios,introduced=14.0)
 @interface HaapiTokenManager : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1094,6 +1095,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver17HaapiTokenManager")
 @class NSURLSession;
 @class HaapiTokenResult;
 
+SWIFT_AVAILABILITY(ios,introduced=14.0)
 @interface HaapiTokenManager (SWIFT_EXTENSION(IdsvrHaapiDriver))
 /// Create a <code>HaapiClient</code> instance that uses the <code>HaapiTokenManager</code>’s state (e.g. the HAAPI token and …)  for building outbound requests.
 /// note:
@@ -1160,7 +1162,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver17HaapiTokenManager")
 /// .build()
 ///
 /// \endcode
-SWIFT_CLASS("_TtC16IdsvrHaapiDriver24HaapiTokenManagerBuilder")
+SWIFT_CLASS("_TtC16IdsvrHaapiDriver24HaapiTokenManagerBuilder") SWIFT_AVAILABILITY(ios,introduced=14.0)
 @interface HaapiTokenManagerBuilder : NSObject
 /// Initialize the <code>Builder</code> with the mandatory <code>tokenEndpoint</code> and <code>clientId</code> parameters
 - (nonnull instancetype)initWithTokenEndpoint:(NSURL * _Nonnull)tokenEndpoint clientId:(NSString * _Nonnull)clientId OBJC_DESIGNATED_INITIALIZER;
@@ -1191,7 +1193,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver24HaapiTokenManagerBuilder")
 /// Only for <code>Objective-C</code> usage
 /// note:
 /// This object is only returned when using functions of HaapiTokenManger that are only visible in Objective-C
-SWIFT_CLASS("_TtC16IdsvrHaapiDriver16HaapiTokenResult")
+SWIFT_CLASS("_TtC16IdsvrHaapiDriver16HaapiTokenResult") SWIFT_AVAILABILITY(ios,introduced=14)
 @interface HaapiTokenResult : NSObject
 /// An optional data class that holds an <code>AccessToken</code> and <code>Dpop</code> instance.
 @property (nonatomic, readonly, strong) DpopAccessTokenInfo * _Nullable dPopAccessTokenInfo;
