@@ -8,10 +8,10 @@ import CryptoKit
 import DeviceCheck
 import Foundation
 import LocalAuthentication
+import OSLog
 import Security
 import Swift
 import _Concurrency
-import os
 @objc @_inheritsConvenienceInitializers public class Haapi : ObjectiveC.NSObject {
   @objc public static var isSupported: Swift.Bool {
     @objc get
