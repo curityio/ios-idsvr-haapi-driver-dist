@@ -6,23 +6,31 @@
 	<dict>
 		<key>Headers/IdsvrHaapiDriver-Swift.h</key>
 		<data>
-		a6CvvtqMQmWPd7CazdyCzvUs158=
+		G38qkZNoyoSoRnjwXYQfWILq6T4=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VVgZvTSfapy+dfuLsQWopt4NWvo=
+		9qNcIzmxmRqwiRUR/Ll0tbi984Y=
+		</data>
+		<key>Modules/IdsvrHaapiDriver.swiftmodule/arm64-apple-ios.abi.json</key>
+		<data>
+		ibTVMvTQCKJzq2ZOCy28JIwOakM=
+		</data>
+		<key>Modules/IdsvrHaapiDriver.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<data>
+		+6C/iby7JMeo5ByY0qHcXiToNfI=
 		</data>
 		<key>Modules/IdsvrHaapiDriver.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		jc5+A6ki+oVsSHz66jOFg33SjBc=
+		5dTd6FlirlEft0jT6pzvFW9f9CE=
 		</data>
 		<key>Modules/IdsvrHaapiDriver.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		o2fr2TYQMKzQnfuLmIp8Ev6xT9U=
+		+6C/iby7JMeo5ByY0qHcXiToNfI=
 		</data>
 		<key>Modules/IdsvrHaapiDriver.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		gTZGthUMPJd9Aq+277iyszRLWz8=
+		FguJ2+RWYZ9Z6SCrfmKPILFXcWM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -35,28 +43,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zAVck2RxqaL4U9i1eivm/VQOb+RUMiXMf5RHAMQg8rE=
+			VPj8SY/DJx/x59BD0NT5Js5xQ5SRbpM3Njq/hQG6wDI=
+			</data>
+		</dict>
+		<key>Modules/IdsvrHaapiDriver.swiftmodule/arm64-apple-ios.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			k/sjtzdpZHwCDLQhXIg/wa9VjdjVhQ6Rp0QBfKtjMlg=
+			</data>
+		</dict>
+		<key>Modules/IdsvrHaapiDriver.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0OqCDl9+VhvWzmuSqiMZ631VmiANdqf3A6fUEmyxhtk=
 			</data>
 		</dict>
 		<key>Modules/IdsvrHaapiDriver.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			As4WUArhgdS2GSj/xoLk37HvDa2m+DdMh8C215MO+ww=
+			Y/u/V7NZEkIXzd9d6TNN9885irecBLLs37YKZ8BeBqI=
 			</data>
 		</dict>
 		<key>Modules/IdsvrHaapiDriver.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			i5jkC2swx1l66ctRShYDs78ouz2Vecs+HVjTKiyBo8g=
+			0OqCDl9+VhvWzmuSqiMZ631VmiANdqf3A6fUEmyxhtk=
 			</data>
 		</dict>
 		<key>Modules/IdsvrHaapiDriver.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GpmZTGL1jiHe+l2KNwRo8+pYb1zl4p9cRQauOg8OVjE=
+			infsgXdJmF7rlIy8FOALweeuDNwjM3hBw8fl8J2Kcjk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
