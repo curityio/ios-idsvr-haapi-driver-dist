@@ -310,6 +310,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver11AccessToken") SWIFT_AVAILABILITY(ios,introd
 /// a <code>String</code> representation of the <code>AccessToken</code> instance,
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 @property (nonatomic, readonly, copy) NSString * _Nonnull debugDescription;
+- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -321,6 +322,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver4Dpop") SWIFT_AVAILABILITY(ios,introduced=14)
 @interface Dpop : NSObject
 /// The JWK Thumbprint of the DPoP public key
 @property (nonatomic, readonly, copy) NSString * _Nonnull jwkThumbprint;
+- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 /// Create a DPoP proof token (a signed JWT) for the provided HTTP-method and URL. To sign the JWT, the cryptographic key of the <code>Dpop</code> context is used.
 /// This method can only be used when running Curity Identity Server versions below 7.1 which use legacy DPoP Proof configuration or when client is explicitly
 /// configured to use legacy DPoP Proof.
@@ -428,6 +430,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver19DpopAccessTokenInfo") SWIFT_AVAILABILITY(io
 /// returns:
 /// the value that can be used in a <code>AuthorizationHeader</code> HTTP request header.
 - (NSString * _Nonnull)authorizationHeaderValue SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -570,6 +573,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL isSensitiveValueMasked;)
 /// \endcodeThe above example attempts to make a <code>GET</code> request to the authorization endpoint and provides a completing function for further processing of the results.
 SWIFT_CLASS("_TtC16IdsvrHaapiDriver17HaapiTokenManager") SWIFT_AVAILABILITY(ios,introduced=14.0)
 @interface HaapiTokenManager : NSObject
+/// Return the <code>Dpop</code> that was used.
+@property (nonatomic, readonly, strong) Dpop * _Nullable dpop;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -697,6 +702,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver16HaapiTokenResult") SWIFT_AVAILABILITY(ios,i
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 
