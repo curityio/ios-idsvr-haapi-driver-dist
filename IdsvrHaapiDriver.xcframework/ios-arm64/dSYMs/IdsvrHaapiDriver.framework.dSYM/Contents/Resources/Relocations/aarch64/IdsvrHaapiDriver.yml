@@ -2,8 +2,8 @@
 triple:          'arm64-apple-darwin'
 binary-path:     '/Users/curity/Library/Developer/Xcode/DerivedData/ios-cat-amnllxujugridfghjaskequlyemx/Build/Intermediates.noindex/ArchiveIntermediates/IdsvrHaapiDriver/InstallationBuildProductsLocation/Library/Frameworks/IdsvrHaapiDriver.framework/IdsvrHaapiDriver'
 relocations:
-  - { offsetInCU: 0x34, offset: 0x31A5C, size: 0x8, addend: 0x0, symName: _IdsvrHaapiDriverVersionString, symObjAddr: 0x0, symBinAddr: 0x4C310, symSize: 0x0 }
-  - { offsetInCU: 0x69, offset: 0x31A91, size: 0x8, addend: 0x0, symName: _IdsvrHaapiDriverVersionNumber, symObjAddr: 0x40, symBinAddr: 0x4C350, symSize: 0x0 }
+  - { offsetInCU: 0x34, offset: 0x31A5C, size: 0x8, addend: 0x0, symName: _IdsvrHaapiDriverVersionString, symObjAddr: 0x0, symBinAddr: 0x4C3E0, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x31A91, size: 0x8, addend: 0x0, symName: _IdsvrHaapiDriverVersionNumber, symObjAddr: 0x40, symBinAddr: 0x4C420, symSize: 0x0 }
   - { offsetInCU: 0x43, offset: 0x31AEA, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver9JWEHeaderVwCP', symObjAddr: 0x274, symBinAddr: 0x4260, symSize: 0x4C }
   - { offsetInCU: 0x57, offset: 0x31AFE, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV15_RepresentationOWOy', symObjAddr: 0x2C0, symBinAddr: 0x42AC, symSize: 0x50 }
   - { offsetInCU: 0x6B, offset: 0x31B12, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver9JWEHeaderVwxx', symObjAddr: 0x310, symBinAddr: 0x42FC, symSize: 0x2C }
@@ -51,8 +51,8 @@ relocations:
   - { offsetInCU: 0x6A1, offset: 0x32148, size: 0x8, addend: 0x0, symName: '_$sSo11CFStringRefaSHSCSH9hashValueSivgTW', symObjAddr: 0x1C, symBinAddr: 0x4014, symSize: 0x3C }
   - { offsetInCU: 0x6BD, offset: 0x32164, size: 0x8, addend: 0x0, symName: '_$sSo11CFStringRefaSHSCSH4hash4intoys6HasherVz_tFTW', symObjAddr: 0x58, symBinAddr: 0x4050, symSize: 0x48 }
   - { offsetInCU: 0x6E0, offset: 0x32187, size: 0x8, addend: 0x0, symName: '_$sSo11CFStringRefaSQSCSQ2eeoiySbx_xtFZTW', symObjAddr: 0x1CC, symBinAddr: 0x41C4, symSize: 0x4C }
-  - { offsetInCU: 0x4F, offset: 0x321F9, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver7masking33_650890B29853998FF7DD305A622CB538LLSSvp', symObjAddr: 0x24F0, symBinAddr: 0x699D0, symSize: 0x0 }
-  - { offsetInCU: 0x69, offset: 0x32213, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver14internalLogger33_650890B29853998FF7DD305A622CB538LL2os0E0Vvp', symObjAddr: 0x2500, symBinAddr: 0x699E0, symSize: 0x0 }
+  - { offsetInCU: 0x4F, offset: 0x321F9, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver7masking33_650890B29853998FF7DD305A622CB538LLSSvp', symObjAddr: 0x24F0, symBinAddr: 0x699C8, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x32213, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver14internalLogger33_650890B29853998FF7DD305A622CB538LL2os0E0Vvp', symObjAddr: 0x2500, symBinAddr: 0x699D8, symSize: 0x0 }
   - { offsetInCU: 0x77, offset: 0x32221, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver7masking33_650890B29853998FF7DD305A622CB538LL_WZ', symObjAddr: 0x0, symBinAddr: 0x4A68, symSize: 0x20 }
   - { offsetInCU: 0x91, offset: 0x3223B, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver14internalLogger33_650890B29853998FF7DD305A622CB538LL_WZ', symObjAddr: 0x20, symBinAddr: 0x4A88, symSize: 0x78 }
   - { offsetInCU: 0x13C, offset: 0x322E6, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver19printWarningMessage33_650890B29853998FF7DD305A622CB538LLyyF', symObjAddr: 0x98, symBinAddr: 0x4B00, symSize: 0x3A0 }
@@ -952,13 +952,13 @@ relocations:
   - { offsetInCU: 0x1A41, offset: 0x49BEB, size: 0x8, addend: 0x0, symName: '_$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCs5UInt8V_Tg5Tf4nnd_n', symObjAddr: 0x1C44, symBinAddr: 0x288C8, symSize: 0x68 }
   - { offsetInCU: 0x1AB5, offset: 0x49C5F, size: 0x8, addend: 0x0, symName: '_$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSs_Tg5Tf4nnd_n', symObjAddr: 0x1D38, symBinAddr: 0x289BC, symSize: 0x7C }
   - { offsetInCU: 0x1B34, offset: 0x49CDE, size: 0x8, addend: 0x0, symName: '_$s2os6LoggerVSgWOh', symObjAddr: 0x2228, symBinAddr: 0x28E04, symSize: 0x40 }
-  - { offsetInCU: 0x4B, offset: 0x4A025, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver15HttpHeaderNamesO6acceptSSvpZ', symObjAddr: 0x6A0, symBinAddr: 0x6A318, symSize: 0x0 }
-  - { offsetInCU: 0x65, offset: 0x4A03F, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver15HttpHeaderNamesO13authorizationSSvpZ', symObjAddr: 0x6B0, symBinAddr: 0x6A328, symSize: 0x0 }
-  - { offsetInCU: 0x7F, offset: 0x4A059, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver15HttpHeaderNamesO11contentTypeSSvpZ', symObjAddr: 0x6C0, symBinAddr: 0x6A338, symSize: 0x0 }
-  - { offsetInCU: 0x99, offset: 0x4A073, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver15HttpHeaderNamesO4dpopSSvpZ', symObjAddr: 0x6D0, symBinAddr: 0x6A348, symSize: 0x0 }
-  - { offsetInCU: 0xB3, offset: 0x4A08D, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver15HttpHeaderNamesO14haapiSessionIdSSvpZ', symObjAddr: 0x6E0, symBinAddr: 0x6A358, symSize: 0x0 }
-  - { offsetInCU: 0xCD, offset: 0x4A0A7, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver15HttpHeaderNamesO17haapiSetSessionIdSSvpZ', symObjAddr: 0x6F0, symBinAddr: 0x6A368, symSize: 0x0 }
-  - { offsetInCU: 0xE7, offset: 0x4A0C1, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver15HttpHeaderNamesO9dpopNonceSSvpZ', symObjAddr: 0x700, symBinAddr: 0x6A378, symSize: 0x0 }
+  - { offsetInCU: 0x4B, offset: 0x4A025, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver15HttpHeaderNamesO6acceptSSvpZ', symObjAddr: 0x6A0, symBinAddr: 0x6A310, symSize: 0x0 }
+  - { offsetInCU: 0x65, offset: 0x4A03F, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver15HttpHeaderNamesO13authorizationSSvpZ', symObjAddr: 0x6B0, symBinAddr: 0x6A320, symSize: 0x0 }
+  - { offsetInCU: 0x7F, offset: 0x4A059, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver15HttpHeaderNamesO11contentTypeSSvpZ', symObjAddr: 0x6C0, symBinAddr: 0x6A330, symSize: 0x0 }
+  - { offsetInCU: 0x99, offset: 0x4A073, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver15HttpHeaderNamesO4dpopSSvpZ', symObjAddr: 0x6D0, symBinAddr: 0x6A340, symSize: 0x0 }
+  - { offsetInCU: 0xB3, offset: 0x4A08D, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver15HttpHeaderNamesO14haapiSessionIdSSvpZ', symObjAddr: 0x6E0, symBinAddr: 0x6A350, symSize: 0x0 }
+  - { offsetInCU: 0xCD, offset: 0x4A0A7, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver15HttpHeaderNamesO17haapiSetSessionIdSSvpZ', symObjAddr: 0x6F0, symBinAddr: 0x6A360, symSize: 0x0 }
+  - { offsetInCU: 0xE7, offset: 0x4A0C1, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver15HttpHeaderNamesO9dpopNonceSSvpZ', symObjAddr: 0x700, symBinAddr: 0x6A370, symSize: 0x0 }
   - { offsetInCU: 0x101, offset: 0x4A0DB, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver9MimeTypesO8rawValueSSvg', symObjAddr: 0x0, symBinAddr: 0x28E4C, symSize: 0x64 }
   - { offsetInCU: 0x12C, offset: 0x4A106, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver9MimeTypesO8rawValueACSgSS_tcfC', symObjAddr: 0x2C8, symBinAddr: 0x29114, symSize: 0x7C }
   - { offsetInCU: 0x157, offset: 0x4A131, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver9MimeTypesOSYAASY8rawValuexSg03RawG0Qz_tcfCTW', symObjAddr: 0x3F0, symBinAddr: 0x291FC, symSize: 0xC }
@@ -1140,7 +1140,7 @@ relocations:
   - { offsetInCU: 0x9F8, offset: 0x4D651, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver11ECCurveTypeOACSeAAWl', symObjAddr: 0x1370, symBinAddr: 0x2DDFC, symSize: 0x44 }
   - { offsetInCU: 0xA0C, offset: 0x4D665, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver12ECPrivateKeyV4fromACs7Decoder_p_tKcfCTf4nd_n', symObjAddr: 0x13B4, symBinAddr: 0x2DE40, symSize: 0x970 }
   - { offsetInCU: 0x27, offset: 0x4DE21, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver12JWKParameterO8rawValueSSvg', symObjAddr: 0x0, symBinAddr: 0x2E7B0, symSize: 0x20 }
-  - { offsetInCU: 0x4B, offset: 0x4DE45, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver12JWKParameterO19nonStringParametersSayACGvpZ', symObjAddr: 0x93A8, symBinAddr: 0x70940, symSize: 0x0 }
+  - { offsetInCU: 0x4B, offset: 0x4DE45, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver12JWKParameterO19nonStringParametersSayACGvpZ', symObjAddr: 0x93A8, symBinAddr: 0x70930, symSize: 0x0 }
   - { offsetInCU: 0x65, offset: 0x4DE5F, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver12JWKParameterO8rawValueSSvg', symObjAddr: 0x0, symBinAddr: 0x2E7B0, symSize: 0x20 }
   - { offsetInCU: 0x9E, offset: 0x4DE98, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver12JWKParameterO11stringValueSSvg', symObjAddr: 0x38, symBinAddr: 0x2E7E8, symSize: 0x20 }
   - { offsetInCU: 0xCC, offset: 0x4DEC6, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver12JWKParameterO11stringValueSSvg', symObjAddr: 0x38, symBinAddr: 0x2E7E8, symSize: 0x20 }
@@ -1418,8 +1418,8 @@ relocations:
   - { offsetInCU: 0x478, offset: 0x525FB, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0C11FollowUpTagOSHAASH4hash4intoys6HasherVz_tFTW', symObjAddr: 0x238, symBinAddr: 0x3399C, symSize: 0x8 }
   - { offsetInCU: 0x494, offset: 0x52617, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0C11FollowUpTagOSHAASH13_rawHashValue4seedS2i_tFTW', symObjAddr: 0x240, symBinAddr: 0x339A4, symSize: 0x8 }
   - { offsetInCU: 0x2B, offset: 0x52736, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV24tokenManagersByNameGuard33_4AC41FAADE72BCD294F045B78623F81BLL_WZ', symObjAddr: 0x0, symBinAddr: 0x33C5C, symSize: 0x20 }
-  - { offsetInCU: 0x4F, offset: 0x5275A, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV24tokenManagersByNameGuard33_4AC41FAADE72BCD294F045B78623F81BLLSo21OS_dispatch_semaphoreCvpZ', symObjAddr: 0x2A8, symBinAddr: 0x6A8E8, symSize: 0x0 }
-  - { offsetInCU: 0x69, offset: 0x52774, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV19tokenManagersByNameSDySSAA0bdE0CGvpZ', symObjAddr: 0x2DF0, symBinAddr: 0x70948, symSize: 0x0 }
+  - { offsetInCU: 0x4F, offset: 0x5275A, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV24tokenManagersByNameGuard33_4AC41FAADE72BCD294F045B78623F81BLLSo21OS_dispatch_semaphoreCvpZ', symObjAddr: 0x2A8, symBinAddr: 0x6A8E0, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x52774, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV19tokenManagersByNameSDySSAA0bdE0CGvpZ', symObjAddr: 0x2DF0, symBinAddr: 0x70938, symSize: 0x0 }
   - { offsetInCU: 0x77, offset: 0x52782, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV24tokenManagersByNameGuard33_4AC41FAADE72BCD294F045B78623F81BLL_WZ', symObjAddr: 0x0, symBinAddr: 0x33C5C, symSize: 0x20 }
   - { offsetInCU: 0x91, offset: 0x5279C, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV19tokenManagersByName_WZ', symObjAddr: 0x20, symBinAddr: 0x33C7C, symSize: 0x40 }
   - { offsetInCU: 0xFB, offset: 0x52806, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV3add4name7factoryAA0bdE0CSS_AHyXEtFZ04$s16ab10Driver0B19dE33BuilderC5buildAA0bdE0CyKFAFyXEfU_AA0bdeM0CTf1ncn_nTf4ndg_n', symObjAddr: 0x60, symBinAddr: 0x33CBC, symSize: 0x244 }
@@ -1734,11 +1734,11 @@ relocations:
   - { offsetInCU: 0xDC1, offset: 0x5CBA2, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver6JWKSetVSTAAST32withContiguousStorageIfAvailableyqd__Sgqd__SRy7ElementQzGKXEKlFTW', symObjAddr: 0x30C, symBinAddr: 0x4308C, symSize: 0x20 }
   - { offsetInCU: 0xE0E, offset: 0x5CBEF, size: 0x8, addend: 0x0, symName: '_$sSlsE22_copyToContiguousArrays0cD0Vy7ElementQzGyF16IdsvrHaapiDriver6JWKSetV_Tg5Tf4g_n', symObjAddr: 0x690, symBinAddr: 0x43410, symSize: 0x90 }
   - { offsetInCU: 0xF61, offset: 0x5CD42, size: 0x8, addend: 0x0, symName: '_$sSlsE5index_8offsetBy07limitedC05IndexQzSgAE_SiAEtF16IdsvrHaapiDriver6JWKSetV_Tg5Tf4nnnd_n', symObjAddr: 0x720, symBinAddr: 0x434A0, symSize: 0x6C }
-  - { offsetInCU: 0x4F, offset: 0x5CF76, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver11AccessTokenC9Constants33_193F7EF468AE23E3FBB76FB2E235F349LLO9expiresOnSSvpZ', symObjAddr: 0x1800, symBinAddr: 0x6AD40, symSize: 0x0 }
-  - { offsetInCU: 0x69, offset: 0x5CF90, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver11AccessTokenC9Constants33_193F7EF468AE23E3FBB76FB2E235F349LLO5valueSSvpZ', symObjAddr: 0x1810, symBinAddr: 0x6AD50, symSize: 0x0 }
-  - { offsetInCU: 0x83, offset: 0x5CFAA, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver19DpopAccessTokenInfoC9Constants33_193F7EF468AE23E3FBB76FB2E235F349LLO06accessF0SSvpZ', symObjAddr: 0x1820, symBinAddr: 0x6AD60, symSize: 0x0 }
-  - { offsetInCU: 0x9D, offset: 0x5CFC4, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver19DpopAccessTokenInfoC9Constants33_193F7EF468AE23E3FBB76FB2E235F349LLO4dpopSSvpZ', symObjAddr: 0x1830, symBinAddr: 0x6AD70, symSize: 0x0 }
-  - { offsetInCU: 0xB7, offset: 0x5CFDE, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver19DpopAccessTokenInfoC9Constants33_193F7EF468AE23E3FBB76FB2E235F349LLO9dpopNonceSSvpZ', symObjAddr: 0x1840, symBinAddr: 0x6AD80, symSize: 0x0 }
+  - { offsetInCU: 0x4F, offset: 0x5CF76, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver11AccessTokenC9Constants33_193F7EF468AE23E3FBB76FB2E235F349LLO9expiresOnSSvpZ', symObjAddr: 0x1800, symBinAddr: 0x6AD38, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x5CF90, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver11AccessTokenC9Constants33_193F7EF468AE23E3FBB76FB2E235F349LLO5valueSSvpZ', symObjAddr: 0x1810, symBinAddr: 0x6AD48, symSize: 0x0 }
+  - { offsetInCU: 0x83, offset: 0x5CFAA, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver19DpopAccessTokenInfoC9Constants33_193F7EF468AE23E3FBB76FB2E235F349LLO06accessF0SSvpZ', symObjAddr: 0x1820, symBinAddr: 0x6AD58, symSize: 0x0 }
+  - { offsetInCU: 0x9D, offset: 0x5CFC4, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver19DpopAccessTokenInfoC9Constants33_193F7EF468AE23E3FBB76FB2E235F349LLO4dpopSSvpZ', symObjAddr: 0x1830, symBinAddr: 0x6AD68, symSize: 0x0 }
+  - { offsetInCU: 0xB7, offset: 0x5CFDE, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver19DpopAccessTokenInfoC9Constants33_193F7EF468AE23E3FBB76FB2E235F349LLO9dpopNonceSSvpZ', symObjAddr: 0x1840, symBinAddr: 0x6AD78, symSize: 0x0 }
   - { offsetInCU: 0xEF, offset: 0x5D016, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver11AccessTokenC5valueSSvgTo', symObjAddr: 0x0, symBinAddr: 0x4365C, symSize: 0x4C }
   - { offsetInCU: 0x12A, offset: 0x5D051, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver11AccessTokenC5valueSSvg', symObjAddr: 0x4C, symBinAddr: 0x436A8, symSize: 0x38 }
   - { offsetInCU: 0x167, offset: 0x5D08E, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver11AccessTokenC9expiresOn10Foundation4DateVvgTo', symObjAddr: 0x84, symBinAddr: 0x436E0, symSize: 0x28 }
@@ -1781,7 +1781,7 @@ relocations:
   - { offsetInCU: 0xF65, offset: 0x5DE8C, size: 0x8, addend: 0x0, symName: '_$sSo8NSObjectCMa', symObjAddr: 0x1694, symBinAddr: 0x44C48, symSize: 0x3C }
   - { offsetInCU: 0xF79, offset: 0x5DEA0, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver11AccessTokenCMU', symObjAddr: 0x16D0, symBinAddr: 0x44C84, symSize: 0x8 }
   - { offsetInCU: 0xF8D, offset: 0x5DEB4, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver11AccessTokenCMr', symObjAddr: 0x16D8, symBinAddr: 0x44C8C, symSize: 0x78 }
-  - { offsetInCU: 0x4F, offset: 0x5E109, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC6shared33_22109F7235A2DF86F19C421E4DEA0C64LLACvpZ', symObjAddr: 0x2188, symBinAddr: 0x6AE20, symSize: 0x0 }
+  - { offsetInCU: 0x4F, offset: 0x5E109, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC6shared33_22109F7235A2DF86F19C421E4DEA0C64LLACvpZ', symObjAddr: 0x2188, symBinAddr: 0x6AE18, symSize: 0x0 }
   - { offsetInCU: 0x69, offset: 0x5E123, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerCACyc33_22109F7235A2DF86F19C421E4DEA0C64Llfc', symObjAddr: 0x0, symBinAddr: 0x44D80, symSize: 0x404 }
   - { offsetInCU: 0x2AF, offset: 0x5E369, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerCACyc33_22109F7235A2DF86F19C421E4DEA0C64LlfcTo', symObjAddr: 0x404, symBinAddr: 0x45184, symSize: 0x20 }
   - { offsetInCU: 0x2DC, offset: 0x5E396, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC12followUpTagsSayAA06FollowF3Tag_pGvgZ', symObjAddr: 0x478, symBinAddr: 0x451F8, symSize: 0x6C }
@@ -1858,13 +1858,13 @@ relocations:
   - { offsetInCU: 0xD55, offset: 0x5EE0F, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC4info11followUpTag7message4file4lineyAA06FollowgH0_p_SSyXASSSitFSSycfu_', symObjAddr: 0x1104, symBinAddr: 0x45E84, symSize: 0x20 }
   - { offsetInCU: 0xD6D, offset: 0x5EE27, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerCfD', symObjAddr: 0x1124, symBinAddr: 0x45EA4, symSize: 0x30 }
   - { offsetInCU: 0xDBA, offset: 0x5EE74, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC12followUpTagsSayAA06FollowF3Tag_pGvWZTf4d_n', symObjAddr: 0x1E6C, symBinAddr: 0x46BEC, symSize: 0x1E0 }
-  - { offsetInCU: 0xF53, offset: 0x5F00D, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC16followUpTagNames33_22109F7235A2DF86F19C421E4DEA0C64LLShySSGvpZ', symObjAddr: 0x2190, symBinAddr: 0x6AE28, symSize: 0x0 }
-  - { offsetInCU: 0xF6D, offset: 0x5F027, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC12followUpTagsSayAA06FollowF3Tag_pGvpZ', symObjAddr: 0x2198, symBinAddr: 0x6AE30, symSize: 0x0 }
-  - { offsetInCU: 0xF87, offset: 0x5F041, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC14isDebugEnabledSbvpZ', symObjAddr: 0x21A0, symBinAddr: 0x6AE38, symSize: 0x0 }
-  - { offsetInCU: 0xFA1, offset: 0x5F05B, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC13isInfoEnabledSbvpZ', symObjAddr: 0x21A1, symBinAddr: 0x6AE39, symSize: 0x0 }
-  - { offsetInCU: 0xFBB, offset: 0x5F075, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC16isWarningEnabledSbvpZ', symObjAddr: 0x21A2, symBinAddr: 0x6AE3A, symSize: 0x0 }
-  - { offsetInCU: 0xFD5, offset: 0x5F08F, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC14isErrorEnabledSbvpZ', symObjAddr: 0x21A3, symBinAddr: 0x6AE3B, symSize: 0x0 }
-  - { offsetInCU: 0xFEF, offset: 0x5F0A9, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC22isSensitiveValueMaskedSbvpZ', symObjAddr: 0x21A4, symBinAddr: 0x6AE3C, symSize: 0x0 }
+  - { offsetInCU: 0xF53, offset: 0x5F00D, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC16followUpTagNames33_22109F7235A2DF86F19C421E4DEA0C64LLShySSGvpZ', symObjAddr: 0x2190, symBinAddr: 0x6AE20, symSize: 0x0 }
+  - { offsetInCU: 0xF6D, offset: 0x5F027, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC12followUpTagsSayAA06FollowF3Tag_pGvpZ', symObjAddr: 0x2198, symBinAddr: 0x6AE28, symSize: 0x0 }
+  - { offsetInCU: 0xF87, offset: 0x5F041, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC14isDebugEnabledSbvpZ', symObjAddr: 0x21A0, symBinAddr: 0x6AE30, symSize: 0x0 }
+  - { offsetInCU: 0xFA1, offset: 0x5F05B, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC13isInfoEnabledSbvpZ', symObjAddr: 0x21A1, symBinAddr: 0x6AE31, symSize: 0x0 }
+  - { offsetInCU: 0xFBB, offset: 0x5F075, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC16isWarningEnabledSbvpZ', symObjAddr: 0x21A2, symBinAddr: 0x6AE32, symSize: 0x0 }
+  - { offsetInCU: 0xFD5, offset: 0x5F08F, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC14isErrorEnabledSbvpZ', symObjAddr: 0x21A3, symBinAddr: 0x6AE33, symSize: 0x0 }
+  - { offsetInCU: 0xFEF, offset: 0x5F0A9, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC22isSensitiveValueMaskedSbvpZ', symObjAddr: 0x21A4, symBinAddr: 0x6AE34, symSize: 0x0 }
   - { offsetInCU: 0x115A, offset: 0x5F214, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC6shared33_22109F7235A2DF86F19C421E4DEA0C64LL_WZ', symObjAddr: 0x424, symBinAddr: 0x451A4, symSize: 0x2C }
   - { offsetInCU: 0x118A, offset: 0x5F244, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC16followUpTagNames33_22109F7235A2DF86F19C421E4DEA0C64LL_WZ', symObjAddr: 0x450, symBinAddr: 0x451D0, symSize: 0x14 }
   - { offsetInCU: 0x11A4, offset: 0x5F25E, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6LoggerC12followUpTags_WZ', symObjAddr: 0x464, symBinAddr: 0x451E4, symSize: 0x14 }
@@ -1882,41 +1882,39 @@ relocations:
   - { offsetInCU: 0x191D, offset: 0x5F9D7, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver8Loggable_pWOb', symObjAddr: 0x209C, symBinAddr: 0x46DF8, symSize: 0x18 }
   - { offsetInCU: 0x1931, offset: 0x5F9EB, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver11FollowUpTag_pWOc', symObjAddr: 0x20D4, symBinAddr: 0x46E10, symSize: 0x44 }
   - { offsetInCU: 0x1A29, offset: 0x5FAE3, size: 0x8, addend: 0x0, symName: '_$sShyShyxGqd__nc7ElementQyd__RszSTRd__lufCSS_SaySSGTg5Tf4gn_n', symObjAddr: 0x1DD8, symBinAddr: 0x46B58, symSize: 0x94 }
-  - { offsetInCU: 0x4F, offset: 0x5FDA8, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC11defaultName33_C229099AFA733F69BC3D60B64C3624DDLLSSvpZ', symObjAddr: 0xF00, symBinAddr: 0x6AE78, symSize: 0x0 }
-  - { offsetInCU: 0x5D, offset: 0x5FDB6, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC11defaultName33_C229099AFA733F69BC3D60B64C3624DDLL_WZ', symObjAddr: 0x0, symBinAddr: 0x46E80, symSize: 0x20 }
-  - { offsetInCU: 0x92, offset: 0x5FDEB, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC13tokenEndpoint8clientIdAC10Foundation3URLV_SStcfC', symObjAddr: 0x20, symBinAddr: 0x46EA0, symSize: 0x58 }
-  - { offsetInCU: 0xC6, offset: 0x5FE1F, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC13tokenEndpoint8clientIdAC10Foundation3URLV_SStcfc', symObjAddr: 0x78, symBinAddr: 0x46EF8, symSize: 0x30 }
-  - { offsetInCU: 0xDA, offset: 0x5FE33, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC13tokenEndpoint8clientIdAC10Foundation3URLV_SStcfcTo', symObjAddr: 0xA8, symBinAddr: 0x46F28, symSize: 0x94 }
-  - { offsetInCU: 0x136, offset: 0x5FE8F, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC7setNameyACSSF', symObjAddr: 0x13C, symBinAddr: 0x46FBC, symSize: 0x40 }
-  - { offsetInCU: 0x1B1, offset: 0x5FF0A, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC7setNameyACSSFTo', symObjAddr: 0x17C, symBinAddr: 0x46FFC, symSize: 0x50 }
-  - { offsetInCU: 0x248, offset: 0x5FFA1, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC21setInternalUrlSessionyACSo12NSURLSessionCF', symObjAddr: 0x1CC, symBinAddr: 0x4704C, symSize: 0x38 }
-  - { offsetInCU: 0x2C1, offset: 0x6001A, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC21setInternalUrlSessionyACSo12NSURLSessionCFTo', symObjAddr: 0x204, symBinAddr: 0x47084, symSize: 0x4C }
-  - { offsetInCU: 0x354, offset: 0x600AD, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC03setbD6MinTtlyACSdF', symObjAddr: 0x250, symBinAddr: 0x470D0, symSize: 0x14 }
-  - { offsetInCU: 0x3CD, offset: 0x60126, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC03setbD6MinTtlyACSdFTo', symObjAddr: 0x264, symBinAddr: 0x470E4, symSize: 0x10 }
-  - { offsetInCU: 0x3ED, offset: 0x60146, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC03setbD6MinTtlyACSdFTo', symObjAddr: 0x264, symBinAddr: 0x470E4, symSize: 0x10 }
-  - { offsetInCU: 0x413, offset: 0x6016C, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC03setbD6MinTtlyACSdFTo', symObjAddr: 0x264, symBinAddr: 0x470E4, symSize: 0x10 }
-  - { offsetInCU: 0x462, offset: 0x601BB, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC29disableDeviceCheckAttestationACyF', symObjAddr: 0x274, symBinAddr: 0x470F4, symSize: 0x14 }
-  - { offsetInCU: 0x4C4, offset: 0x6021D, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC29disableDeviceCheckAttestationACyFTo', symObjAddr: 0x288, symBinAddr: 0x47108, symSize: 0x10 }
-  - { offsetInCU: 0x4E4, offset: 0x6023D, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC29disableDeviceCheckAttestationACyFTo', symObjAddr: 0x288, symBinAddr: 0x47108, symSize: 0x10 }
-  - { offsetInCU: 0x501, offset: 0x6025A, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC29disableDeviceCheckAttestationACyFTo', symObjAddr: 0x288, symBinAddr: 0x47108, symSize: 0x10 }
-  - { offsetInCU: 0x54E, offset: 0x602A7, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC27setAttestationMaxRetryCount10maxRetriesACSi_tF', symObjAddr: 0x298, symBinAddr: 0x47118, symSize: 0x14 }
-  - { offsetInCU: 0x578, offset: 0x602D1, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC27setAttestationMaxRetryCount10maxRetriesACSi_tF', symObjAddr: 0x298, symBinAddr: 0x47118, symSize: 0x14 }
-  - { offsetInCU: 0x5C5, offset: 0x6031E, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC27setAttestationMaxRetryCount10maxRetriesACSi_tFTo', symObjAddr: 0x2AC, symBinAddr: 0x4712C, symSize: 0x10 }
-  - { offsetInCU: 0x5E5, offset: 0x6033E, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC27setAttestationMaxRetryCount10maxRetriesACSi_tFTo', symObjAddr: 0x2AC, symBinAddr: 0x4712C, symSize: 0x10 }
-  - { offsetInCU: 0x60A, offset: 0x60363, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC27setAttestationMaxRetryCount10maxRetriesACSi_tFTo', symObjAddr: 0x2AC, symBinAddr: 0x4712C, symSize: 0x10 }
-  - { offsetInCU: 0x66A, offset: 0x603C3, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC5buildAA0bdE0CyKF', symObjAddr: 0x2BC, symBinAddr: 0x4713C, symSize: 0x210 }
-  - { offsetInCU: 0x745, offset: 0x6049E, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC5buildAA0bdE0CyKFAFyXEfU_', symObjAddr: 0x4CC, symBinAddr: 0x4734C, symSize: 0x2CC }
-  - { offsetInCU: 0x9EB, offset: 0x60744, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC5buildAA0bdE0CyKFTo', symObjAddr: 0x798, symBinAddr: 0x47618, symSize: 0x8C }
-  - { offsetInCU: 0xA1D, offset: 0x60776, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderCACycfC', symObjAddr: 0x824, symBinAddr: 0x476A4, symSize: 0x20 }
-  - { offsetInCU: 0xA3B, offset: 0x60794, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderCACycfc', symObjAddr: 0x844, symBinAddr: 0x476C4, symSize: 0x2C }
-  - { offsetInCU: 0xA9E, offset: 0x607F7, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderCACycfcTo', symObjAddr: 0x870, symBinAddr: 0x476F0, symSize: 0x2C }
-  - { offsetInCU: 0xB05, offset: 0x6085E, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderCfD', symObjAddr: 0x89C, symBinAddr: 0x4771C, symSize: 0x34 }
-  - { offsetInCU: 0xB32, offset: 0x6088B, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC13tokenEndpoint8clientIdAC10Foundation3URLV_SStcfcTf4ngn_n', symObjAddr: 0xAE0, symBinAddr: 0x47960, symSize: 0x1A4 }
-  - { offsetInCU: 0xD75, offset: 0x60ACE, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderCfETo', symObjAddr: 0x8D0, symBinAddr: 0x47750, symSize: 0x78 }
-  - { offsetInCU: 0xE0D, offset: 0x60B66, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderCMa', symObjAddr: 0xCC8, symBinAddr: 0x47B04, symSize: 0x3C }
-  - { offsetInCU: 0xE21, offset: 0x60B7A, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderCMU', symObjAddr: 0xD04, symBinAddr: 0x47B40, symSize: 0x8 }
-  - { offsetInCU: 0xE35, offset: 0x60B8E, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderCMr', symObjAddr: 0xD0C, symBinAddr: 0x47B48, symSize: 0x9C }
-  - { offsetInCU: 0xE49, offset: 0x60BA2, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver18AttestationManager_pWOc', symObjAddr: 0xE74, symBinAddr: 0x47CB0, symSize: 0x44 }
-  - { offsetInCU: 0xE5D, offset: 0x60BB6, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver7Storage_pWOb', symObjAddr: 0xED8, symBinAddr: 0x47CF4, symSize: 0x18 }
-  - { offsetInCU: 0xEEA, offset: 0x60C43, size: 0x8, addend: 0x0, symName: '_$sSTsE8contains5whereS2b7ElementQzKXE_tKFSDySS16IdsvrHaapiDriver0E12TokenManagerCG_Tg504$s16de10Driver0B19gH61TrackerV8contains4nameSbSS_tFZSbSS3key_AA0bdE0C5valuet_tXEfU_SSTf1cn_nTf4ng_n', symObjAddr: 0x948, symBinAddr: 0x477C8, symSize: 0x198 }
+  - { offsetInCU: 0x83, offset: 0x5FDDC, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC13tokenEndpoint8clientIdAC10Foundation3URLV_SStcfC', symObjAddr: 0x0, symBinAddr: 0x46E80, symSize: 0x124 }
+  - { offsetInCU: 0xD3, offset: 0x5FE2C, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC13tokenEndpoint8clientIdAC10Foundation3URLV_SStcfc', symObjAddr: 0x124, symBinAddr: 0x46FA4, symSize: 0x30 }
+  - { offsetInCU: 0xFA, offset: 0x5FE53, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC13tokenEndpoint8clientIdAC10Foundation3URLV_SStcfcTo', symObjAddr: 0x154, symBinAddr: 0x46FD4, symSize: 0x94 }
+  - { offsetInCU: 0x156, offset: 0x5FEAF, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC7setNameyACSSF', symObjAddr: 0x1E8, symBinAddr: 0x47068, symSize: 0x40 }
+  - { offsetInCU: 0x1D1, offset: 0x5FF2A, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC7setNameyACSSFTo', symObjAddr: 0x228, symBinAddr: 0x470A8, symSize: 0x50 }
+  - { offsetInCU: 0x268, offset: 0x5FFC1, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC21setInternalUrlSessionyACSo12NSURLSessionCF', symObjAddr: 0x278, symBinAddr: 0x470F8, symSize: 0x38 }
+  - { offsetInCU: 0x2E1, offset: 0x6003A, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC21setInternalUrlSessionyACSo12NSURLSessionCFTo', symObjAddr: 0x2B0, symBinAddr: 0x47130, symSize: 0x4C }
+  - { offsetInCU: 0x374, offset: 0x600CD, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC03setbD6MinTtlyACSdF', symObjAddr: 0x2FC, symBinAddr: 0x4717C, symSize: 0x14 }
+  - { offsetInCU: 0x3ED, offset: 0x60146, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC03setbD6MinTtlyACSdFTo', symObjAddr: 0x310, symBinAddr: 0x47190, symSize: 0x10 }
+  - { offsetInCU: 0x40D, offset: 0x60166, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC03setbD6MinTtlyACSdFTo', symObjAddr: 0x310, symBinAddr: 0x47190, symSize: 0x10 }
+  - { offsetInCU: 0x433, offset: 0x6018C, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC03setbD6MinTtlyACSdFTo', symObjAddr: 0x310, symBinAddr: 0x47190, symSize: 0x10 }
+  - { offsetInCU: 0x482, offset: 0x601DB, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC29disableDeviceCheckAttestationACyF', symObjAddr: 0x320, symBinAddr: 0x471A0, symSize: 0x14 }
+  - { offsetInCU: 0x4E4, offset: 0x6023D, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC29disableDeviceCheckAttestationACyFTo', symObjAddr: 0x334, symBinAddr: 0x471B4, symSize: 0x10 }
+  - { offsetInCU: 0x504, offset: 0x6025D, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC29disableDeviceCheckAttestationACyFTo', symObjAddr: 0x334, symBinAddr: 0x471B4, symSize: 0x10 }
+  - { offsetInCU: 0x521, offset: 0x6027A, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC29disableDeviceCheckAttestationACyFTo', symObjAddr: 0x334, symBinAddr: 0x471B4, symSize: 0x10 }
+  - { offsetInCU: 0x56E, offset: 0x602C7, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC27setAttestationMaxRetryCount10maxRetriesACSi_tF', symObjAddr: 0x344, symBinAddr: 0x471C4, symSize: 0x14 }
+  - { offsetInCU: 0x598, offset: 0x602F1, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC27setAttestationMaxRetryCount10maxRetriesACSi_tF', symObjAddr: 0x344, symBinAddr: 0x471C4, symSize: 0x14 }
+  - { offsetInCU: 0x5E5, offset: 0x6033E, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC27setAttestationMaxRetryCount10maxRetriesACSi_tFTo', symObjAddr: 0x358, symBinAddr: 0x471D8, symSize: 0x10 }
+  - { offsetInCU: 0x605, offset: 0x6035E, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC27setAttestationMaxRetryCount10maxRetriesACSi_tFTo', symObjAddr: 0x358, symBinAddr: 0x471D8, symSize: 0x10 }
+  - { offsetInCU: 0x62A, offset: 0x60383, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC27setAttestationMaxRetryCount10maxRetriesACSi_tFTo', symObjAddr: 0x358, symBinAddr: 0x471D8, symSize: 0x10 }
+  - { offsetInCU: 0x68A, offset: 0x603E3, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC5buildAA0bdE0CyKF', symObjAddr: 0x368, symBinAddr: 0x471E8, symSize: 0x210 }
+  - { offsetInCU: 0x765, offset: 0x604BE, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC5buildAA0bdE0CyKFAFyXEfU_', symObjAddr: 0x578, symBinAddr: 0x473F8, symSize: 0x378 }
+  - { offsetInCU: 0xAB5, offset: 0x6080E, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC5buildAA0bdE0CyKFTo', symObjAddr: 0x8F0, symBinAddr: 0x47770, symSize: 0x8C }
+  - { offsetInCU: 0xAE7, offset: 0x60840, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderCACycfC', symObjAddr: 0x97C, symBinAddr: 0x477FC, symSize: 0x20 }
+  - { offsetInCU: 0xB05, offset: 0x6085E, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderCACycfc', symObjAddr: 0x99C, symBinAddr: 0x4781C, symSize: 0x2C }
+  - { offsetInCU: 0xB68, offset: 0x608C1, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderCACycfcTo', symObjAddr: 0x9C8, symBinAddr: 0x47848, symSize: 0x2C }
+  - { offsetInCU: 0xBCF, offset: 0x60928, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderCfD', symObjAddr: 0x9F4, symBinAddr: 0x47874, symSize: 0x34 }
+  - { offsetInCU: 0xBFC, offset: 0x60955, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderC13tokenEndpoint8clientIdAC10Foundation3URLV_SStcfcTf4ngn_n', symObjAddr: 0xC38, symBinAddr: 0x47AB8, symSize: 0x114 }
+  - { offsetInCU: 0xE32, offset: 0x60B8B, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderCfETo', symObjAddr: 0xA28, symBinAddr: 0x478A8, symSize: 0x78 }
+  - { offsetInCU: 0xEB9, offset: 0x60C12, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderCMa', symObjAddr: 0xD90, symBinAddr: 0x47BCC, symSize: 0x3C }
+  - { offsetInCU: 0xECD, offset: 0x60C26, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderCMU', symObjAddr: 0xDCC, symBinAddr: 0x47C08, symSize: 0x8 }
+  - { offsetInCU: 0xEE1, offset: 0x60C3A, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerBuilderCMr', symObjAddr: 0xDD4, symBinAddr: 0x47C10, symSize: 0x9C }
+  - { offsetInCU: 0xEF5, offset: 0x60C4E, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver18AttestationManager_pWOc', symObjAddr: 0xF3C, symBinAddr: 0x47D78, symSize: 0x44 }
+  - { offsetInCU: 0xF09, offset: 0x60C62, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver7Storage_pWOb', symObjAddr: 0xFA0, symBinAddr: 0x47DBC, symSize: 0x18 }
+  - { offsetInCU: 0xF97, offset: 0x60CF0, size: 0x8, addend: 0x0, symName: '_$sSTsE8contains5whereS2b7ElementQzKXE_tKFSDySS16IdsvrHaapiDriver0E12TokenManagerCG_Tg504$s16de10Driver0B19gH61TrackerV8contains4nameSbSS_tFZSbSS3key_AA0bdE0C5valuet_tXEfU_SSTf1cn_nTf4ng_n', symObjAddr: 0xAA0, symBinAddr: 0x47920, symSize: 0x198 }
 ...
