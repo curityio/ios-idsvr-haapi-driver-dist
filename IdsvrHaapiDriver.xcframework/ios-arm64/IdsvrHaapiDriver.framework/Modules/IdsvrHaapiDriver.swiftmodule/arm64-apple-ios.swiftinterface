@@ -281,6 +281,20 @@ public class HaapiClient : ObjectiveC.NSObject {
   @objc public static var isSensitiveValueMasked: Swift.Bool
   @objc deinit
 }
+public enum LogType : Swift.String {
+  case debug
+  case error
+  case info
+  case warning
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol LogSink {
+  func writeLog(logType: IdsvrHaapiDriver.LogType, followUpTag: any IdsvrHaapiDriver.FollowUpTag, message: Swift.String, file: Swift.String, line: Swift.Int)
+}
 @objc @available(iOS 14.0, *)
 @objcMembers public class HaapiTokenManagerBuilder : ObjectiveC.NSObject {
   @objc public init(tokenEndpoint: Foundation.URL, clientId: Swift.String)
@@ -306,3 +320,6 @@ extension IdsvrHaapiDriver.MimeTypes : Swift.RawRepresentable {}
 extension IdsvrHaapiDriver.DriverFollowUpTag : Swift.Equatable {}
 extension IdsvrHaapiDriver.DriverFollowUpTag : Swift.Hashable {}
 extension IdsvrHaapiDriver.DriverFollowUpTag : Swift.RawRepresentable {}
+extension IdsvrHaapiDriver.LogType : Swift.Equatable {}
+extension IdsvrHaapiDriver.LogType : Swift.Hashable {}
+extension IdsvrHaapiDriver.LogType : Swift.RawRepresentable {}
