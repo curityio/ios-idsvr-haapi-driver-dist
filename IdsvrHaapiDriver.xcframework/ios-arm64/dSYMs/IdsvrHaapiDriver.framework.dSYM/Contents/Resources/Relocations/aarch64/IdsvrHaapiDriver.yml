@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/curity/Library/Developer/Xcode/DerivedData/ios-cat-amnllxujugridfghjaskequlyemx/Build/Intermediates.noindex/ArchiveIntermediates/IdsvrHaapiDriver/InstallationBuildProductsLocation/Library/Frameworks/IdsvrHaapiDriver.framework/IdsvrHaapiDriver'
+binary-path:     '/Users/curity/Library/Developer/Xcode/DerivedData/ios-cat-frkzsuvstvrtslgfzomrvpriwqap/Build/Intermediates.noindex/ArchiveIntermediates/IdsvrHaapiDriver/InstallationBuildProductsLocation/Library/Frameworks/IdsvrHaapiDriver.framework/IdsvrHaapiDriver'
 relocations:
   - { offsetInCU: 0x34, offset: 0x32175, size: 0x8, addend: 0x0, symName: _IdsvrHaapiDriverVersionString, symObjAddr: 0x0, symBinAddr: 0x6C6C0, symSize: 0x0 }
   - { offsetInCU: 0x69, offset: 0x321AA, size: 0x8, addend: 0x0, symName: _IdsvrHaapiDriverVersionNumber, symObjAddr: 0x40, symBinAddr: 0x6C700, symSize: 0x0 }
@@ -1380,7 +1380,7 @@ relocations:
   - { offsetInCU: 0x65B, offset: 0x69E90, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0C11FollowUpTagO8allCasesSayACGvgZ', symObjAddr: 0x234, symBinAddr: 0x4581C, symSize: 0x28 }
   - { offsetInCU: 0x2B, offset: 0x69F33, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV24tokenManagersByNameGuard33_4AC41FAADE72BCD294F045B78623F81BLL_WZ', symObjAddr: 0x0, symBinAddr: 0x45D7C, symSize: 0x20 }
   - { offsetInCU: 0x4F, offset: 0x69F57, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV24tokenManagersByNameGuard33_4AC41FAADE72BCD294F045B78623F81BLLSo21OS_dispatch_semaphoreCvpZ', symObjAddr: 0x2A0, symBinAddr: 0x89F18, symSize: 0x0 }
-  - { offsetInCU: 0x69, offset: 0x69F71, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV19tokenManagersByNameSDySSAA0bdE0CGvpZ', symObjAddr: 0x2ED0, symBinAddr: 0x906E0, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x69F71, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV19tokenManagersByNameSDySSAA0bdE0CGvpZ', symObjAddr: 0x2EC8, symBinAddr: 0x906E0, symSize: 0x0 }
   - { offsetInCU: 0x77, offset: 0x69F7F, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV24tokenManagersByNameGuard33_4AC41FAADE72BCD294F045B78623F81BLL_WZ', symObjAddr: 0x0, symBinAddr: 0x45D7C, symSize: 0x20 }
   - { offsetInCU: 0x91, offset: 0x69F99, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV19tokenManagersByName_WZ', symObjAddr: 0x20, symBinAddr: 0x45D9C, symSize: 0x40 }
   - { offsetInCU: 0xFB, offset: 0x6A003, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV3add4name7factoryAA0bdE0CSS_AHyXEtFZ04$s16ab10Driver0B19dE33BuilderC5buildAA0bdE0CyKFAFyXEfU_AA0bdeM0CTf1ncn_nTf4ndg_n', symObjAddr: 0x60, symBinAddr: 0x45DDC, symSize: 0x240 }

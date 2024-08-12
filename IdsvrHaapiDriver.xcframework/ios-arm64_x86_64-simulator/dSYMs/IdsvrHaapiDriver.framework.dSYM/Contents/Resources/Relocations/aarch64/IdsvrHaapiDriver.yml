@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/curity/Library/Developer/Xcode/DerivedData/ios-cat-amnllxujugridfghjaskequlyemx/Build/Intermediates.noindex/ArchiveIntermediates/IdsvrHaapiDriver/InstallationBuildProductsLocation/Library/Frameworks/IdsvrHaapiDriver.framework/IdsvrHaapiDriver'
+binary-path:     '/Users/curity/Library/Developer/Xcode/DerivedData/ios-cat-frkzsuvstvrtslgfzomrvpriwqap/Build/Intermediates.noindex/ArchiveIntermediates/IdsvrHaapiDriver/InstallationBuildProductsLocation/Library/Frameworks/IdsvrHaapiDriver.framework/IdsvrHaapiDriver'
 relocations:
   - { offsetInCU: 0x34, offset: 0x32886, size: 0x8, addend: 0x0, symName: _IdsvrHaapiDriverVersionString, symObjAddr: 0x0, symBinAddr: 0x65B00, symSize: 0x0 }
   - { offsetInCU: 0x69, offset: 0x328BB, size: 0x8, addend: 0x0, symName: _IdsvrHaapiDriverVersionNumber, symObjAddr: 0x40, symBinAddr: 0x65B40, symSize: 0x0 }
@@ -1364,7 +1364,7 @@ relocations:
   - { offsetInCU: 0x657, offset: 0x6A844, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0C11FollowUpTagO8allCasesSayACGvgZ', symObjAddr: 0x224, symBinAddr: 0x405C8, symSize: 0x24 }
   - { offsetInCU: 0x2B, offset: 0x6A8E7, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV24tokenManagersByNameGuard33_4AC41FAADE72BCD294F045B78623F81BLL_WZ', symObjAddr: 0x0, symBinAddr: 0x40AD4, symSize: 0x20 }
   - { offsetInCU: 0x4F, offset: 0x6A90B, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV24tokenManagersByNameGuard33_4AC41FAADE72BCD294F045B78623F81BLLSo21OS_dispatch_semaphoreCvpZ', symObjAddr: 0x288, symBinAddr: 0x84858, symSize: 0x0 }
-  - { offsetInCU: 0x69, offset: 0x6A925, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV19tokenManagersByNameSDySSAA0bdE0CGvpZ', symObjAddr: 0x2FE8, symBinAddr: 0x8ADC8, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x6A925, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV19tokenManagersByNameSDySSAA0bdE0CGvpZ', symObjAddr: 0x2FE0, symBinAddr: 0x8ADC8, symSize: 0x0 }
   - { offsetInCU: 0x77, offset: 0x6A933, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV24tokenManagersByNameGuard33_4AC41FAADE72BCD294F045B78623F81BLL_WZ', symObjAddr: 0x0, symBinAddr: 0x40AD4, symSize: 0x20 }
   - { offsetInCU: 0x91, offset: 0x6A94D, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV19tokenManagersByName_WZ', symObjAddr: 0x20, symBinAddr: 0x40AF4, symSize: 0x24 }
   - { offsetInCU: 0xFB, offset: 0x6A9B7, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B19TokenManagerTrackerV3add4name7factoryAA0bdE0CSS_AHyXEtFZ04$s16ab10Driver0B19dE33BuilderC5buildAA0bdE0CyKFAFyXEfU_AA0bdeM0CTf1ncn_nTf4ndg_n', symObjAddr: 0x44, symBinAddr: 0x40B18, symSize: 0x240 }
@@ -1583,7 +1583,7 @@ relocations:
   - { offsetInCU: 0x7191, offset: 0x7DC2C, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6ClientCACycfC', symObjAddr: 0x2590, symBinAddr: 0x4F6C4, symSize: 0x20 }
   - { offsetInCU: 0x71A5, offset: 0x7DC40, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6ClientCACycfc', symObjAddr: 0x25B0, symBinAddr: 0x4F6E4, symSize: 0x2C }
   - { offsetInCU: 0x71FE, offset: 0x7DC99, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver0B6ClientCfD', symObjAddr: 0x2608, symBinAddr: 0x4F73C, symSize: 0x30 }
-  - { offsetInCU: 0x4B, offset: 0x7DFDE, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver012SecKeyCryptoE8ProviderC0E4TypeSo11CFStringRefavpZ', symObjAddr: 0x1A950, symBinAddr: 0x8ADD0, symSize: 0x0 }
+  - { offsetInCU: 0x4B, offset: 0x7DFDE, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver012SecKeyCryptoE8ProviderC0E4TypeSo11CFStringRefavpZ', symObjAddr: 0x1A948, symBinAddr: 0x8ADD0, symSize: 0x0 }
   - { offsetInCU: 0x599, offset: 0x7E52C, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver30SecureEnclaveCryptoKeyProviderCMa', symObjAddr: 0x1758, symBinAddr: 0x5850C, symSize: 0x20 }
   - { offsetInCU: 0x5AD, offset: 0x7E540, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver012SecKeyCryptoE8ProviderC0E4Type_WZ', symObjAddr: 0x1778, symBinAddr: 0x5852C, symSize: 0x18 }
   - { offsetInCU: 0x653, offset: 0x7E5E6, size: 0x8, addend: 0x0, symName: '_$s16IdsvrHaapiDriver012SecKeyCryptoE8ProviderCMa', symObjAddr: 0x2F78, symBinAddr: 0x59D2C, symSize: 0x20 }
