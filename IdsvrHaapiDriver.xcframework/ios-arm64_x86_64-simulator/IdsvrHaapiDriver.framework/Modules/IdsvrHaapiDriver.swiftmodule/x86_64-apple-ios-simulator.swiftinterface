@@ -76,10 +76,12 @@ extension Foundation.Data {
   @objc deinit
 }
 @available(iOS 14, *)
-public enum HaapiError : Swift.Error {
+public enum HaapiError : IdsvrHaapiDriver.IdsvrError, Swift.Error {
   case communication(message: Swift.String, cause: (any Swift.Error)? = nil)
   case serverError(_: Swift.String, errorDescription: Swift.String, statusCode: Swift.Int)
+  @available(*, deprecated, message: "This case is being replaced by `serverError`.")
   case invalidStatusCode(_: Swift.Int)
+  case invalidURLResponse(_: Foundation.URLResponse?, reason: Swift.String, cause: (any Swift.Error)? = nil)
   case attestationNotSupported
   case attestationFailure(cause: (any Swift.Error)? = nil)
   case attestationKeyGenFailure(cause: (any Swift.Error)? = nil)
@@ -93,12 +95,28 @@ public enum HaapiError : Swift.Error {
   case illegalState(message: Swift.String)
   case invalidConfiguration(reason: Swift.String)
   case haapiTokenManagerAlreadyExists(name: Swift.String)
-}
-@available(iOS 14, *)
-extension IdsvrHaapiDriver.HaapiError : Foundation.LocalizedError {
+  public var failureReason: Swift.String {
+    get
+  }
   public var errorDescription: Swift.String? {
     get
   }
+  public var error: Swift.String {
+    get
+  }
+  public var cause: (any Swift.Error)? {
+    get
+  }
+  public var recoverySuggestion: IdsvrHaapiDriver.IdsvrErrorHandling {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @available(iOS 14, *)
+public class KeychainStorage : IdsvrHaapiDriver.Storage {
+  public func write(key: Swift.String, data: Foundation.Data) throws
+  public func read(key: Swift.String) throws -> Foundation.Data?
+  public func delete(key: Swift.String) throws
+  @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers @available(iOS 14, *)
 @objcMembers public class Dpop : ObjectiveC.NSObject, Swift.Codable {
@@ -196,13 +214,13 @@ public enum MimeTypes : Swift.String {
   @objc var keyPairType: IdsvrHaapiDriver.CryptoKeyType { get }
 }
 @_inheritsConvenienceInitializers @available(iOS 14.0, *)
-@objc public class UnboundedTokenConfiguration : ObjectiveC.NSObject, IdsvrHaapiDriver.TokenBoundConfiguration {
-  @objc public var keyPairType: IdsvrHaapiDriver.CryptoKeyType
+@objc final public class UnboundedTokenConfiguration : ObjectiveC.NSObject, IdsvrHaapiDriver.TokenBoundConfiguration {
+  @objc final public var keyPairType: IdsvrHaapiDriver.CryptoKeyType
   @objc override dynamic public init()
   @objc deinit
 }
 @available(iOS 14.0, *)
-@objc public class BoundedTokenConfiguration : ObjectiveC.NSObject, IdsvrHaapiDriver.TokenBoundConfiguration {
+@objc final public class BoundedTokenConfiguration : ObjectiveC.NSObject, IdsvrHaapiDriver.TokenBoundConfiguration {
   @objc final public let keyPairType: IdsvrHaapiDriver.CryptoKeyType
   public init(keyPairType: IdsvrHaapiDriver.CryptoKeyType = .secureEnclave)
   @objc deinit
@@ -224,13 +242,6 @@ public protocol Storage {
   func read(key: Swift.String) throws -> Foundation.Data?
   func write(key: Swift.String, data: Foundation.Data) throws
   func delete(key: Swift.String) throws
-}
-@_hasMissingDesignatedInitializers @available(iOS 14, *)
-public class KeychainStorage : IdsvrHaapiDriver.Storage {
-  public func write(key: Swift.String, data: Foundation.Data) throws
-  public func read(key: Swift.String) throws -> Foundation.Data?
-  public func delete(key: Swift.String) throws
-  @objc deinit
 }
 public enum DriverFollowUpTag : Swift.String, IdsvrHaapiDriver.FollowUpTag, Swift.CaseIterable {
   case flow
@@ -283,6 +294,33 @@ public class HaapiClient : ObjectiveC.NSObject {
 }
 @available(iOS 14.0, *)
 extension IdsvrHaapiDriver.CryptoKeyType : Swift.Codable {
+}
+public enum RetryCondition {
+  case now
+  case whenAppInForeground
+  public static func == (a: IdsvrHaapiDriver.RetryCondition, b: IdsvrHaapiDriver.RetryCondition) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum UnrecoverableAction : Swift.Equatable {
+  case modifyConfiguration(reason: Swift.String)
+  case introspectCause
+  case invalidPlatform
+  public static func == (a: IdsvrHaapiDriver.UnrecoverableAction, b: IdsvrHaapiDriver.UnrecoverableAction) -> Swift.Bool
+}
+public enum IdsvrErrorHandling {
+  case retryable(condition: IdsvrHaapiDriver.RetryCondition)
+  case newHaapiFlow
+  case unrecoverable(action: IdsvrHaapiDriver.UnrecoverableAction)
+}
+public protocol IdsvrError : Swift.Error {
+  var error: Swift.String { get }
+  var errorDescription: Swift.String? { get }
+  var failureReason: Swift.String { get }
+  var recoverySuggestion: IdsvrHaapiDriver.IdsvrErrorHandling { get }
+  var cause: (any Swift.Error)? { get }
 }
 @objc @_hasMissingDesignatedInitializers @available(iOS 14, *)
 @objcMembers public class AccessToken : ObjectiveC.NSObject {
@@ -370,6 +408,8 @@ extension IdsvrHaapiDriver.CryptoKeyType : Swift.Hashable {}
 extension IdsvrHaapiDriver.DriverFollowUpTag : Swift.Equatable {}
 extension IdsvrHaapiDriver.DriverFollowUpTag : Swift.Hashable {}
 extension IdsvrHaapiDriver.DriverFollowUpTag : Swift.RawRepresentable {}
+extension IdsvrHaapiDriver.RetryCondition : Swift.Equatable {}
+extension IdsvrHaapiDriver.RetryCondition : Swift.Hashable {}
 extension IdsvrHaapiDriver.LogType : Swift.Equatable {}
 extension IdsvrHaapiDriver.LogType : Swift.Hashable {}
 extension IdsvrHaapiDriver.LogType : Swift.RawRepresentable {}
