@@ -315,6 +315,13 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver11AccessToken") SWIFT_AVAILABILITY(ios,introd
 @property (nonatomic, readonly, copy) NSString * _Nonnull value;
 /// The expiration date of the Access Token
 @property (nonatomic, readonly, copy) NSDate * _Nonnull expiresOn;
+/// Return a <code>String</code> representation of the <code>AccessToken</code> instance, for example to be used for debugging
+///
+/// returns:
+/// a <code>String</code> representation of the <code>AccessToken</code> instance,
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+/// Return a <code>String</code> representation of the <code>AccessToken</code> instance, for example to be used for debugging.
+@property (nonatomic, readonly, copy) NSString * _Nonnull debugDescription;
 /// Calculate whether the Access Token is valid on a particular moment.
 /// The <code>minTtl</code> is used as threshold: the Access Token is considered valid if it is valid for at least <code>minTtl</code> seconds before it expires.
 /// \param atTime the moment that validity of the Access Token is calculated for
@@ -325,12 +332,6 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver11AccessToken") SWIFT_AVAILABILITY(ios,introd
 /// returns:
 /// true if the token is valid for the given <code>atTime</code> and <code>minTtl</code>, false if not
 - (BOOL)isValidAtTime:(NSDate * _Nonnull)atTime minTtl:(NSTimeInterval)minTtl SWIFT_WARN_UNUSED_RESULT;
-/// Return a <code>String</code> representation of the <code>AccessToken</code> instance, for example to be used for debugging
-///
-/// returns:
-/// a <code>String</code> representation of the <code>AccessToken</code> instance,
-@property (nonatomic, readonly, copy) NSString * _Nonnull description;
-@property (nonatomic, readonly, copy) NSString * _Nonnull debugDescription;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -559,9 +560,9 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver19DpopAccessTokenInfo") SWIFT_AVAILABILITY(io
 @interface DpopAccessTokenInfo : NSObject
 /// An <code>AccessToken</code> instance
 @property (nonatomic, readonly, strong) AccessToken * _Nonnull accessToken;
-/// An <code>Dpop</code> instance
+/// A <code>Dpop</code> instance
 @property (nonatomic, readonly, strong) Dpop * _Nonnull dpop;
-/// An <code>String</code> instance that represents the most recent DPoP nonce. Any Identity Server response may contain a
+/// A <code>String</code> instance that represents the most recent DPoP nonce. Any Identity Server response may contain a
 /// DPoP-Nonce header with a nonce string. This nonce needs be provided to all subsequent calls to the server.
 @property (nonatomic, readonly, copy) NSString * _Nullable dpopNonce;
 /// Return a String representation of the <code>DpopAccessTokenInfo</code> instance.
@@ -580,7 +581,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver19DpopAccessTokenInfo") SWIFT_AVAILABILITY(io
 /// returns:
 /// a String value with the <code>DPoP</code> proof token value
 - (NSString * _Nullable)dpopHeaderValueWithHttpMethod:(NSString * _Nonnull)httpMethod url:(NSURL * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-/// Calculate the value that can be used when the DPoP-bound Access Token is to be included in the <code>Authorization</code> HTTP request header.
+/// Calculates the value that can be used when the DPoP-bound Access Token is to be included in the <code>Authorization</code> HTTP request header.
 ///
 /// returns:
 /// the value that can be used in a <code>AuthorizationHeader</code> HTTP request header.
@@ -1259,6 +1260,13 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver11AccessToken") SWIFT_AVAILABILITY(ios,introd
 @property (nonatomic, readonly, copy) NSString * _Nonnull value;
 /// The expiration date of the Access Token
 @property (nonatomic, readonly, copy) NSDate * _Nonnull expiresOn;
+/// Return a <code>String</code> representation of the <code>AccessToken</code> instance, for example to be used for debugging
+///
+/// returns:
+/// a <code>String</code> representation of the <code>AccessToken</code> instance,
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+/// Return a <code>String</code> representation of the <code>AccessToken</code> instance, for example to be used for debugging.
+@property (nonatomic, readonly, copy) NSString * _Nonnull debugDescription;
 /// Calculate whether the Access Token is valid on a particular moment.
 /// The <code>minTtl</code> is used as threshold: the Access Token is considered valid if it is valid for at least <code>minTtl</code> seconds before it expires.
 /// \param atTime the moment that validity of the Access Token is calculated for
@@ -1269,12 +1277,6 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver11AccessToken") SWIFT_AVAILABILITY(ios,introd
 /// returns:
 /// true if the token is valid for the given <code>atTime</code> and <code>minTtl</code>, false if not
 - (BOOL)isValidAtTime:(NSDate * _Nonnull)atTime minTtl:(NSTimeInterval)minTtl SWIFT_WARN_UNUSED_RESULT;
-/// Return a <code>String</code> representation of the <code>AccessToken</code> instance, for example to be used for debugging
-///
-/// returns:
-/// a <code>String</code> representation of the <code>AccessToken</code> instance,
-@property (nonatomic, readonly, copy) NSString * _Nonnull description;
-@property (nonatomic, readonly, copy) NSString * _Nonnull debugDescription;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1503,9 +1505,9 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver19DpopAccessTokenInfo") SWIFT_AVAILABILITY(io
 @interface DpopAccessTokenInfo : NSObject
 /// An <code>AccessToken</code> instance
 @property (nonatomic, readonly, strong) AccessToken * _Nonnull accessToken;
-/// An <code>Dpop</code> instance
+/// A <code>Dpop</code> instance
 @property (nonatomic, readonly, strong) Dpop * _Nonnull dpop;
-/// An <code>String</code> instance that represents the most recent DPoP nonce. Any Identity Server response may contain a
+/// A <code>String</code> instance that represents the most recent DPoP nonce. Any Identity Server response may contain a
 /// DPoP-Nonce header with a nonce string. This nonce needs be provided to all subsequent calls to the server.
 @property (nonatomic, readonly, copy) NSString * _Nullable dpopNonce;
 /// Return a String representation of the <code>DpopAccessTokenInfo</code> instance.
@@ -1524,7 +1526,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver19DpopAccessTokenInfo") SWIFT_AVAILABILITY(io
 /// returns:
 /// a String value with the <code>DPoP</code> proof token value
 - (NSString * _Nullable)dpopHeaderValueWithHttpMethod:(NSString * _Nonnull)httpMethod url:(NSURL * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-/// Calculate the value that can be used when the DPoP-bound Access Token is to be included in the <code>Authorization</code> HTTP request header.
+/// Calculates the value that can be used when the DPoP-bound Access Token is to be included in the <code>Authorization</code> HTTP request header.
 ///
 /// returns:
 /// the value that can be used in a <code>AuthorizationHeader</code> HTTP request header.
