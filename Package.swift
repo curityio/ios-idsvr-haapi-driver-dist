@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version: 6.2
 
 import PackageDescription
 
@@ -20,5 +20,5 @@ let package = Package(
             path: "IdsvrHaapiDriver.xcframework"
         )
     ],
-    swiftLanguageVersions: [.v5]
+    swiftLanguageModes: [.v6]
 )
