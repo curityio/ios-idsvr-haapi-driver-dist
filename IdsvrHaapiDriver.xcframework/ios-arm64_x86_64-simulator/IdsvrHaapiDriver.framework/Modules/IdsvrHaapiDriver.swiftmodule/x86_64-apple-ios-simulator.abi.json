@@ -179,6 +179,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IdsvrHaapiDriver",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "CryptoKit",
         "printedName": "CryptoKit",
         "declKind": "Import",
@@ -1969,6 +1979,7 @@
             "mangledName": "$s16IdsvrHaapiDriver15KeychainStorageC5write3key4dataySS_10Foundation4DataVtKF",
             "moduleName": "IdsvrHaapiDriver",
             "declAttributes": [
+              "Final",
               "AccessControl"
             ],
             "throwing": true,
@@ -2005,6 +2016,7 @@
             "mangledName": "$s16IdsvrHaapiDriver15KeychainStorageC4read3key10Foundation4DataVSgSS_tKF",
             "moduleName": "IdsvrHaapiDriver",
             "declAttributes": [
+              "Final",
               "AccessControl"
             ],
             "throwing": true,
@@ -2032,6 +2044,7 @@
             "mangledName": "$s16IdsvrHaapiDriver15KeychainStorageC6delete3keyySS_tKF",
             "moduleName": "IdsvrHaapiDriver",
             "declAttributes": [
+              "Final",
               "AccessControl"
             ],
             "throwing": true,
@@ -2044,6 +2057,7 @@
         "moduleName": "IdsvrHaapiDriver",
         "intro_iOS": "14",
         "declAttributes": [
+          "Final",
           "AccessControl",
           "Available"
         ],
@@ -2069,6 +2083,20 @@
             "printedName": "Storage",
             "usr": "s:16IdsvrHaapiDriver7StorageP",
             "mangledName": "$s16IdsvrHaapiDriver7StorageP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -2135,6 +2163,7 @@
             "mangledName": "$s16IdsvrHaapiDriver4DpopC13jwkThumbprintSSvp",
             "moduleName": "IdsvrHaapiDriver",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment",
               "ObjC"
@@ -2157,6 +2186,7 @@
                 "mangledName": "$s16IdsvrHaapiDriver4DpopC13jwkThumbprintSSvg",
                 "moduleName": "IdsvrHaapiDriver",
                 "declAttributes": [
+                  "Final",
                   "ObjC"
                 ],
                 "accessorKind": "get"
@@ -2195,7 +2225,7 @@
             "overriding": true,
             "objc_name": "isEqual:",
             "declAttributes": [
-              "Dynamic",
+              "Final",
               "ObjC",
               "AccessControl",
               "Override"
@@ -2224,6 +2254,7 @@
             "mangledName": "$s16IdsvrHaapiDriver4DpopC6encode2toys7Encoder_p_tKF",
             "moduleName": "IdsvrHaapiDriver",
             "declAttributes": [
+              "Final",
               "AccessControl"
             ],
             "throwing": true,
@@ -2317,6 +2348,7 @@
             "mangledName": "$s16IdsvrHaapiDriver4DpopC11createProof10httpMethod3url5nonce11accessTokenS2S_10Foundation3URLVSSSgALtKF",
             "moduleName": "IdsvrHaapiDriver",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment",
               "ObjC"
@@ -2383,6 +2415,7 @@
             "mangledName": "$s16IdsvrHaapiDriver4DpopC14getHeaderValue10httpMethod3url5nonce11accessTokenS2S_10Foundation3URLVSSSgALtKF",
             "moduleName": "IdsvrHaapiDriver",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment",
               "ObjC"
@@ -2423,6 +2456,7 @@
         "moduleName": "IdsvrHaapiDriver",
         "intro_iOS": "14",
         "declAttributes": [
+          "Final",
           "AccessControl",
           "ObjCMembers",
           "Available",
@@ -2448,6 +2482,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           },
           {
             "kind": "Conformance",
@@ -2518,6 +2559,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -2989,17 +3037,150 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "CryptoKit",
+        "printedName": "CryptoKit",
         "declKind": "Import",
         "moduleName": "IdsvrHaapiDriver"
       },
       {
         "kind": "Import",
-        "name": "CryptoKit",
-        "printedName": "CryptoKit",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "IdsvrHaapiDriver"
+        "moduleName": "IdsvrHaapiDriver",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RiskAssessmentConfiguration",
+        "printedName": "RiskAssessmentConfiguration",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(operatingSystemName:operatingSystemVersion:deviceModelName:applicatonIdentifier:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RiskAssessmentConfiguration",
+                "printedName": "IdsvrHaapiDriver.RiskAssessmentConfiguration",
+                "usr": "s:16IdsvrHaapiDriver27RiskAssessmentConfigurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16IdsvrHaapiDriver27RiskAssessmentConfigurationV19operatingSystemName0gH7Version011deviceModelI020applicatonIdentifierACSS_S3Stcfc",
+            "mangledName": "$s16IdsvrHaapiDriver27RiskAssessmentConfigurationV19operatingSystemName0gH7Version011deviceModelI020applicatonIdentifierACSS_S3Stcfc",
+            "moduleName": "IdsvrHaapiDriver",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RiskAssessmentConfiguration",
+                "printedName": "IdsvrHaapiDriver.RiskAssessmentConfiguration",
+                "usr": "s:16IdsvrHaapiDriver27RiskAssessmentConfigurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RiskAssessmentConfiguration",
+                "printedName": "IdsvrHaapiDriver.RiskAssessmentConfiguration",
+                "usr": "s:16IdsvrHaapiDriver27RiskAssessmentConfigurationV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IdsvrHaapiDriver27RiskAssessmentConfigurationV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s16IdsvrHaapiDriver27RiskAssessmentConfigurationV2eeoiySbAC_ACtFZ",
+            "moduleName": "IdsvrHaapiDriver",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16IdsvrHaapiDriver27RiskAssessmentConfigurationV",
+        "mangledName": "$s16IdsvrHaapiDriver27RiskAssessmentConfigurationV",
+        "moduleName": "IdsvrHaapiDriver",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -3323,13 +3504,6 @@
         "moduleName": "IdsvrHaapiDriver"
       },
       {
-        "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
-        "declKind": "Import",
-        "moduleName": "IdsvrHaapiDriver"
-      },
-      {
         "kind": "TypeDecl",
         "name": "HaapiTokenManager",
         "printedName": "HaapiTokenManager",
@@ -3355,14 +3529,13 @@
               }
             ],
             "declKind": "Var",
-            "usr": "c:@M@IdsvrHaapiDriver@objc(cs)HaapiTokenManager(py)dpop",
+            "usr": "s:16IdsvrHaapiDriver0B12TokenManagerC4dpopAA4DpopCSgvp",
             "mangledName": "$s16IdsvrHaapiDriver0B12TokenManagerC4dpopAA4DpopCSgvp",
             "moduleName": "IdsvrHaapiDriver",
             "declAttributes": [
               "Final",
               "AccessControl",
-              "RawDocComment",
-              "ObjC"
+              "RawDocComment"
             ],
             "accessors": [
               {
@@ -3386,12 +3559,11 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@IdsvrHaapiDriver@objc(cs)HaapiTokenManager(im)dpop",
+                "usr": "s:16IdsvrHaapiDriver0B12TokenManagerC4dpopAA4DpopCSgvg",
                 "mangledName": "$s16IdsvrHaapiDriver0B12TokenManagerC4dpopAA4DpopCSgvg",
                 "moduleName": "IdsvrHaapiDriver",
                 "declAttributes": [
-                  "Final",
-                  "ObjC"
+                  "Final"
                 ],
                 "accessorKind": "get"
               }
@@ -3426,47 +3598,6 @@
           {
             "kind": "Function",
             "name": "createClient",
-            "printedName": "createClient(urlSession:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "HaapiClient",
-                "printedName": "IdsvrHaapiDriver.HaapiClient",
-                "usr": "c:@M@IdsvrHaapiDriver@objc(cs)HaapiClient"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.URLSession?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "URLSession",
-                    "printedName": "Foundation.URLSession",
-                    "usr": "c:objc(cs)NSURLSession"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@IdsvrHaapiDriver@objc(cs)HaapiTokenManager(im)createClientWithUrlSession:",
-            "mangledName": "$s16IdsvrHaapiDriver0B12TokenManagerC12createClient10urlSessionAA0bG0CSo12NSURLSessionCSg_tF",
-            "moduleName": "IdsvrHaapiDriver",
-            "deprecated": true,
-            "declAttributes": [
-              "Final",
-              "Available",
-              "RawDocComment",
-              "ObjC"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "createClient",
             "printedName": "createClient()",
             "children": [
               {
@@ -3482,10 +3613,57 @@
             "moduleName": "IdsvrHaapiDriver",
             "declAttributes": [
               "Final",
-              "RawDocComment",
-              "ObjC"
+              "ObjC",
+              "RawDocComment"
             ],
             "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getHaapiTokenAsync",
+            "printedName": "getHaapiTokenAsync(forceFresh:dpopNonce:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DpopAccessTokenInfo",
+                "printedName": "IdsvrHaapiDriver.DpopAccessTokenInfo",
+                "usr": "c:@M@IdsvrHaapiDriver@objc(cs)DpopAccessTokenInfo"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IdsvrHaapiDriver0B12TokenManagerC03getbD5Async10forceFresh9dpopNonceAA010DpopAccessD4InfoCSb_SSSgtYaKF",
+            "mangledName": "$s16IdsvrHaapiDriver0B12TokenManagerC03getbD5Async10forceFresh9dpopNonceAA010DpopAccessD4InfoCSb_SSSgtYaKF",
+            "moduleName": "IdsvrHaapiDriver",
+            "declAttributes": [
+              "Final",
+              "Nonisolated",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -3554,11 +3732,13 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:16IdsvrHaapiDriver0B12TokenManagerC03getbD010forceFresh9dpopNonce17completionHandlerySb_SSSgys6ResultOyAA010DpopAccessD4InfoCAA0B5ErrorOGctF",
-            "mangledName": "$s16IdsvrHaapiDriver0B12TokenManagerC03getbD010forceFresh9dpopNonce17completionHandlerySb_SSSgys6ResultOyAA010DpopAccessD4InfoCAA0B5ErrorOGctF",
+            "usr": "s:16IdsvrHaapiDriver0B12TokenManagerC03getbD010forceFresh9dpopNonce17completionHandlerySb_SSSgys6ResultOyAA010DpopAccessD4InfoCAA0B5ErrorOGYbctF",
+            "mangledName": "$s16IdsvrHaapiDriver0B12TokenManagerC03getbD010forceFresh9dpopNonce17completionHandlerySb_SSSgys6ResultOyAA010DpopAccessD4InfoCAA0B5ErrorOGYbctF",
             "moduleName": "IdsvrHaapiDriver",
+            "deprecated": true,
             "declAttributes": [
               "Final",
+              "Available",
               "RawDocComment"
             ],
             "isFromExtension": true,
@@ -3581,8 +3761,8 @@
             "moduleName": "IdsvrHaapiDriver",
             "declAttributes": [
               "Final",
-              "RawDocComment",
-              "ObjC"
+              "ObjC",
+              "RawDocComment"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -3604,8 +3784,8 @@
             "moduleName": "IdsvrHaapiDriver",
             "declAttributes": [
               "Final",
-              "RawDocComment",
-              "ObjC"
+              "ObjC",
+              "RawDocComment"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -3619,7 +3799,6 @@
         "declAttributes": [
           "Final",
           "AccessControl",
-          "ObjCMembers",
           "Available",
           "RawDocComment",
           "ObjC"
@@ -3630,6 +3809,13 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
           {
             "kind": "Conformance",
             "name": "Copyable",
@@ -3699,6 +3885,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -3775,171 +3968,6 @@
         "printedName": "OSLog",
         "declKind": "Import",
         "moduleName": "IdsvrHaapiDriver"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "FollowUpTag",
-        "printedName": "FollowUpTag",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "subsystem",
-            "printedName": "subsystem",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:16IdsvrHaapiDriver11FollowUpTagP9subsystemSSvp",
-            "mangledName": "$s16IdsvrHaapiDriver11FollowUpTagP9subsystemSSvp",
-            "moduleName": "IdsvrHaapiDriver",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:16IdsvrHaapiDriver11FollowUpTagP9subsystemSSvg",
-                "mangledName": "$s16IdsvrHaapiDriver11FollowUpTagP9subsystemSSvg",
-                "moduleName": "IdsvrHaapiDriver",
-                "genericSig": "<τ_0_0 where τ_0_0 : IdsvrHaapiDriver.FollowUpTag>",
-                "sugared_genericSig": "<Self where Self : IdsvrHaapiDriver.FollowUpTag>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "tagName",
-            "printedName": "tagName",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:16IdsvrHaapiDriver11FollowUpTagP7tagNameSSvp",
-            "mangledName": "$s16IdsvrHaapiDriver11FollowUpTagP7tagNameSSvp",
-            "moduleName": "IdsvrHaapiDriver",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:16IdsvrHaapiDriver11FollowUpTagP7tagNameSSvg",
-                "mangledName": "$s16IdsvrHaapiDriver11FollowUpTagP7tagNameSSvg",
-                "moduleName": "IdsvrHaapiDriver",
-                "genericSig": "<τ_0_0 where τ_0_0 : IdsvrHaapiDriver.FollowUpTag>",
-                "sugared_genericSig": "<Self where Self : IdsvrHaapiDriver.FollowUpTag>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "osLog",
-            "printedName": "osLog",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "OSLog",
-                "printedName": "os.OSLog",
-                "usr": "c:objc(cs)OS_os_log"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:16IdsvrHaapiDriver11FollowUpTagPAAE5osLogSo03OS_G4_logCvp",
-            "mangledName": "$s16IdsvrHaapiDriver11FollowUpTagPAAE5osLogSo03OS_G4_logCvp",
-            "moduleName": "IdsvrHaapiDriver",
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "OSLog",
-                    "printedName": "os.OSLog",
-                    "usr": "c:objc(cs)OS_os_log"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:16IdsvrHaapiDriver11FollowUpTagPAAE5osLogSo03OS_G4_logCvg",
-                "mangledName": "$s16IdsvrHaapiDriver11FollowUpTagPAAE5osLogSo03OS_G4_logCvg",
-                "moduleName": "IdsvrHaapiDriver",
-                "genericSig": "<τ_0_0 where τ_0_0 : IdsvrHaapiDriver.FollowUpTag>",
-                "sugared_genericSig": "<Self where Self : IdsvrHaapiDriver.FollowUpTag>",
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:16IdsvrHaapiDriver11FollowUpTagP",
-        "mangledName": "$s16IdsvrHaapiDriver11FollowUpTagP",
-        "moduleName": "IdsvrHaapiDriver",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          }
-        ]
       },
       {
         "kind": "Import",
@@ -5032,6 +5060,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -5105,8 +5147,8 @@
         "usr": "c:@M@IdsvrHaapiDriver@objc(pl)TokenBoundConfiguration",
         "mangledName": "$s16IdsvrHaapiDriver23TokenBoundConfigurationP",
         "moduleName": "IdsvrHaapiDriver",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
+        "genericSig": "<τ_0_0 : AnyObject, τ_0_0 : Swift.Sendable>",
+        "sugared_genericSig": "<Self : AnyObject, Self : Swift.Sendable>",
         "intro_iOS": "14.0",
         "declAttributes": [
           "AccessControl",
@@ -5128,6 +5170,20 @@
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -5160,6 +5216,7 @@
               "HasStorage",
               "AccessControl"
             ],
+            "isLet": true,
             "hasStorage": true,
             "accessors": [
               {
@@ -5185,57 +5242,6 @@
                   "ObjC"
                 ],
                 "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CryptoKeyType",
-                    "printedName": "IdsvrHaapiDriver.CryptoKeyType",
-                    "usr": "c:@M@IdsvrHaapiDriver@E@CryptoKeyType"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@IdsvrHaapiDriver@objc(cs)UnboundedTokenConfiguration(im)setKeyPairType:",
-                "mangledName": "$s16IdsvrHaapiDriver27UnboundedTokenConfigurationC11keyPairTypeAA09CryptoKeyI0Ovs",
-                "moduleName": "IdsvrHaapiDriver",
-                "implicit": true,
-                "declAttributes": [
-                  "Final",
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:16IdsvrHaapiDriver27UnboundedTokenConfigurationC11keyPairTypeAA09CryptoKeyI0OvM",
-                "mangledName": "$s16IdsvrHaapiDriver27UnboundedTokenConfigurationC11keyPairTypeAA09CryptoKeyI0OvM",
-                "moduleName": "IdsvrHaapiDriver",
-                "implicit": true,
-                "intro_iOS": "14.0",
-                "declAttributes": [
-                  "Final",
-                  "Available"
-                ],
-                "accessorKind": "_modify"
               }
             ]
           },
@@ -5360,6 +5366,20 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -5571,6 +5591,20 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -5711,6 +5745,16 @@
         "printedName": "Security",
         "declKind": "Import",
         "moduleName": "IdsvrHaapiDriver"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IdsvrHaapiDriver",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -6220,6 +6264,8 @@
         "usr": "s:16IdsvrHaapiDriver7StorageP",
         "mangledName": "$s16IdsvrHaapiDriver7StorageP",
         "moduleName": "IdsvrHaapiDriver",
+        "genericSig": "<τ_0_0 : Swift.Sendable>",
+        "sugared_genericSig": "<Self : Swift.Sendable>",
         "intro_iOS": "14",
         "declAttributes": [
           "AccessControl",
@@ -6240,6 +6286,20 @@
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -6758,6 +6818,20 @@
             ],
             "usr": "s:s12CaseIterableP",
             "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -6894,8 +6968,8 @@
         "usr": "c:@M@IdsvrHaapiDriver@objc(pl)ClientAuthenticationMethod",
         "mangledName": "$s16IdsvrHaapiDriver26ClientAuthenticationMethodP",
         "moduleName": "IdsvrHaapiDriver",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
+        "genericSig": "<τ_0_0 : AnyObject, τ_0_0 : Swift.Sendable>",
+        "sugared_genericSig": "<Self : AnyObject, Self : Swift.Sendable>",
         "declAttributes": [
           "AccessControl",
           "ObjC",
@@ -6915,6 +6989,20 @@
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -7042,6 +7130,20 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -7198,6 +7300,20 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -7288,6 +7404,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -7355,6 +7478,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -7600,6 +7730,20 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -8057,6 +8201,66 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[IdsvrHaapiDriver.JWTAsymmetricAlgorithm]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "JWTAsymmetricAlgorithm",
+                    "printedName": "IdsvrHaapiDriver.JWTAsymmetricAlgorithm",
+                    "usr": "c:@M@IdsvrHaapiDriver@E@JWTAsymmetricAlgorithm"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16IdsvrHaapiDriver22JWTAsymmetricAlgorithmO8allCasesSayACGvpZ",
+            "mangledName": "$s16IdsvrHaapiDriver22JWTAsymmetricAlgorithmO8allCasesSayACGvpZ",
+            "moduleName": "IdsvrHaapiDriver",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[IdsvrHaapiDriver.JWTAsymmetricAlgorithm]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JWTAsymmetricAlgorithm",
+                        "printedName": "IdsvrHaapiDriver.JWTAsymmetricAlgorithm",
+                        "usr": "c:@M@IdsvrHaapiDriver@E@JWTAsymmetricAlgorithm"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16IdsvrHaapiDriver22JWTAsymmetricAlgorithmO8allCasesSayACGvgZ",
+                "mangledName": "$s16IdsvrHaapiDriver22JWTAsymmetricAlgorithmO8allCasesSayACGvgZ",
+                "moduleName": "IdsvrHaapiDriver",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
           }
         ],
         "declKind": "Enum",
@@ -8121,6 +8325,50 @@
             ],
             "usr": "s:SY",
             "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[IdsvrHaapiDriver.JWTAsymmetricAlgorithm]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JWTAsymmetricAlgorithm",
+                        "printedName": "IdsvrHaapiDriver.JWTAsymmetricAlgorithm",
+                        "usr": "c:@M@IdsvrHaapiDriver@E@JWTAsymmetricAlgorithm"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -8197,6 +8445,7 @@
             "declAttributes": [
               "Final",
               "HasStorage",
+              "Nonisolated",
               "AccessControl",
               "RawDocComment"
             ],
@@ -8307,6 +8556,7 @@
           "Final",
           "AccessControl",
           "Available",
+          "RawDocComment",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
@@ -8320,6 +8570,13 @@
             "printedName": "ClientAuthenticationMethod",
             "usr": "c:@M@IdsvrHaapiDriver@objc(pl)ClientAuthenticationMethod",
             "mangledName": "$s16IdsvrHaapiDriver26ClientAuthenticationMethodP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           },
           {
             "kind": "Conformance",
@@ -8390,6 +8647,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -8749,6 +9013,20 @@
             ],
             "usr": "s:s12CaseIterableP",
             "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -9011,7 +9289,31 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IdsvrHaapiDriver",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -9251,6 +9553,20 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -9366,13 +9682,44 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:16IdsvrHaapiDriver0B6ClientC15performDataTask3for17completionHandlery10Foundation10URLRequestV_ys6ResultOyAA011ResponseAndF0Vs5Error_pGctF",
-            "mangledName": "$s16IdsvrHaapiDriver0B6ClientC15performDataTask3for17completionHandlery10Foundation10URLRequestV_ys6ResultOyAA011ResponseAndF0Vs5Error_pGctF",
+            "usr": "s:16IdsvrHaapiDriver0B6ClientC15performDataTask3for17completionHandlery10Foundation10URLRequestV_ys6ResultOyAA011ResponseAndF0Vs5Error_pGYbctF",
+            "mangledName": "$s16IdsvrHaapiDriver0B6ClientC15performDataTask3for17completionHandlery10Foundation10URLRequestV_ys6ResultOyAA011ResponseAndF0Vs5Error_pGYbctF",
             "moduleName": "IdsvrHaapiDriver",
+            "deprecated": true,
             "declAttributes": [
               "AccessControl",
+              "Available",
               "RawDocComment"
             ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "performDataTask",
+            "printedName": "performDataTask(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ResponseAndData",
+                "printedName": "IdsvrHaapiDriver.ResponseAndData",
+                "usr": "s:16IdsvrHaapiDriver15ResponseAndDataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IdsvrHaapiDriver0B6ClientC15performDataTask3forAA011ResponseAndF0V10Foundation10URLRequestV_tYaKF",
+            "mangledName": "$s16IdsvrHaapiDriver0B6ClientC15performDataTask3forAA011ResponseAndF0V10Foundation10URLRequestV_tYaKF",
+            "moduleName": "IdsvrHaapiDriver",
+            "declAttributes": [
+              "Nonisolated",
+              "AccessControl"
+            ],
+            "throwing": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -9419,6 +9766,13 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
           {
             "kind": "Conformance",
             "name": "Copyable",
@@ -9488,6 +9842,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -10833,6 +11194,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -10900,6 +11268,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -11096,7 +11471,7 @@
             "overriding": true,
             "objc_name": "description",
             "declAttributes": [
-              "Dynamic",
+              "Final",
               "ObjC",
               "AccessControl",
               "Override",
@@ -11122,7 +11497,7 @@
                 "overriding": true,
                 "objc_name": "description",
                 "declAttributes": [
-                  "Dynamic",
+                  "Final",
                   "ObjC"
                 ],
                 "accessorKind": "get"
@@ -11148,7 +11523,7 @@
             "overriding": true,
             "objc_name": "debugDescription",
             "declAttributes": [
-              "Dynamic",
+              "Final",
               "ObjC",
               "AccessControl",
               "Override",
@@ -11174,7 +11549,7 @@
                 "overriding": true,
                 "objc_name": "debugDescription",
                 "declAttributes": [
-                  "Dynamic",
+                  "Final",
                   "ObjC"
                 ],
                 "accessorKind": "get"
@@ -11210,6 +11585,7 @@
             "mangledName": "$s16IdsvrHaapiDriver19DpopAccessTokenInfoC15dpopHeaderValue10httpMethod3urlS2S_10Foundation3URLVtKF",
             "moduleName": "IdsvrHaapiDriver",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment",
               "ObjC"
@@ -11234,6 +11610,7 @@
             "mangledName": "$s16IdsvrHaapiDriver19DpopAccessTokenInfoC24authorizationHeaderValueSSyF",
             "moduleName": "IdsvrHaapiDriver",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment",
               "ObjC"
@@ -11272,7 +11649,7 @@
             "overriding": true,
             "objc_name": "isEqual:",
             "declAttributes": [
-              "Dynamic",
+              "Final",
               "ObjC",
               "AccessControl",
               "Override",
@@ -11313,6 +11690,7 @@
         "moduleName": "IdsvrHaapiDriver",
         "intro_iOS": "14",
         "declAttributes": [
+          "Final",
           "AccessControl",
           "ObjCMembers",
           "Available",
@@ -11325,6 +11703,13 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
           {
             "kind": "Conformance",
             "name": "Copyable",
@@ -11394,6 +11779,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -11445,13 +11837,10 @@
             "moduleName": "IdsvrHaapiDriver",
             "static": true,
             "declAttributes": [
-              "HasInitialValue",
               "Final",
-              "HasStorage",
               "AccessControl",
               "RawDocComment"
             ],
-            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -11478,7 +11867,6 @@
                 "mangledName": "$s16IdsvrHaapiDriver0B6LoggerC12followUpTagsSayAA06FollowF3Tag_pGvgZ",
                 "moduleName": "IdsvrHaapiDriver",
                 "static": true,
-                "implicit": true,
                 "declAttributes": [
                   "Final"
                 ],
@@ -11514,7 +11902,6 @@
                 "mangledName": "$s16IdsvrHaapiDriver0B6LoggerC12followUpTagsSayAA06FollowF3Tag_pGvsZ",
                 "moduleName": "IdsvrHaapiDriver",
                 "static": true,
-                "implicit": true,
                 "declAttributes": [
                   "Final"
                 ],
@@ -11562,14 +11949,11 @@
             "moduleName": "IdsvrHaapiDriver",
             "static": true,
             "declAttributes": [
-              "HasInitialValue",
               "Final",
-              "HasStorage",
               "AccessControl",
               "ObjC",
               "RawDocComment"
             ],
-            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -11588,7 +11972,6 @@
                 "mangledName": "$s16IdsvrHaapiDriver0B6LoggerC14isDebugEnabledSbvgZ",
                 "moduleName": "IdsvrHaapiDriver",
                 "static": true,
-                "implicit": true,
                 "declAttributes": [
                   "Final",
                   "ObjC"
@@ -11617,7 +12000,6 @@
                 "mangledName": "$s16IdsvrHaapiDriver0B6LoggerC14isDebugEnabledSbvsZ",
                 "moduleName": "IdsvrHaapiDriver",
                 "static": true,
-                "implicit": true,
                 "declAttributes": [
                   "Final",
                   "ObjC"
@@ -11666,14 +12048,11 @@
             "moduleName": "IdsvrHaapiDriver",
             "static": true,
             "declAttributes": [
-              "HasInitialValue",
               "Final",
-              "HasStorage",
               "AccessControl",
               "ObjC",
               "RawDocComment"
             ],
-            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -11692,7 +12071,6 @@
                 "mangledName": "$s16IdsvrHaapiDriver0B6LoggerC13isInfoEnabledSbvgZ",
                 "moduleName": "IdsvrHaapiDriver",
                 "static": true,
-                "implicit": true,
                 "declAttributes": [
                   "Final",
                   "ObjC"
@@ -11721,7 +12099,6 @@
                 "mangledName": "$s16IdsvrHaapiDriver0B6LoggerC13isInfoEnabledSbvsZ",
                 "moduleName": "IdsvrHaapiDriver",
                 "static": true,
-                "implicit": true,
                 "declAttributes": [
                   "Final",
                   "ObjC"
@@ -11770,14 +12147,11 @@
             "moduleName": "IdsvrHaapiDriver",
             "static": true,
             "declAttributes": [
-              "HasInitialValue",
               "Final",
-              "HasStorage",
               "AccessControl",
               "ObjC",
               "RawDocComment"
             ],
-            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -11796,7 +12170,6 @@
                 "mangledName": "$s16IdsvrHaapiDriver0B6LoggerC16isWarningEnabledSbvgZ",
                 "moduleName": "IdsvrHaapiDriver",
                 "static": true,
-                "implicit": true,
                 "declAttributes": [
                   "Final",
                   "ObjC"
@@ -11825,7 +12198,6 @@
                 "mangledName": "$s16IdsvrHaapiDriver0B6LoggerC16isWarningEnabledSbvsZ",
                 "moduleName": "IdsvrHaapiDriver",
                 "static": true,
-                "implicit": true,
                 "declAttributes": [
                   "Final",
                   "ObjC"
@@ -11874,14 +12246,11 @@
             "moduleName": "IdsvrHaapiDriver",
             "static": true,
             "declAttributes": [
-              "HasInitialValue",
               "Final",
-              "HasStorage",
               "AccessControl",
               "ObjC",
               "RawDocComment"
             ],
-            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -11900,7 +12269,6 @@
                 "mangledName": "$s16IdsvrHaapiDriver0B6LoggerC14isErrorEnabledSbvgZ",
                 "moduleName": "IdsvrHaapiDriver",
                 "static": true,
-                "implicit": true,
                 "declAttributes": [
                   "Final",
                   "ObjC"
@@ -11929,7 +12297,6 @@
                 "mangledName": "$s16IdsvrHaapiDriver0B6LoggerC14isErrorEnabledSbvsZ",
                 "moduleName": "IdsvrHaapiDriver",
                 "static": true,
-                "implicit": true,
                 "declAttributes": [
                   "Final",
                   "ObjC"
@@ -11978,14 +12345,11 @@
             "moduleName": "IdsvrHaapiDriver",
             "static": true,
             "declAttributes": [
-              "HasInitialValue",
               "Final",
-              "HasStorage",
               "AccessControl",
               "ObjC",
               "RawDocComment"
             ],
-            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -12004,7 +12368,6 @@
                 "mangledName": "$s16IdsvrHaapiDriver0B6LoggerC22isSensitiveValueMaskedSbvgZ",
                 "moduleName": "IdsvrHaapiDriver",
                 "static": true,
-                "implicit": true,
                 "declAttributes": [
                   "Final",
                   "ObjC"
@@ -12033,7 +12396,6 @@
                 "mangledName": "$s16IdsvrHaapiDriver0B6LoggerC22isSensitiveValueMaskedSbvsZ",
                 "moduleName": "IdsvrHaapiDriver",
                 "static": true,
-                "implicit": true,
                 "declAttributes": [
                   "Final",
                   "ObjC"
@@ -12534,6 +12896,8 @@
         "usr": "s:16IdsvrHaapiDriver7LogSinkP",
         "mangledName": "$s16IdsvrHaapiDriver7LogSinkP",
         "moduleName": "IdsvrHaapiDriver",
+        "genericSig": "<τ_0_0 : Swift.Sendable>",
+        "sugared_genericSig": "<Self : Swift.Sendable>",
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
@@ -12552,6 +12916,157 @@
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FollowUpTag",
+        "printedName": "FollowUpTag",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "subsystem",
+            "printedName": "subsystem",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16IdsvrHaapiDriver11FollowUpTagP9subsystemSSvp",
+            "mangledName": "$s16IdsvrHaapiDriver11FollowUpTagP9subsystemSSvp",
+            "moduleName": "IdsvrHaapiDriver",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16IdsvrHaapiDriver11FollowUpTagP9subsystemSSvg",
+                "mangledName": "$s16IdsvrHaapiDriver11FollowUpTagP9subsystemSSvg",
+                "moduleName": "IdsvrHaapiDriver",
+                "genericSig": "<τ_0_0 where τ_0_0 : IdsvrHaapiDriver.FollowUpTag>",
+                "sugared_genericSig": "<Self where Self : IdsvrHaapiDriver.FollowUpTag>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tagName",
+            "printedName": "tagName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16IdsvrHaapiDriver11FollowUpTagP7tagNameSSvp",
+            "mangledName": "$s16IdsvrHaapiDriver11FollowUpTagP7tagNameSSvp",
+            "moduleName": "IdsvrHaapiDriver",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16IdsvrHaapiDriver11FollowUpTagP7tagNameSSvg",
+                "mangledName": "$s16IdsvrHaapiDriver11FollowUpTagP7tagNameSSvg",
+                "moduleName": "IdsvrHaapiDriver",
+                "genericSig": "<τ_0_0 where τ_0_0 : IdsvrHaapiDriver.FollowUpTag>",
+                "sugared_genericSig": "<Self where Self : IdsvrHaapiDriver.FollowUpTag>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16IdsvrHaapiDriver11FollowUpTagP",
+        "mangledName": "$s16IdsvrHaapiDriver11FollowUpTagP",
+        "moduleName": "IdsvrHaapiDriver",
+        "genericSig": "<τ_0_0 : Swift.Sendable>",
+        "sugared_genericSig": "<Self : Swift.Sendable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -12811,8 +13326,8 @@
           },
           {
             "kind": "Function",
-            "name": "setApplicationBundle",
-            "printedName": "setApplicationBundle(_:)",
+            "name": "setRiskAssessmentConfiguration",
+            "printedName": "setRiskAssessmentConfiguration(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -12822,28 +13337,19 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.Bundle?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bundle",
-                    "printedName": "Foundation.Bundle",
-                    "usr": "c:objc(cs)NSBundle"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "RiskAssessmentConfiguration",
+                "printedName": "IdsvrHaapiDriver.RiskAssessmentConfiguration",
+                "usr": "s:16IdsvrHaapiDriver27RiskAssessmentConfigurationV"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@IdsvrHaapiDriver@objc(cs)HaapiTokenManagerBuilder(im)setApplicationBundle:",
-            "mangledName": "$s16IdsvrHaapiDriver0B19TokenManagerBuilderC20setApplicationBundleyACSo8NSBundleCSgF",
+            "usr": "s:16IdsvrHaapiDriver0B19TokenManagerBuilderC30setRiskAssessmentConfigurationyAcA0hiJ0VF",
+            "mangledName": "$s16IdsvrHaapiDriver0B19TokenManagerBuilderC30setRiskAssessmentConfigurationyAcA0hiJ0VF",
             "moduleName": "IdsvrHaapiDriver",
             "declAttributes": [
               "AccessControl",
               "DiscardableResult",
-              "RawDocComment",
-              "ObjC"
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -13684,35 +14190,6 @@
             "printedName": "CVarArg",
             "usr": "s:s7CVarArgP",
             "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Transferable",
-            "printedName": "Transferable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "Representation",
-                "printedName": "Representation",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "OpaqueTypeArchetype",
-                    "printedName": "some CoreTransferable.TransferRepresentation",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TransferRepresentation",
-                        "printedName": "CoreTransferable.TransferRepresentation",
-                        "usr": "s:16CoreTransferable22TransferRepresentationP"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "usr": "s:16CoreTransferable0B0P",
-            "mangledName": "$s16CoreTransferable0B0P"
           }
         ]
       },
@@ -14047,35 +14524,6 @@
             "printedName": "_ExpressibleByFileReferenceLiteral",
             "usr": "s:s34_ExpressibleByFileReferenceLiteralP",
             "mangledName": "$ss34_ExpressibleByFileReferenceLiteralP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Transferable",
-            "printedName": "Transferable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "Representation",
-                "printedName": "Representation",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "OpaqueTypeArchetype",
-                    "printedName": "some CoreTransferable.TransferRepresentation",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TransferRepresentation",
-                        "printedName": "CoreTransferable.TransferRepresentation",
-                        "usr": "s:16CoreTransferable22TransferRepresentationP"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "usr": "s:16CoreTransferable0B0P",
-            "mangledName": "$s16CoreTransferable0B0P"
           }
         ]
       },
@@ -14699,35 +15147,6 @@
             ],
             "usr": "s:s21_ObjectiveCBridgeableP",
             "mangledName": "$ss21_ObjectiveCBridgeableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Transferable",
-            "printedName": "Transferable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "Representation",
-                "printedName": "Representation",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "OpaqueTypeArchetype",
-                    "printedName": "some CoreTransferable.TransferRepresentation",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TransferRepresentation",
-                        "printedName": "CoreTransferable.TransferRepresentation",
-                        "usr": "s:16CoreTransferable22TransferRepresentationP"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "usr": "s:16CoreTransferable0B0P",
-            "mangledName": "$s16CoreTransferable0B0P"
           }
         ]
       },
@@ -15963,1178 +16382,1129 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWEHeader.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWEHeader.swift",
       "kind": "StringLiteral",
       "offset": 1123,
       "length": 39,
       "value": "\"header parameters are invalid json...\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWEHeader.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWEHeader.swift",
       "kind": "Array",
       "offset": 1531,
       "length": 14,
       "value": "[\"alg\", \"enc\"]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Masking.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Masking.swift",
       "kind": "StringLiteral",
       "offset": 371,
       "length": 7,
       "value": "\"*****\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Masking.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Masking.swift",
       "kind": "StringLiteral",
       "offset": 409,
       "length": 51,
       "value": "\"********** SENSITIVE VALUE IS UNMASKED **********\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Masking.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Masking.swift",
       "kind": "StringLiteral",
       "offset": 491,
       "length": 97,
       "value": "\"********** HaapiLogger.isSensitiveValueMasked must be set to true in `release` mode. **********\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Masking.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Masking.swift",
       "kind": "StringLiteral",
       "offset": 698,
       "length": 36,
       "value": "\"se.curity.identityserver.haapi.ios\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Masking.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Masking.swift",
       "kind": "StringLiteral",
       "offset": 746,
       "length": 11,
       "value": "\"UNSECURED\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Masking.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Masking.swift",
       "kind": "StringLiteral",
       "offset": 5069,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/RSAKeys.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/RSAKeys.swift",
       "kind": "Dictionary",
       "offset": 5120,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/RSAKeys.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/RSAKeys.swift",
       "kind": "Dictionary",
       "offset": 6026,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/RSAKeys.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/RSAKeys.swift",
       "kind": "Dictionary",
       "offset": 9832,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/RSAKeys.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/RSAKeys.swift",
       "kind": "Dictionary",
       "offset": 10868,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/CryptoHelper.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/InMemoryStorageForTesting.swift",
+      "kind": "Dictionary",
+      "offset": 529,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/CryptoHelper.swift",
       "kind": "IntegerLiteral",
       "offset": 10709,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
       "kind": "StringLiteral",
       "offset": 2059,
       "length": 8,
       "value": "\"RSA1_5\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
       "kind": "StringLiteral",
       "offset": 2159,
       "length": 10,
       "value": "\"RSA-OAEP\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
       "kind": "StringLiteral",
       "offset": 2268,
       "length": 14,
       "value": "\"RSA-OAEP-256\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
       "kind": "StringLiteral",
       "offset": 2687,
       "length": 5,
       "value": "\"dir\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
       "kind": "StringLiteral",
       "offset": 2955,
       "length": 15,
       "value": "\"A256CBC-HS512\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
       "kind": "StringLiteral",
       "offset": 3053,
       "length": 15,
       "value": "\"A128CBC-HS256\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
       "kind": "StringLiteral",
       "offset": 3146,
       "length": 9,
       "value": "\"A256GCM\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
       "kind": "StringLiteral",
       "offset": 3233,
       "length": 9,
       "value": "\"A128GCM\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
       "kind": "StringLiteral",
-      "offset": 4063,
+      "offset": 4073,
       "length": 5,
       "value": "\"DEF\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Algorithms.swift",
       "kind": "StringLiteral",
-      "offset": 4085,
+      "offset": 4095,
       "length": 6,
       "value": "\"NONE\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWSHeader.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWSHeader.swift",
       "kind": "Array",
       "offset": 1457,
       "length": 7,
       "value": "[\"alg\"]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Haapi.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Haapi.swift",
       "kind": "BooleanLiteral",
       "offset": 826,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Haapi.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Haapi.swift",
       "kind": "BooleanLiteral",
       "offset": 867,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/SecKey+PublicKeyHash.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/SecKey+PublicKeyHash.swift",
       "kind": "Array",
       "offset": 397,
       "length": 162,
       "value": "[0x30, 0x82, 0x01, 0x22, 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86, 0xf7, 0x0d, 0x01, 0x01, 0x01, 0x05, 0x00, 0x03, 0x82, 0x01, 0x0f, 0x00]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/SecKey+PublicKeyHash.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/SecKey+PublicKeyHash.swift",
       "kind": "Array",
       "offset": 602,
       "length": 162,
       "value": "[0x30, 0x82, 0x02, 0x22, 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86, 0xf7, 0x0d, 0x01, 0x01, 0x01, 0x05, 0x00, 0x03, 0x82, 0x02, 0x0f, 0x00]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/SecKey+PublicKeyHash.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/SecKey+PublicKeyHash.swift",
       "kind": "Array",
       "offset": 812,
       "length": 166,
       "value": "[0x30, 0x59, 0x30, 0x13, 0x06, 0x07, 0x2a, 0x86, 0x48, 0xce, 0x3d, 0x02, 0x01, 0x06, 0x08, 0x2a, 0x86, 0x48, 0xce, 0x3d, 0x03, 0x01, 0x07, 0x03, 0x42, 0x00]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/SecKey+PublicKeyHash.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/SecKey+PublicKeyHash.swift",
       "kind": "Array",
       "offset": 1026,
       "length": 152,
       "value": "[0x30, 0x76, 0x30, 0x10, 0x06, 0x07, 0x2a, 0x86, 0x48, 0xce, 0x3d, 0x02, 0x01, 0x06, 0x05, 0x2b, 0x81, 0x04, 0x00, 0x22, 0x03, 0x62, 0x00]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Deserializer.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Deserializer.swift",
       "kind": "IntegerLiteral",
       "offset": 2506,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Deserializer.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Deserializer.swift",
       "kind": "IntegerLiteral",
       "offset": 2541,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Deserializer.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Deserializer.swift",
       "kind": "IntegerLiteral",
       "offset": 2578,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Deserializer.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Deserializer.swift",
       "kind": "IntegerLiteral",
       "offset": 2612,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Deserializer.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Deserializer.swift",
       "kind": "IntegerLiteral",
       "offset": 2652,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Deserializer.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Deserializer.swift",
       "kind": "IntegerLiteral",
       "offset": 2700,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Deserializer.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Deserializer.swift",
       "kind": "IntegerLiteral",
       "offset": 2738,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Deserializer.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Deserializer.swift",
       "kind": "IntegerLiteral",
       "offset": 2783,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Mtls.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Mtls.swift",
       "kind": "BooleanLiteral",
-      "offset": 8582,
+      "offset": 9162,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Mtls.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Mtls.swift",
       "kind": "BooleanLiteral",
-      "offset": 8961,
+      "offset": 9592,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/ASN1DERParsing.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/ASN1DERParsing.swift",
       "kind": "IntegerLiteral",
       "offset": 8780,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Dpop.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Dpop.swift",
       "kind": "StringLiteral",
-      "offset": 3823,
+      "offset": 3826,
       "length": 59,
       "value": "\"Cannot retreive JWK thumbprint. \""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Dpop.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Dpop.swift",
       "kind": "StringLiteral",
-      "offset": 3881,
+      "offset": 3884,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Dpop.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Dpop.swift",
       "kind": "StringLiteral",
-      "offset": 3903,
+      "offset": 3906,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Dpop.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Dpop.swift",
       "kind": "BooleanLiteral",
-      "offset": 5221,
+      "offset": 5211,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
       "kind": "StringLiteral",
-      "offset": 10005,
+      "offset": 9762,
       "length": 49,
       "value": "\"It is not a valid PEM file. It should contain: \""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
       "kind": "StringLiteral",
-      "offset": 10073,
+      "offset": 9834,
       "length": 73,
       "value": "\"`-----BEGIN RSA PRIVATE KEY-----` & `-----END RSA PRIVATE KEY-----` OR \""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
       "kind": "StringLiteral",
-      "offset": 10165,
+      "offset": 9930,
       "length": 65,
       "value": "\"`-----BEGIN PRIVATE KEY-----` & `-----END PRIVATE KEY-----` OR \""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
       "kind": "StringLiteral",
-      "offset": 10249,
+      "offset": 10018,
       "length": 61,
       "value": "\"`-----BEGIN CERTIFICATE-----` & `-----END CERTIFICATE-----`\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
       "kind": "StringLiteral",
-      "offset": 10806,
+      "offset": 10600,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
       "kind": "StringLiteral",
-      "offset": 10882,
+      "offset": 10680,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
       "kind": "StringLiteral",
-      "offset": 10920,
+      "offset": 10722,
       "length": 4,
       "value": "\"\n\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
       "kind": "StringLiteral",
-      "offset": 10932,
+      "offset": 10734,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
       "kind": "StringLiteral",
-      "offset": 10970,
+      "offset": 10776,
       "length": 4,
       "value": "\"\r\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
       "kind": "StringLiteral",
-      "offset": 10982,
+      "offset": 10788,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/RSAHelper.swift",
       "kind": "StringLiteral",
-      "offset": 11161,
+      "offset": 10979,
       "length": 65,
       "value": "\"The PEM file may not be valid because it cannot base64 encoded.\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/RiskAssessmentManager.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/RiskAssessmentManager.swift",
       "kind": "StringLiteral",
-      "offset": 446,
+      "offset": 433,
       "length": 23,
       "value": "\"haapi+client+info+jwt\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/RiskAssessmentManager.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/RiskAssessmentManager.swift",
       "kind": "StringLiteral",
-      "offset": 2767,
+      "offset": 494,
       "length": 46,
       "value": "\"IdsvrHaapiDriver-DeviceInfo-deviceIdentifier\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
       "kind": "StringLiteral",
       "offset": 829,
       "length": 20,
       "value": "\"attestation_string\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
       "kind": "StringLiteral",
       "offset": 871,
       "length": 8,
       "value": "\"key_id\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
       "kind": "StringLiteral",
       "offset": 899,
       "length": 5,
       "value": "\"jkt\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
       "kind": "StringLiteral",
       "offset": 926,
       "length": 7,
       "value": "\"state\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
       "kind": "StringLiteral",
       "offset": 3016,
       "length": 28,
       "value": "\"urn:se:curity:scopes:haapi\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
       "kind": "StringLiteral",
       "offset": 3065,
       "length": 20,
       "value": "\"client_credentials\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
       "kind": "StringLiteral",
       "offset": 3116,
       "length": 34,
       "value": "\"urn:se:curity:attestation:client\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
       "kind": "StringLiteral",
       "offset": 4454,
       "length": 14,
       "value": "\"access_token\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
       "kind": "StringLiteral",
       "offset": 4494,
       "length": 12,
       "value": "\"expires_in\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
       "kind": "StringLiteral",
       "offset": 5458,
       "length": 16,
       "value": "\"use_dpop_nonce\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
       "kind": "StringLiteral",
       "offset": 5505,
       "length": 26,
       "value": "\"error=\"use_dpop_nonce\"\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
       "kind": "StringLiteral",
       "offset": 5578,
       "length": 40,
       "value": "\"provided-attestation-state-is-invalid:\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
       "kind": "StringLiteral",
       "offset": 5643,
       "length": 15,
       "value": "\"invalid_grant\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
       "kind": "StringLiteral",
       "offset": 5685,
       "length": 17,
       "value": "\"invalid_request\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Models.swift",
       "kind": "StringLiteral",
       "offset": 5731,
       "length": 26,
       "value": "\"Missing DPoP Proof Token\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4249,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManager.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 4384,
+      "offset": 7619,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManager.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 8740,
+      "offset": 8861,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManager.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 9835,
+      "offset": 9991,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManager.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 11041,
+      "offset": 11334,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManager.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 16005,
+      "offset": 12010,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 16737,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 17408,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 18128,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 18631,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWK.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWK.swift",
       "kind": "StringLiteral",
-      "offset": 1567,
+      "offset": 1587,
       "length": 5,
       "value": "\"RSA\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWK.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWK.swift",
       "kind": "StringLiteral",
-      "offset": 1588,
+      "offset": 1608,
       "length": 5,
       "value": "\"oct\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWK.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWK.swift",
       "kind": "StringLiteral",
-      "offset": 1608,
+      "offset": 1628,
       "length": 4,
       "value": "\"EC\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1226,
       "length": 8,
       "value": "\"Accept\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1320,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1418,
       "length": 14,
       "value": "\"Content-Type\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1500,
       "length": 6,
       "value": "\"DPoP\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1590,
       "length": 12,
       "value": "\"Session-Id\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1693,
       "length": 16,
       "value": "\"Set-Session-Id\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1788,
       "length": 12,
       "value": "\"dpop-nonce\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1892,
       "length": 18,
       "value": "\"Www-Authenticate\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1992,
       "length": 13,
       "value": "\"Client-Info\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 2372,
       "length": 27,
       "value": "\"application\/vnd.auth+json\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 2451,
       "length": 18,
       "value": "\"application\/json\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 2552,
       "length": 35,
       "value": "\"application\/x-www-form-urlencoded\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/TokenBoundConfiguration.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/TokenBoundConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 977,
+      "offset": 987,
       "length": 13,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/TokenBoundConfiguration.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/TokenBoundConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 1053,
+      "offset": 1063,
       "length": 8,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
       "kind": "StringLiteral",
-      "offset": 1105,
+      "offset": 1115,
       "length": 5,
       "value": "\"kty\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
       "kind": "StringLiteral",
-      "offset": 1129,
+      "offset": 1139,
       "length": 5,
       "value": "\"use\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
       "kind": "StringLiteral",
-      "offset": 1160,
+      "offset": 1170,
       "length": 9,
       "value": "\"key_ops\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
       "kind": "StringLiteral",
-      "offset": 1191,
+      "offset": 1201,
       "length": 5,
       "value": "\"alg\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
       "kind": "StringLiteral",
-      "offset": 1222,
+      "offset": 1232,
       "length": 5,
       "value": "\"kid\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
       "kind": "StringLiteral",
-      "offset": 1247,
+      "offset": 1257,
       "length": 5,
       "value": "\"x5u\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
       "kind": "StringLiteral",
-      "offset": 1285,
+      "offset": 1295,
       "length": 5,
       "value": "\"x5c\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
       "kind": "StringLiteral",
-      "offset": 1332,
+      "offset": 1342,
       "length": 5,
       "value": "\"x5t\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
       "kind": "StringLiteral",
-      "offset": 1381,
+      "offset": 1391,
       "length": 10,
       "value": "\"x5t#S256\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
       "kind": "StringLiteral",
-      "offset": 1696,
+      "offset": 1716,
       "length": 3,
       "value": "\"n\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
       "kind": "StringLiteral",
-      "offset": 1720,
+      "offset": 1740,
       "length": 3,
       "value": "\"e\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
       "kind": "StringLiteral",
-      "offset": 1751,
+      "offset": 1771,
       "length": 3,
       "value": "\"d\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
       "kind": "StringLiteral",
-      "offset": 1958,
+      "offset": 1988,
       "length": 3,
       "value": "\"k\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
       "kind": "StringLiteral",
-      "offset": 2146,
+      "offset": 2186,
       "length": 5,
       "value": "\"crv\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
       "kind": "StringLiteral",
-      "offset": 2165,
+      "offset": 2205,
       "length": 3,
       "value": "\"x\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
       "kind": "StringLiteral",
-      "offset": 2182,
+      "offset": 2222,
       "length": 3,
       "value": "\"y\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/JWKParameters.swift",
       "kind": "StringLiteral",
-      "offset": 2208,
+      "offset": 2248,
       "length": 3,
       "value": "\"d\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/KeychainHelper.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/KeychainHelper.swift",
       "kind": "IntegerLiteral",
       "offset": 559,
       "length": 7,
       "value": "-25308"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/KeychainHelper.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/KeychainHelper.swift",
       "kind": "StringLiteral",
-      "offset": 968,
+      "offset": 895,
       "length": 6,
       "value": "\"accc\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/KeychainHelper.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/KeychainHelper.swift",
       "kind": "Array",
-      "offset": 1442,
+      "offset": 1544,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/KeychainHelper.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/KeychainHelper.swift",
       "kind": "Array",
-      "offset": 2015,
+      "offset": 2292,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/SymmetricKeys.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/SymmetricKeys.swift",
       "kind": "Dictionary",
       "offset": 2712,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/SymmetricKeys.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/SymmetricKeys.swift",
       "kind": "Dictionary",
       "offset": 3533,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/CryptoImplementation\/EC.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/SequentialQueue.swift",
+      "kind": "Array",
+      "offset": 688,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/SequentialQueue.swift",
+      "kind": "BooleanLiteral",
+      "offset": 722,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/SequentialQueue.swift",
+      "kind": "BooleanLiteral",
+      "offset": 758,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/CryptoImplementation\/EC.swift",
       "kind": "StringLiteral",
       "offset": 1592,
       "length": 7,
       "value": "\"P-256\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/CryptoImplementation\/EC.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/CryptoImplementation\/EC.swift",
       "kind": "StringLiteral",
       "offset": 1616,
       "length": 7,
       "value": "\"P-384\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/CryptoImplementation\/EC.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/CryptoImplementation\/EC.swift",
       "kind": "StringLiteral",
       "offset": 1640,
       "length": 7,
       "value": "\"P-521\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/CryptoImplementation\/EC.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/CryptoImplementation\/EC.swift",
       "kind": "IntegerLiteral",
       "offset": 3668,
       "length": 4,
       "value": "0x02"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/CryptoImplementation\/EC.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/CryptoImplementation\/EC.swift",
       "kind": "IntegerLiteral",
       "offset": 3699,
       "length": 4,
       "value": "0x03"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/CryptoImplementation\/EC.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/CryptoImplementation\/EC.swift",
       "kind": "IntegerLiteral",
       "offset": 3728,
       "length": 4,
       "value": "0x04"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/CryptoImplementation\/EC.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/CryptoImplementation\/EC.swift",
       "kind": "IntegerLiteral",
       "offset": 3774,
       "length": 4,
       "value": "0x06"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/CryptoImplementation\/EC.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/CryptoImplementation\/EC.swift",
       "kind": "IntegerLiteral",
       "offset": 3801,
       "length": 4,
       "value": "0x07"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManagerTracker.swift",
-      "kind": "IntegerLiteral",
-      "offset": 512,
-      "length": 1,
-      "value": "1"
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManagerTracker.swift",
+      "kind": "StringLiteral",
+      "offset": 750,
+      "length": 36,
+      "value": "\"thread_safe_token_managers_by_name\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManagerTracker.swift",
-      "kind": "Dictionary",
-      "offset": 656,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/AttestationManager.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
       "kind": "IntegerLiteral",
-      "offset": 3611,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5225,
+      "offset": 5270,
       "length": 5,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
       "kind": "IntegerLiteral",
-      "offset": 5280,
+      "offset": 5325,
       "length": 5,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
       "kind": "IntegerLiteral",
-      "offset": 5350,
+      "offset": 5395,
       "length": 5,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
       "kind": "IntegerLiteral",
-      "offset": 5420,
+      "offset": 5465,
       "length": 5,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
       "kind": "IntegerLiteral",
-      "offset": 5490,
+      "offset": 5535,
       "length": 5,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
       "kind": "IntegerLiteral",
-      "offset": 5539,
+      "offset": 5584,
       "length": 5,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
       "kind": "IntegerLiteral",
-      "offset": 5588,
+      "offset": 5633,
       "length": 5,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
       "kind": "IntegerLiteral",
-      "offset": 5637,
+      "offset": 5682,
       "length": 5,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
       "kind": "IntegerLiteral",
-      "offset": 7735,
+      "offset": 8255,
       "length": 5,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/ClientAuthenticationMethod.swift",
       "kind": "IntegerLiteral",
-      "offset": 7777,
+      "offset": 8297,
       "length": 5,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/ECKeys.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/ThreadSafeWrapper.swift",
+      "kind": "StringLiteral",
+      "offset": 444,
+      "length": 55,
+      "value": "\"se.curity.identityserver.haapi.ios.threadsafe_wrapper\""
+    },
+    {
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/ECKeys.swift",
       "kind": "Dictionary",
       "offset": 5404,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/ECKeys.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/ECKeys.swift",
       "kind": "Dictionary",
       "offset": 6367,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/ECKeys.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/ECKeys.swift",
       "kind": "Dictionary",
       "offset": 10618,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/ECKeys.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/ECKeys.swift",
       "kind": "Dictionary",
       "offset": 11837,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/libraries\/JOSESwift\/JOSESwift\/Sources\/Serializer.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/libraries\/JOSESwift\/JOSESwift\/Sources\/Serializer.swift",
       "kind": "Array",
       "offset": 1602,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/CryptoKeyPair.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/CryptoKeyPair.swift",
       "kind": "IntegerLiteral",
-      "offset": 5884,
+      "offset": 8793,
       "length": 3,
       "value": "256"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/AccessToken.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 2656,
+      "offset": 2666,
       "length": 11,
       "value": "\"expiresOn\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/AccessToken.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 2695,
+      "offset": 2705,
       "length": 7,
       "value": "\"value\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/AccessToken.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 3694,
+      "offset": 3720,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/AccessToken.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 4085,
+      "offset": 4111,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/AccessToken.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 6074,
+      "offset": 6100,
       "length": 13,
       "value": "\"accessToken\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/AccessToken.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 6114,
+      "offset": 6140,
       "length": 6,
       "value": "\"dpop\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/AccessToken.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 6152,
+      "offset": 6178,
       "length": 11,
       "value": "\"dpopNonce\""
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiLogger.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1605,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiLogger.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1815,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiLogger.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2022,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiLogger.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2225,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiLogger.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2590,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManagerBuilder.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManagerBuilder.swift",
       "kind": "IntegerLiteral",
       "offset": 1156,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManagerBuilder.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManagerBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1243,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManagerBuilder.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManagerBuilder.swift",
       "kind": "IntegerLiteral",
       "offset": 1288,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManagerBuilder.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManagerBuilder.swift",
       "kind": "IntegerLiteral",
-      "offset": 11604,
+      "offset": 12638,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManagerBuilder.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManagerBuilder.swift",
       "kind": "IntegerLiteral",
-      "offset": 11669,
+      "offset": 12703,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_4.7\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManagerBuilder.swift",
+      "filePath": "\/Users\/curity\/build\/jenkins-agent\/workspace\/ios-cat_version_5.1\/frameworks\/IdsvrHaapiDriver\/Source\/HaapiTokenManagerBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 11714,
+      "offset": 12748,
       "length": 4,
       "value": "true"
     }
