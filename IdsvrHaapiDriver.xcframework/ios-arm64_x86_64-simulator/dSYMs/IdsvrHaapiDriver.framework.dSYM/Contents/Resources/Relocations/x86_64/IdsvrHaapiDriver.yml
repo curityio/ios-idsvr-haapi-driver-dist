@@ -1,6 +1,6 @@
 ---
 triple:          'x86_64-apple-darwin'
-binary-path:     '/Users/curity/Library/Developer/Xcode/DerivedData/ios-cat-fomlahljrontijgvxxmutqlwfmfo/Build/Intermediates.noindex/ArchiveIntermediates/IdsvrHaapiDriver/InstallationBuildProductsLocation/Library/Frameworks/IdsvrHaapiDriver.framework/IdsvrHaapiDriver'
+binary-path:     '/Users/curity/Library/Developer/Xcode/DerivedData/ios-cat-fyqrrpagmodeeiehgvqqxxzhrwds/Build/Intermediates.noindex/ArchiveIntermediates/IdsvrHaapiDriver/InstallationBuildProductsLocation/Library/Frameworks/IdsvrHaapiDriver.framework/IdsvrHaapiDriver'
 relocations:
   - { offset: 0x54142, size: 0x8, addend: 0x0, symName: _IdsvrHaapiDriverVersionString, symObjAddr: 0x0, symBinAddr: 0x9A430, symSize: 0x0 }
   - { offset: 0x54179, size: 0x8, addend: 0x0, symName: _IdsvrHaapiDriverVersionNumber, symObjAddr: 0x40, symBinAddr: 0x9A470, symSize: 0x0 }
