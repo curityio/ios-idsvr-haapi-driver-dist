@@ -196,10 +196,14 @@ extension IdsvrHaapiDriver.HaapiTokenManager {
   @objc final public func getHaapiToken(forceFresh: Swift.Bool = false, completionHandler: @escaping @Sendable (IdsvrHaapiDriver.DpopAccessTokenInfo?, (any Swift.Error)?) -> Swift.Void)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes && $AsyncExecutionBehaviorAttributes
+  @available(*, deprecated, message: "The dpopNonce parameter is no longer needed. Use getHaapiTokenAsync(forceFresh:) instead.")
   nonisolated(nonsending) final public func getHaapiTokenAsync(forceFresh: Swift.Bool = false, dpopNonce: Swift.String? = nil) async throws -> IdsvrHaapiDriver.DpopAccessTokenInfo
   #endif
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) final public func getHaapiTokenAsync(forceFresh: Swift.Bool = false) async throws -> IdsvrHaapiDriver.DpopAccessTokenInfo
+  #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @available(*, deprecated, message: "This function will not be supported in the next major version. Please use getHaapiTokenAsync")
+  @available(*, deprecated, message: "Use getHaapiTokenAsync(forceFresh:) instead.")
   final public func getHaapiToken(forceFresh: Swift.Bool = false, dpopNonce: Swift.String? = nil, completionHandler: @escaping @Sendable (Swift.Result<IdsvrHaapiDriver.DpopAccessTokenInfo, IdsvrHaapiDriver.HaapiError>) -> Swift.Void)
   #endif
   @objc final public func close()
