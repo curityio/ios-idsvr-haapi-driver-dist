@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.3 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
-// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 6 -O -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -module-name IdsvrHaapiDriver
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+// swift-compiler-version: Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -language-mode 6 -O -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -module-name IdsvrHaapiDriver
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.4
 import Combine
 import CommonCrypto
 import Compression
@@ -16,340 +16,308 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 public protocol Masking {
-  var masked: Swift.String { get }
+  var masked: Swift::String { get }
 }
-extension Swift.String : IdsvrHaapiDriver.Masking {
-  public var masked: Swift.String {
+extension Swift::String : IdsvrHaapiDriver::Masking {
+  public var masked: Swift::String {
     get
   }
 }
-extension ObjectiveC.NSObject : IdsvrHaapiDriver.Masking {
-  public var masked: Swift.String {
+extension ObjectiveC::NSObject : IdsvrHaapiDriver::Masking {
+  public var masked: Swift::String {
     get
   }
 }
-extension Foundation.URL : IdsvrHaapiDriver.Masking {
-  public var masked: Swift.String {
+extension Foundation::URL : IdsvrHaapiDriver::Masking {
+  public var masked: Swift::String {
     get
   }
 }
-extension Foundation.Data : IdsvrHaapiDriver.Masking {
-  public var masked: Swift.String {
+extension Foundation::Data : IdsvrHaapiDriver::Masking {
+  public var masked: Swift::String {
     get
   }
 }
-extension Swift.Dictionary : IdsvrHaapiDriver.Masking where Key == Swift.String {
-  public var masked: Swift.String {
+extension Swift::Dictionary : IdsvrHaapiDriver::Masking where Key == Swift::String {
+  public var masked: Swift::String {
     get
   }
 }
-extension Foundation.URLRequest : IdsvrHaapiDriver.Masking {
-  public var masked: Swift.String {
+extension Foundation::URLRequest : IdsvrHaapiDriver::Masking {
+  public var masked: Swift::String {
     get
   }
 }
-extension Swift.String {
-  public static func optionalData(_ data: Foundation.Data?, encoding: Swift.String.Encoding = .utf8, fallback: Swift.String = "") -> Swift.String
-  public var maskedPrefix: Swift.String {
+extension Swift::String {
+  public static func optionalData(_ data: Foundation::Data?, encoding: Swift::String.Foundation::Encoding = .utf8, fallback: Swift::String = "") -> Swift::String
+  public var maskedPrefix: Swift::String {
     get
   }
 }
-@available(iOS 13.0, *)
-extension Swift.StringProtocol {
-  public var sha256Hex: Swift.String {
+extension Swift::StringProtocol {
+  public var sha256Hex: Swift::String {
     get
   }
-  public var dataUtf8Encoding: Foundation.Data {
+  public var dataUtf8Encoding: Foundation::Data {
     get
   }
-  public var base64URLEncodedStringOfSHA256Hash: Swift.String {
-    get
-  }
-}
-extension Foundation.Data {
-  public var stringUtf8Encoding: Swift.String? {
+  public var base64URLEncodedStringOfSHA256Hash: Swift::String {
     get
   }
 }
-@objc @_inheritsConvenienceInitializers public class Haapi : ObjectiveC.NSObject {
-  @objc public static var isSupported: Swift.Bool {
-    @objc get
+extension Foundation::Data {
+  public var stringUtf8Encoding: Swift::String? {
+    get
   }
-  @available(*, unavailable)
-  @objc override dynamic public init()
-  @objc deinit
 }
-@available(iOS 14, *)
-public enum HaapiError : IdsvrHaapiDriver.IdsvrError, Swift.Error, Swift.Sendable {
-  case communication(message: Swift.String, cause: (any Swift.Error)? = nil)
-  case serverError(_: Swift.String, errorDescription: Swift.String, statusCode: Swift.Int)
+public enum HaapiError : IdsvrHaapiDriver::IdsvrError, Swift::Error, Swift::Sendable {
+  case communication(message: Swift::String, cause: (any Swift::Error)? = nil)
+  case serverError(_: Swift::String, errorDescription: Swift::String, statusCode: Swift::Int)
   @available(*, deprecated, message: "This case is being replaced by `serverError`.")
-  case invalidStatusCode(_: Swift.Int)
-  case invalidURLResponse(_: Foundation.URLResponse?, reason: Swift.String, cause: (any Swift.Error)? = nil)
+  case invalidStatusCode(_: Swift::Int)
+  case invalidURLResponse(_: Foundation::URLResponse?, reason: Swift::String, cause: (any Swift::Error)? = nil)
   case attestationNotSupported
-  case attestationFailure(cause: (any Swift.Error)? = nil)
-  case attestationKeyGenFailure(cause: (any Swift.Error)? = nil)
-  case attestationRefusedByServer(cause: (any Swift.Error)? = nil)
-  case assertionFailure(cause: (any Swift.Error)? = nil)
-  case dpopKeyCreationFailure(cause: any Swift.Error)
-  case dpopProofCreationFailure(cause: any Swift.Error)
-  case dpopProofFailure(message: Swift.String, cause: any Swift.Error)
+  case attestationFailure(cause: (any Swift::Error)? = nil)
+  case attestationKeyGenFailure(cause: (any Swift::Error)? = nil)
+  case attestationRefusedByServer(cause: (any Swift::Error)? = nil)
+  case assertionFailure(cause: (any Swift::Error)? = nil)
+  case dpopKeyCreationFailure(cause: any Swift::Error)
+  case dpopProofCreationFailure(cause: any Swift::Error)
+  case dpopProofFailure(message: Swift::String, cause: any Swift::Error)
   case haapiTokenManagerIsClosed
   case haapiTokenManagerIsExpired
-  case illegalState(message: Swift.String)
-  case invalidConfiguration(reason: Swift.String)
-  case haapiTokenManagerAlreadyExists(name: Swift.String)
-  public var failureReason: Swift.String {
+  case illegalState(message: Swift::String)
+  case invalidConfiguration(reason: Swift::String)
+  case haapiTokenManagerAlreadyExists(name: Swift::String)
+  public var failureReason: Swift::String {
     get
   }
-  public var errorDescription: Swift.String? {
+  public var errorDescription: Swift::String? {
     get
   }
-  public var error: Swift.String {
+  public var error: Swift::String {
     get
   }
-  public var cause: (any Swift.Error)? {
+  public var cause: (any Swift::Error)? {
     get
   }
-  public var recoverySuggestion: IdsvrHaapiDriver.IdsvrErrorHandling {
+  public var recoverySuggestion: IdsvrHaapiDriver::IdsvrErrorHandling {
     get
   }
 }
-@objc @_hasMissingDesignatedInitializers @available(iOS 14, *)
-@objcMembers final public class Dpop : ObjectiveC.NSObject, Swift.Codable, Swift.Sendable {
-  @objc final public var jwkThumbprint: Swift.String {
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class Dpop : ObjectiveC::NSObject, Swift::Codable, Swift::Sendable {
+  @objc final public var jwkThumbprint: Swift::String {
     @objc get
   }
-  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
-  final public func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
+  @objc override final public func isEqual(_ object: Any?) -> Swift::Bool
+  final public func encode(to encoder: any Swift::Encoder) throws
+  required public init(from decoder: any Swift::Decoder) throws
   @objc @available(swift, obsoleted: 0.1, message: "Use `createProof(httpMethod: String, url: URL, nonce: String?, accessToken: String?)` instead")
-  final public func createProof(httpMethod: Swift.String, url: Foundation.URL) throws -> Swift.String
-  @objc final public func createProof(httpMethod: Swift.String, url: Foundation.URL, nonce: Swift.String? = nil, accessToken: Swift.String? = nil) throws -> Swift.String
+  final public func createProof(httpMethod: Swift::String, url: Foundation::URL) throws -> Swift::String
+  @objc final public func createProof(httpMethod: Swift::String, url: Foundation::URL, nonce: Swift::String? = nil, accessToken: Swift::String? = nil) throws -> Swift::String
   @objc @available(swift, obsoleted: 0.1, message: "Use `getHeaderValue(httpMethod: String, url: URL, nonce: String?, accessToken: String?)` instead")
-  final public func getHeaderValue(httpMethod: Swift.String, url: Foundation.URL) throws -> Swift.String
-  @objc final public func getHeaderValue(httpMethod: Swift.String, url: Foundation.URL, nonce: Swift.String? = nil, accessToken: Swift.String? = nil) throws -> Swift.String
+  final public func getHeaderValue(httpMethod: Swift::String, url: Foundation::URL) throws -> Swift::String
+  @objc final public func getHeaderValue(httpMethod: Swift::String, url: Foundation::URL, nonce: Swift::String? = nil, accessToken: Swift::String? = nil) throws -> Swift::String
   @objc deinit
 }
-public enum CryptoImportError : Swift.Error, Swift.CustomDebugStringConvertible {
-  case invalidPath(_: Swift.String)
-  case invalidPEMString(_: Swift.String, cause: (any Swift.Error)?)
+public enum CryptoImportError : Swift::Error, Swift::CustomDebugStringConvertible {
+  case invalidPath(_: Swift::String)
+  case invalidPEMString(_: Swift::String, cause: (any Swift::Error)?)
   case invalidPassphrase
-  case invalidType(_: Swift.String)
+  case invalidType(_: Swift::String)
   case outOfBounds
-  case failedToImport(_: Swift.String)
-  public var debugDescription: Swift.String {
+  case failedToImport(_: Swift::String)
+  public var debugDescription: Swift::String {
     get
   }
 }
-public struct RiskAssessmentConfiguration : Swift.Equatable, Swift.Sendable {
-  public init(operatingSystemName: Swift.String, operatingSystemVersion: Swift.String, deviceModelName: Swift.String, applicatonIdentifier: Swift.String)
-  public static func == (a: IdsvrHaapiDriver.RiskAssessmentConfiguration, b: IdsvrHaapiDriver.RiskAssessmentConfiguration) -> Swift.Bool
+public struct RiskAssessmentConfiguration : Swift::Equatable, Swift::Sendable {
+  public init(operatingSystemName: Swift::String, operatingSystemVersion: Swift::String, deviceModelName: Swift::String, applicatonIdentifier: Swift::String)
+  public static func == (a: IdsvrHaapiDriver::RiskAssessmentConfiguration, b: IdsvrHaapiDriver::RiskAssessmentConfiguration) -> Swift::Bool
 }
-@objc @_hasMissingDesignatedInitializers @available(iOS 14, *)
-@objcMembers public class HaapiTokenResult : ObjectiveC.NSObject {
-  @objc final public let dPopAccessTokenInfo: IdsvrHaapiDriver.DpopAccessTokenInfo?
-  @objc final public let error: (any Swift.Error)?
+@objc @_hasMissingDesignatedInitializers @objcMembers public class HaapiTokenResult : ObjectiveC::NSObject {
+  @objc final public let dPopAccessTokenInfo: IdsvrHaapiDriver::DpopAccessTokenInfo?
+  @objc final public let error: (any Swift::Error)?
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @available(iOS 14.0, *)
-final public class HaapiTokenManager : ObjectiveC.NSObject, Swift.Sendable {
-  final public var dpop: IdsvrHaapiDriver.Dpop? {
+@objc @_hasMissingDesignatedInitializers final public class HaapiTokenManager : ObjectiveC::NSObject, Swift::Sendable {
+  final public var dpop: IdsvrHaapiDriver::Dpop? {
     get
   }
   @objc deinit
 }
-@available(iOS 14.0, *)
-extension IdsvrHaapiDriver.HaapiTokenManager {
-  @objc final public func createClient() -> IdsvrHaapiDriver.HaapiClient
+extension IdsvrHaapiDriver::HaapiTokenManager {
+  @objc final public func createClient() -> IdsvrHaapiDriver::HaapiClient
   @available(swift, deprecated: 1.0, obsoleted: 1.0, message: "Objective-c will not be supported in the next major version")
-  @objc final public func getHaapiToken(forceFresh: Swift.Bool = false, dpopNonce: Swift.String? = nil, completionHandler: @escaping @Sendable (IdsvrHaapiDriver.DpopAccessTokenInfo?, (any Swift.Error)?) -> Swift.Void)
+  @objc final public func getHaapiToken(forceFresh: Swift::Bool = false, dpopNonce: Swift::String? = nil, completionHandler: @escaping @Sendable (IdsvrHaapiDriver::DpopAccessTokenInfo?, (any Swift::Error)?) -> Swift::Void)
   @available(swift, deprecated: 1.0, obsoleted: 1.0, message: "Objective-c will not be supported in the next major version")
-  @objc final public func getHaapiToken(forceFresh: Swift.Bool = false, completionHandler: @escaping @Sendable (IdsvrHaapiDriver.DpopAccessTokenInfo?, (any Swift.Error)?) -> Swift.Void)
+  @objc final public func getHaapiToken(forceFresh: Swift::Bool = false, completionHandler: @escaping @Sendable (IdsvrHaapiDriver::DpopAccessTokenInfo?, (any Swift::Error)?) -> Swift::Void)
   #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
   @available(*, deprecated, message: "The dpopNonce parameter is no longer needed. Use getHaapiTokenAsync(forceFresh:) instead.")
-  nonisolated(nonsending) final public func getHaapiTokenAsync(forceFresh: Swift.Bool = false, dpopNonce: Swift.String? = nil) async throws -> IdsvrHaapiDriver.DpopAccessTokenInfo
+  nonisolated(nonsending) final public func getHaapiTokenAsync(forceFresh: Swift::Bool = false, dpopNonce: Swift::String? = nil) async throws -> IdsvrHaapiDriver::DpopAccessTokenInfo
   #endif
   #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
-  nonisolated(nonsending) final public func getHaapiTokenAsync(forceFresh: Swift.Bool = false) async throws -> IdsvrHaapiDriver.DpopAccessTokenInfo
+  nonisolated(nonsending) final public func getHaapiTokenAsync(forceFresh: Swift::Bool = false) async throws -> IdsvrHaapiDriver::DpopAccessTokenInfo
   #endif
   @available(*, deprecated, message: "Use getHaapiTokenAsync(forceFresh:) instead.")
-  final public func getHaapiToken(forceFresh: Swift.Bool = false, dpopNonce: Swift.String? = nil, completionHandler: @escaping @Sendable (Swift.Result<IdsvrHaapiDriver.DpopAccessTokenInfo, IdsvrHaapiDriver.HaapiError>) -> Swift.Void)
+  final public func getHaapiToken(forceFresh: Swift::Bool = false, dpopNonce: Swift::String? = nil, completionHandler: @escaping @Sendable (Swift::Result<IdsvrHaapiDriver::DpopAccessTokenInfo, IdsvrHaapiDriver::HaapiError>) -> Swift::Void)
   @objc final public func close()
   @objc final public func clearState()
 }
-@available(iOS 14, *)
 public enum HttpHeaderNames {
-  public static let accept: Swift.String
-  public static let authorization: Swift.String
-  public static let contentType: Swift.String
-  public static let dpop: Swift.String
-  public static let haapiSessionId: Swift.String
-  public static let haapiSetSessionId: Swift.String
-  public static let dpopNonce: Swift.String
-  public static let wwwAuthenticate: Swift.String
-  public static let clientInfo: Swift.String
+  public static let accept: Swift::String
+  public static let authorization: Swift::String
+  public static let contentType: Swift::String
+  public static let dpop: Swift::String
+  public static let haapiSessionId: Swift::String
+  public static let haapiSetSessionId: Swift::String
+  public static let dpopNonce: Swift::String
+  public static let wwwAuthenticate: Swift::String
+  public static let clientInfo: Swift::String
 }
-@available(iOS 14, *)
-public enum MimeTypes : Swift.String {
+public enum MimeTypes : Swift::String {
   case happi
   case json
   case xWwwFormUrlEncoded
-  public init?(rawValue: Swift.String)
-  @available(iOS 14, *)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
     get
   }
 }
-@objc public enum CryptoKeyType : Swift.Int, Swift.RawRepresentable, Swift.Sendable {
+@objc public enum CryptoKeyType : Swift::Int, Swift::RawRepresentable, Swift::Sendable {
   case p256
   case secureEnclave
   case security
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
     get
   }
 }
-@available(iOS 14.0, *)
-@objc public protocol TokenBoundConfiguration : Swift.Sendable {
-  @objc var keyPairType: IdsvrHaapiDriver.CryptoKeyType { get }
+@objc public protocol TokenBoundConfiguration : Swift::Sendable {
+  @objc var keyPairType: IdsvrHaapiDriver::CryptoKeyType { get }
 }
-@_inheritsConvenienceInitializers @available(iOS 14.0, *)
-@objc final public class UnboundedTokenConfiguration : ObjectiveC.NSObject, IdsvrHaapiDriver.TokenBoundConfiguration {
-  @objc final public let keyPairType: IdsvrHaapiDriver.CryptoKeyType
+@_inheritsConvenienceInitializers @objc final public class UnboundedTokenConfiguration : ObjectiveC::NSObject, IdsvrHaapiDriver::TokenBoundConfiguration {
+  @objc final public let keyPairType: IdsvrHaapiDriver::CryptoKeyType
   @objc override dynamic public init()
   @objc deinit
 }
-@available(iOS 14.0, *)
-@objc final public class BoundedTokenConfiguration : ObjectiveC.NSObject, IdsvrHaapiDriver.TokenBoundConfiguration {
-  @objc final public let keyPairType: IdsvrHaapiDriver.CryptoKeyType
-  @objc public init(keyPairType: IdsvrHaapiDriver.CryptoKeyType = .secureEnclave)
+@objc final public class BoundedTokenConfiguration : ObjectiveC::NSObject, IdsvrHaapiDriver::TokenBoundConfiguration {
+  @objc final public let keyPairType: IdsvrHaapiDriver::CryptoKeyType
+  @objc public init(keyPairType: IdsvrHaapiDriver::CryptoKeyType = .secureEnclave)
   @objc deinit
 }
-@available(iOS 14, *)
-public enum KeychainAccessibility : Swift.Sendable {
+public enum KeychainAccessibility : Swift::Sendable {
   case afterFirstUnlockThisDeviceOnly
   case whenUnlockedThisDeviceOnly
-  public static func == (a: IdsvrHaapiDriver.KeychainAccessibility, b: IdsvrHaapiDriver.KeychainAccessibility) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+  public static func == (a: IdsvrHaapiDriver::KeychainAccessibility, b: IdsvrHaapiDriver::KeychainAccessibility) -> Swift::Bool
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
     get
   }
 }
-@available(iOS 14, *)
 public enum StorageBuilder {
   final public class Keychain {
     public init()
     @discardableResult
-    final public func accessGroup(_ accessGroup: Swift.String?) -> IdsvrHaapiDriver.StorageBuilder.Keychain
+    final public func accessGroup(_ accessGroup: Swift::String?) -> IdsvrHaapiDriver::StorageBuilder.IdsvrHaapiDriver::Keychain
     @discardableResult
-    final public func accessibility(_ accessibility: IdsvrHaapiDriver.KeychainAccessibility) -> IdsvrHaapiDriver.StorageBuilder.Keychain
-    final public func build() -> any IdsvrHaapiDriver.Storage
+    final public func accessibility(_ accessibility: IdsvrHaapiDriver::KeychainAccessibility) -> IdsvrHaapiDriver::StorageBuilder.IdsvrHaapiDriver::Keychain
+    final public func build() -> any IdsvrHaapiDriver::Storage
     @objc deinit
   }
 }
-@available(iOS 14, *)
-public enum StorageOperation : Swift.Sendable {
+public enum StorageOperation : Swift::Sendable {
   case read
   case write
   case delete
-  public static func == (a: IdsvrHaapiDriver.StorageOperation, b: IdsvrHaapiDriver.StorageOperation) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+  public static func == (a: IdsvrHaapiDriver::StorageOperation, b: IdsvrHaapiDriver::StorageOperation) -> Swift::Bool
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
     get
   }
 }
-@available(iOS 14, *)
-public enum StorageItemCategory : Swift.Sendable {
+public enum StorageItemCategory : Swift::Sendable {
   case sessionCredential
   case cryptographicKey
   case diagnostic
   case other
-  public static func == (a: IdsvrHaapiDriver.StorageItemCategory, b: IdsvrHaapiDriver.StorageItemCategory) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+  public static func == (a: IdsvrHaapiDriver::StorageItemCategory, b: IdsvrHaapiDriver::StorageItemCategory) -> Swift::Bool
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
     get
   }
 }
-@available(iOS 14, *)
-public enum StorageError : Swift.Error {
-  case writeError(cause: any Swift.Error)
-  case readError(cause: any Swift.Error)
-  case deleteError(cause: any Swift.Error)
-  case unavailable(operation: IdsvrHaapiDriver.StorageOperation, category: IdsvrHaapiDriver.StorageItemCategory, code: Swift.Int32?)
+public enum StorageError : Swift::Error {
+  case writeError(cause: any Swift::Error)
+  case readError(cause: any Swift::Error)
+  case deleteError(cause: any Swift::Error)
+  case unavailable(operation: IdsvrHaapiDriver::StorageOperation, category: IdsvrHaapiDriver::StorageItemCategory, code: Swift::Int32?)
 }
-@available(iOS 14, *)
-extension IdsvrHaapiDriver.StorageError : Foundation.LocalizedError {
-  public var errorDescription: Swift.String? {
+extension IdsvrHaapiDriver::StorageError : Foundation::LocalizedError {
+  public var errorDescription: Swift::String? {
     get
   }
 }
-@available(iOS 14, *)
-public protocol Storage : Swift.Sendable {
-  func read(key: Swift.String) throws -> Foundation.Data?
-  func write(key: Swift.String, data: Foundation.Data) throws
-  func delete(key: Swift.String) throws
+public protocol Storage : Swift::Sendable {
+  func read(key: Swift::String) throws -> Foundation::Data?
+  func write(key: Swift::String, data: Foundation::Data) throws
+  func delete(key: Swift::String) throws
 }
-public enum DriverFollowUpTag : Swift.String, IdsvrHaapiDriver.FollowUpTag, Swift.CaseIterable {
+public enum DriverFollowUpTag : Swift::String, IdsvrHaapiDriver::FollowUpTag, Swift::CaseIterable {
   case flow
   case storage
   case http
   case attestation
-  public var subsystem: Swift.String {
+  public var subsystem: Swift::String {
     get
   }
-  public var tagName: Swift.String {
+  public var tagName: Swift::String {
     get
   }
-  public init?(rawValue: Swift.String)
-  public typealias AllCases = [IdsvrHaapiDriver.DriverFollowUpTag]
-  public typealias RawValue = Swift.String
-  nonisolated public static var allCases: [IdsvrHaapiDriver.DriverFollowUpTag] {
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [IdsvrHaapiDriver::DriverFollowUpTag]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [IdsvrHaapiDriver::DriverFollowUpTag] {
     get
   }
-  public var rawValue: Swift.String {
+  public var rawValue: Swift::String {
     get
   }
 }
-@available(iOS 14, *)
-extension Foundation.URLResponse {
-  public func haapiSessionId() -> Swift.String?
-  public func dpopNonce() -> Swift.String?
+extension Foundation::URLResponse {
+  public func haapiSessionId() -> Swift::String?
+  public func dpopNonce() -> Swift::String?
 }
-@available(iOS 14, *)
-extension Foundation.URLRequest {
-  public mutating func addAuthorizationHeader(headerValue: Swift.String)
-  public mutating func addDpopHeader(headerValue: Swift.String)
-  public mutating func addClientInfoHeader(headerValue: Swift.String)
-  public mutating func addDpopAccessTokenHeaders(from dpopAccessTokenInfo: IdsvrHaapiDriver.DpopAccessTokenInfo, httpMethod: Swift.String, url: Foundation.URL) throws
+extension Foundation::URLRequest {
+  public mutating func addAuthorizationHeader(headerValue: Swift::String)
+  public mutating func addDpopHeader(headerValue: Swift::String)
+  public mutating func addClientInfoHeader(headerValue: Swift::String)
+  public mutating func addDpopAccessTokenHeaders(from dpopAccessTokenInfo: IdsvrHaapiDriver::DpopAccessTokenInfo, httpMethod: Swift::String, url: Foundation::URL) throws
   public mutating func addHaapiMediaTypeAcceptHeader()
-  public mutating func addHaapiSessionIdHeader(_ sessionId: Swift.String)
+  public mutating func addHaapiSessionIdHeader(_ sessionId: Swift::String)
 }
-@objc public protocol ClientAuthenticationMethod : Swift.Sendable {
+@objc public protocol ClientAuthenticationMethod : Swift::Sendable {
 }
-@objc @_inheritsConvenienceInitializers final public class ClientAuthenticationMethodNone : ObjectiveC.NSObject, IdsvrHaapiDriver.ClientAuthenticationMethod {
+@objc @_inheritsConvenienceInitializers final public class ClientAuthenticationMethodNone : ObjectiveC::NSObject, IdsvrHaapiDriver::ClientAuthenticationMethod {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc final public class ClientAuthenticationMethodSecret : ObjectiveC.NSObject, IdsvrHaapiDriver.ClientAuthenticationMethod {
-  @objc public init(secret: Swift.String)
+@objc final public class ClientAuthenticationMethodSecret : ObjectiveC::NSObject, IdsvrHaapiDriver::ClientAuthenticationMethod {
+  @objc public init(secret: Swift::String)
   @objc deinit
 }
-@objc @available(iOS 14.0, *)
-final public class KeyPinning : ObjectiveC.NSObject, Swift.Sendable {
-  @objc public init(hostname: Swift.String, publicKeyHash: Swift.String)
+@objc final public class KeyPinning : ObjectiveC::NSObject, Swift::Sendable {
+  @objc public init(hostname: Swift::String, publicKeyHash: Swift::String)
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @available(iOS 14.0, *)
-final public class ClientAuthenticationMethodMTLS : ObjectiveC.NSObject, IdsvrHaapiDriver.ClientAuthenticationMethod {
-  @objc convenience public init(pkcs12Filename: Swift.String, pkcs12Passphrase: Swift.String, serverPEMFilename: Swift.String, isValidatingHostname: Swift.Bool, bundle: Foundation.Bundle = Bundle.main) throws
-  @objc convenience public init(pkcs12Filename: Swift.String, pkcs12Passphrase: Swift.String, serverKeyPinnings: [IdsvrHaapiDriver.KeyPinning], bundle: Foundation.Bundle = Bundle.main) throws
+@objc @_hasMissingDesignatedInitializers final public class ClientAuthenticationMethodMTLS : ObjectiveC::NSObject, IdsvrHaapiDriver::ClientAuthenticationMethod {
+  @objc convenience public init(pkcs12Filename: Swift::String, pkcs12Passphrase: Swift::String, serverPEMFilename: Swift::String, isValidatingHostname: Swift::Bool, bundle: Foundation::Bundle = Bundle.main) throws
+  @objc convenience public init(pkcs12Filename: Swift::String, pkcs12Passphrase: Swift::String, serverKeyPinnings: [IdsvrHaapiDriver::KeyPinning], bundle: Foundation::Bundle = Bundle.main) throws
   @objc deinit
 }
-@available(iOS 14.0, *)
-@objc public enum JWTAsymmetricAlgorithm : Swift.Int, Swift.CaseIterable, Swift.Sendable {
+@objc public enum JWTAsymmetricAlgorithm : Swift::Int, Swift::CaseIterable, Swift::Sendable {
   case rs256
   case rs384
   case rs512
@@ -359,241 +327,213 @@ final public class ClientAuthenticationMethodMTLS : ObjectiveC.NSObject, IdsvrHa
   case es256
   case es384
   case es512
-  public init?(rawValue: Swift.Int)
-  @available(iOS 14.0, *)
-  public typealias AllCases = [IdsvrHaapiDriver.JWTAsymmetricAlgorithm]
-  @available(iOS 14.0, *)
-  public typealias RawValue = Swift.Int
-  nonisolated public static var allCases: [IdsvrHaapiDriver.JWTAsymmetricAlgorithm] {
+  public init?(rawValue: Swift::Int)
+  public typealias AllCases = [IdsvrHaapiDriver::JWTAsymmetricAlgorithm]
+  public typealias RawValue = Swift::Int
+  nonisolated public static var allCases: [IdsvrHaapiDriver::JWTAsymmetricAlgorithm] {
     get
   }
-  public var rawValue: Swift.Int {
+  public var rawValue: Swift::Int {
     get
   }
 }
-@objc @available(iOS 14.0, *)
-final public class ClientAuthenticationMethodJWTAsymmetric : ObjectiveC.NSObject, IdsvrHaapiDriver.ClientAuthenticationMethod, Swift.Sendable {
-  final public let signatureAlgorithm: IdsvrHaapiDriver.JWTAsymmetricAlgorithm
-  nonisolated(unsafe) final public let privateKey: Security.SecKey
-  @objc public init(pemFilename: Swift.String, signatureAlgorithm: IdsvrHaapiDriver.JWTAsymmetricAlgorithm, bundle: Foundation.Bundle = Bundle.main) throws
+@objc final public class ClientAuthenticationMethodJWTAsymmetric : ObjectiveC::NSObject, IdsvrHaapiDriver::ClientAuthenticationMethod, Swift::Sendable {
+  final public let signatureAlgorithm: IdsvrHaapiDriver::JWTAsymmetricAlgorithm
+  nonisolated(unsafe) final public let privateKey: Security::SecKey
+  @objc public init(pemFilename: Swift::String, signatureAlgorithm: IdsvrHaapiDriver::JWTAsymmetricAlgorithm, bundle: Foundation::Bundle = Bundle.main) throws
   @objc deinit
 }
-@available(iOS 14.0, *)
-@objc public enum JWTSymmetricAlgorithm : Swift.Int, Swift.CaseIterable, Swift.Sendable {
+@objc public enum JWTSymmetricAlgorithm : Swift::Int, Swift::CaseIterable, Swift::Sendable {
   case hs256
   case hs384
   case hs512
-  public init?(rawValue: Swift.Int)
-  @available(iOS 14.0, *)
-  public typealias AllCases = [IdsvrHaapiDriver.JWTSymmetricAlgorithm]
-  @available(iOS 14.0, *)
-  public typealias RawValue = Swift.Int
-  nonisolated public static var allCases: [IdsvrHaapiDriver.JWTSymmetricAlgorithm] {
+  public init?(rawValue: Swift::Int)
+  public typealias AllCases = [IdsvrHaapiDriver::JWTSymmetricAlgorithm]
+  public typealias RawValue = Swift::Int
+  nonisolated public static var allCases: [IdsvrHaapiDriver::JWTSymmetricAlgorithm] {
     get
   }
-  public var rawValue: Swift.Int {
+  public var rawValue: Swift::Int {
     get
   }
 }
-@objc @available(iOS 14.0, *)
-final public class ClientAuthenticationMethodJWTSymmetric : ObjectiveC.NSObject, IdsvrHaapiDriver.ClientAuthenticationMethod {
-  final public let signatureAlgorithm: IdsvrHaapiDriver.JWTSymmetricAlgorithm
-  final public let secretKey: Swift.String
-  @objc public init(signatureAlgorithm: IdsvrHaapiDriver.JWTSymmetricAlgorithm, secretKey: Swift.String)
+@objc final public class ClientAuthenticationMethodJWTSymmetric : ObjectiveC::NSObject, IdsvrHaapiDriver::ClientAuthenticationMethod {
+  final public let signatureAlgorithm: IdsvrHaapiDriver::JWTSymmetricAlgorithm
+  final public let secretKey: Swift::String
+  @objc public init(signatureAlgorithm: IdsvrHaapiDriver::JWTSymmetricAlgorithm, secretKey: Swift::String)
   @objc deinit
 }
-@available(iOS 14, *)
-public struct ResponseAndData : Swift.Sendable {
-  public let response: Foundation.URLResponse
-  public let data: Foundation.Data?
+public struct ResponseAndData : Swift::Sendable {
+  public let response: Foundation::URLResponse
+  public let data: Foundation::Data?
 }
-@objc @_hasMissingDesignatedInitializers @available(iOS 14.0, *)
-public class HaapiClient : ObjectiveC.NSObject, @unchecked Swift.Sendable {
-  public var dpop: IdsvrHaapiDriver.Dpop? {
+@objc @_hasMissingDesignatedInitializers public class HaapiClient : ObjectiveC::NSObject, @unchecked Swift::Sendable {
+  public var dpop: IdsvrHaapiDriver::Dpop? {
     get
   }
   @available(*, deprecated, message: "This function will not be supported in the next major version. Please use async performDataTask")
-  public func performDataTask(for urlRequest: Foundation.URLRequest, completionHandler: @escaping @Sendable (Swift.Result<IdsvrHaapiDriver.ResponseAndData, any Swift.Error>) -> Swift.Void)
+  public func performDataTask(for urlRequest: Foundation::URLRequest, completionHandler: @escaping @Sendable (Swift::Result<IdsvrHaapiDriver::ResponseAndData, any Swift::Error>) -> Swift::Void)
   #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
-  nonisolated(nonsending) public func performDataTask(for urlRequest: Foundation.URLRequest) async throws -> IdsvrHaapiDriver.ResponseAndData
+  nonisolated(nonsending) public func performDataTask(for urlRequest: Foundation::URLRequest) async throws -> IdsvrHaapiDriver::ResponseAndData
   #endif
   @available(swift, deprecated: 1.0, obsoleted: 1.0, message: "Objective-c will not be supported in the next major version")
-  @objc public func performDataTask(for urlRequest: Foundation.URLRequest, completionHandler: @escaping @Sendable (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
+  @objc public func performDataTask(for urlRequest: Foundation::URLRequest, completionHandler: @escaping @Sendable (Foundation::Data?, Foundation::URLResponse?, (any Swift::Error)?) -> Swift::Void)
   @objc deinit
 }
-@available(iOS 14.0, *)
-extension IdsvrHaapiDriver.CryptoKeyType : Swift.Codable {
+extension IdsvrHaapiDriver::CryptoKeyType : Swift::Codable {
 }
 public enum RetryCondition {
   case now
   case whenAppInForeground
-  public static func == (a: IdsvrHaapiDriver.RetryCondition, b: IdsvrHaapiDriver.RetryCondition) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+  public static func == (a: IdsvrHaapiDriver::RetryCondition, b: IdsvrHaapiDriver::RetryCondition) -> Swift::Bool
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
     get
   }
 }
-public enum UnrecoverableAction : Swift.Equatable {
-  case modifyConfiguration(reason: Swift.String)
+public enum UnrecoverableAction : Swift::Equatable {
+  case modifyConfiguration(reason: Swift::String)
   case introspectCause
   case invalidPlatform
-  public static func == (a: IdsvrHaapiDriver.UnrecoverableAction, b: IdsvrHaapiDriver.UnrecoverableAction) -> Swift.Bool
+  public static func == (a: IdsvrHaapiDriver::UnrecoverableAction, b: IdsvrHaapiDriver::UnrecoverableAction) -> Swift::Bool
 }
 public enum IdsvrErrorHandling {
-  case retryable(condition: IdsvrHaapiDriver.RetryCondition)
+  case retryable(condition: IdsvrHaapiDriver::RetryCondition)
   case newHaapiFlow
-  case unrecoverable(action: IdsvrHaapiDriver.UnrecoverableAction)
+  case unrecoverable(action: IdsvrHaapiDriver::UnrecoverableAction)
 }
-public protocol IdsvrError : Swift.Error {
-  var error: Swift.String { get }
-  var errorDescription: Swift.String? { get }
-  var failureReason: Swift.String { get }
-  var recoverySuggestion: IdsvrHaapiDriver.IdsvrErrorHandling { get }
-  var cause: (any Swift.Error)? { get }
+public protocol IdsvrError : Swift::Error {
+  var error: Swift::String { get }
+  var errorDescription: Swift::String? { get }
+  var failureReason: Swift::String { get }
+  var recoverySuggestion: IdsvrHaapiDriver::IdsvrErrorHandling { get }
+  var cause: (any Swift::Error)? { get }
 }
-@objc @_hasMissingDesignatedInitializers @available(iOS 14, *)
-@objcMembers final public class AccessToken : ObjectiveC.NSObject, Swift.Sendable {
-  @objc final public let value: Swift.String
-  @objc final public let expiresOn: Foundation.Date
-  @objc override final public var description: Swift.String {
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class AccessToken : ObjectiveC::NSObject, Swift::Sendable {
+  @objc final public let value: Swift::String
+  @objc final public let expiresOn: Foundation::Date
+  @objc override final public var description: Swift::String {
     @objc get
   }
-  @objc override final public var debugDescription: Swift.String {
+  @objc override final public var debugDescription: Swift::String {
     @objc get
   }
-  @objc final public func isValid(atTime: Foundation.Date, minTtl: Foundation.TimeInterval) -> Swift.Bool
-  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc final public func isValid(atTime: Foundation::Date, minTtl: Foundation::TimeInterval) -> Swift::Bool
+  @objc override final public func isEqual(_ object: Any?) -> Swift::Bool
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @available(iOS 14, *)
-@objcMembers final public class DpopAccessTokenInfo : ObjectiveC.NSObject, Swift.Sendable {
-  @objc final public let accessToken: IdsvrHaapiDriver.AccessToken
-  @objc final public let dpop: IdsvrHaapiDriver.Dpop
-  @objc final public let dpopNonce: Swift.String?
-  @objc override final public var description: Swift.String {
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class DpopAccessTokenInfo : ObjectiveC::NSObject, Swift::Sendable {
+  @objc final public let accessToken: IdsvrHaapiDriver::AccessToken
+  @objc final public let dpop: IdsvrHaapiDriver::Dpop
+  @objc final public let dpopNonce: Swift::String?
+  @objc override final public var description: Swift::String {
     @objc get
   }
-  @objc override final public var debugDescription: Swift.String {
+  @objc override final public var debugDescription: Swift::String {
     @objc get
   }
-  @objc final public func dpopHeaderValue(httpMethod: Swift.String, url: Foundation.URL) throws -> Swift.String
-  @objc final public func authorizationHeaderValue() -> Swift.String
-  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc final public func dpopHeaderValue(httpMethod: Swift::String, url: Foundation::URL) throws -> Swift::String
+  @objc final public func authorizationHeaderValue() -> Swift::String
+  @objc override final public func isEqual(_ object: Any?) -> Swift::Bool
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class HaapiLogger : ObjectiveC.NSObject {
-  public static var followUpTags: [any IdsvrHaapiDriver.FollowUpTag] {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class HaapiLogger : ObjectiveC::NSObject {
+  public static var followUpTags: [any IdsvrHaapiDriver::FollowUpTag] {
     get
     set
   }
   @available(*, deprecated, message: "Use `setLogType(...)` instead. Support for this property will be removed in a future major version.")
-  @objc public static var isDebugEnabled: Swift.Bool {
+  @objc public static var isDebugEnabled: Swift::Bool {
     @objc get
     @objc set
   }
   @available(*, deprecated, message: "Use `setLogType(...)` instead. Support for this property will be removed in a future major version.")
-  @objc public static var isInfoEnabled: Swift.Bool {
+  @objc public static var isInfoEnabled: Swift::Bool {
     @objc get
     @objc set
   }
   @available(*, deprecated, message: "Use `setLogType(...)` instead. Support for this property will be removed in a future major version.")
-  @objc public static var isWarningEnabled: Swift.Bool {
+  @objc public static var isWarningEnabled: Swift::Bool {
     @objc get
     @objc set
   }
   @available(*, deprecated, message: "Use `setLogType(...)` instead. Support for this property will be removed in a future major version.")
-  @objc public static var isErrorEnabled: Swift.Bool {
+  @objc public static var isErrorEnabled: Swift::Bool {
     @objc get
     @objc set
   }
-  @objc public static var isSensitiveValueMasked: Swift.Bool {
+  @objc public static var isSensitiveValueMasked: Swift::Bool {
     @objc get
     @objc set
   }
-  public static func appendLogSink(_ logSink: any IdsvrHaapiDriver.LogSink)
-  public static func setLogType(_ logType: IdsvrHaapiDriver.LogType)
+  public static func appendLogSink(_ logSink: any IdsvrHaapiDriver::LogSink)
+  public static func setLogType(_ logType: IdsvrHaapiDriver::LogType)
   @objc deinit
 }
-public enum LogType : Swift.String {
+public enum LogType : Swift::String {
   case error
   case warning
   case info
   case debug
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
     get
   }
 }
-public protocol LogSink : Swift.Sendable {
-  func writeLog(logType: IdsvrHaapiDriver.LogType, followUpTag: any IdsvrHaapiDriver.FollowUpTag, message: Swift.String, file: Swift.String, line: Swift.Int)
+public protocol LogSink : Swift::Sendable {
+  func writeLog(logType: IdsvrHaapiDriver::LogType, followUpTag: any IdsvrHaapiDriver::FollowUpTag, message: Swift::String, file: Swift::String, line: Swift::Int)
 }
-public protocol FollowUpTag : Swift.Sendable {
-  var subsystem: Swift.String { get }
-  var tagName: Swift.String { get }
+public protocol FollowUpTag : Swift::Sendable {
+  var subsystem: Swift::String { get }
+  var tagName: Swift::String { get }
 }
-@objc @available(iOS 14.0, *)
-@objcMembers public class HaapiTokenManagerBuilder : ObjectiveC.NSObject {
-  @objc public init(tokenEndpoint: Foundation.URL, clientId: Swift.String)
+@objc @objcMembers public class HaapiTokenManagerBuilder : ObjectiveC::NSObject {
+  @objc public init(tokenEndpoint: Foundation::URL, clientId: Swift::String)
   @objc @discardableResult
-  public func setName(_ name: Swift.String) -> IdsvrHaapiDriver.HaapiTokenManagerBuilder
+  public func setName(_ name: Swift::String) -> IdsvrHaapiDriver::HaapiTokenManagerBuilder
   @objc @discardableResult
-  public func setInternalUrlSession(_ urlSession: Foundation.URLSession) -> IdsvrHaapiDriver.HaapiTokenManagerBuilder
+  public func setInternalUrlSession(_ urlSession: Foundation::URLSession) -> IdsvrHaapiDriver::HaapiTokenManagerBuilder
   @objc @discardableResult
-  public func setHaapiTokenMinTtl(_ minTtl: Foundation.TimeInterval) -> IdsvrHaapiDriver.HaapiTokenManagerBuilder
+  public func setHaapiTokenMinTtl(_ minTtl: Foundation::TimeInterval) -> IdsvrHaapiDriver::HaapiTokenManagerBuilder
   @objc @discardableResult
-  public func disableDeviceCheckAttestation() -> IdsvrHaapiDriver.HaapiTokenManagerBuilder
+  public func disableDeviceCheckAttestation() -> IdsvrHaapiDriver::HaapiTokenManagerBuilder
   @objc @discardableResult
-  public func setAttestationMaxRetryCount(maxRetries: Swift.Int) -> IdsvrHaapiDriver.HaapiTokenManagerBuilder
+  public func setAttestationMaxRetryCount(maxRetries: Swift::Int) -> IdsvrHaapiDriver::HaapiTokenManagerBuilder
   @objc @discardableResult
-  public func setTokenBoundConfiguration(config: any IdsvrHaapiDriver.TokenBoundConfiguration) -> IdsvrHaapiDriver.HaapiTokenManagerBuilder
+  public func setTokenBoundConfiguration(config: any IdsvrHaapiDriver::TokenBoundConfiguration) -> IdsvrHaapiDriver::HaapiTokenManagerBuilder
   @objc @discardableResult
-  public func setClientAuthenticationMethod(method: any IdsvrHaapiDriver.ClientAuthenticationMethod) -> IdsvrHaapiDriver.HaapiTokenManagerBuilder
+  public func setClientAuthenticationMethod(method: any IdsvrHaapiDriver::ClientAuthenticationMethod) -> IdsvrHaapiDriver::HaapiTokenManagerBuilder
   @objc @discardableResult
   @available(*, unavailable, renamed: "setRiskAssessmentConfiguration(_:)", message: "Use setRiskAssessmentConfiguration(_:) instead.")
-  public func setApplicationBundle(_ bundle: Foundation.Bundle?) -> IdsvrHaapiDriver.HaapiTokenManagerBuilder
+  public func setApplicationBundle(_ bundle: Foundation::Bundle?) -> IdsvrHaapiDriver::HaapiTokenManagerBuilder
   @discardableResult
-  public func setRiskAssessmentConfiguration(_ configuration: IdsvrHaapiDriver.RiskAssessmentConfiguration) -> IdsvrHaapiDriver.HaapiTokenManagerBuilder
-  @objc public func build() throws -> IdsvrHaapiDriver.HaapiTokenManager
+  public func setRiskAssessmentConfiguration(_ configuration: IdsvrHaapiDriver::RiskAssessmentConfiguration) -> IdsvrHaapiDriver::HaapiTokenManagerBuilder
+  @objc public func build() throws -> IdsvrHaapiDriver::HaapiTokenManager
   @objc deinit
 }
-@available(iOS 14, *)
-extension IdsvrHaapiDriver.MimeTypes : Swift.Equatable {}
-@available(iOS 14, *)
-extension IdsvrHaapiDriver.MimeTypes : Swift.Hashable {}
-@available(iOS 14, *)
-extension IdsvrHaapiDriver.MimeTypes : Swift.RawRepresentable {}
-extension IdsvrHaapiDriver.CryptoKeyType : Swift.Equatable {}
-extension IdsvrHaapiDriver.CryptoKeyType : Swift.Hashable {}
-@available(iOS 14, *)
-extension IdsvrHaapiDriver.KeychainAccessibility : Swift.Equatable {}
-@available(iOS 14, *)
-extension IdsvrHaapiDriver.KeychainAccessibility : Swift.Hashable {}
-@available(iOS 14, *)
-extension IdsvrHaapiDriver.StorageOperation : Swift.Equatable {}
-@available(iOS 14, *)
-extension IdsvrHaapiDriver.StorageOperation : Swift.Hashable {}
-@available(iOS 14, *)
-extension IdsvrHaapiDriver.StorageItemCategory : Swift.Equatable {}
-@available(iOS 14, *)
-extension IdsvrHaapiDriver.StorageItemCategory : Swift.Hashable {}
-extension IdsvrHaapiDriver.DriverFollowUpTag : Swift.Equatable {}
-extension IdsvrHaapiDriver.DriverFollowUpTag : Swift.Hashable {}
-extension IdsvrHaapiDriver.DriverFollowUpTag : Swift.RawRepresentable {}
-@available(iOS 14.0, *)
-extension IdsvrHaapiDriver.JWTAsymmetricAlgorithm : Swift.Equatable {}
-@available(iOS 14.0, *)
-extension IdsvrHaapiDriver.JWTAsymmetricAlgorithm : Swift.Hashable {}
-@available(iOS 14.0, *)
-extension IdsvrHaapiDriver.JWTAsymmetricAlgorithm : Swift.RawRepresentable {}
-@available(iOS 14.0, *)
-extension IdsvrHaapiDriver.JWTSymmetricAlgorithm : Swift.Equatable {}
-@available(iOS 14.0, *)
-extension IdsvrHaapiDriver.JWTSymmetricAlgorithm : Swift.Hashable {}
-@available(iOS 14.0, *)
-extension IdsvrHaapiDriver.JWTSymmetricAlgorithm : Swift.RawRepresentable {}
-extension IdsvrHaapiDriver.RetryCondition : Swift.Equatable {}
-extension IdsvrHaapiDriver.RetryCondition : Swift.Hashable {}
-extension IdsvrHaapiDriver.LogType : Swift.Equatable {}
-extension IdsvrHaapiDriver.LogType : Swift.Hashable {}
-extension IdsvrHaapiDriver.LogType : Swift.RawRepresentable {}
+extension IdsvrHaapiDriver::MimeTypes : Swift::Equatable {}
+extension IdsvrHaapiDriver::MimeTypes : Swift::Hashable {}
+extension IdsvrHaapiDriver::MimeTypes : Swift::RawRepresentable {}
+extension IdsvrHaapiDriver::CryptoKeyType : Swift::Equatable {}
+extension IdsvrHaapiDriver::CryptoKeyType : Swift::Hashable {}
+extension IdsvrHaapiDriver::KeychainAccessibility : Swift::Equatable {}
+extension IdsvrHaapiDriver::KeychainAccessibility : Swift::Hashable {}
+extension IdsvrHaapiDriver::StorageOperation : Swift::Equatable {}
+extension IdsvrHaapiDriver::StorageOperation : Swift::Hashable {}
+extension IdsvrHaapiDriver::StorageItemCategory : Swift::Equatable {}
+extension IdsvrHaapiDriver::StorageItemCategory : Swift::Hashable {}
+extension IdsvrHaapiDriver::DriverFollowUpTag : Swift::Equatable {}
+extension IdsvrHaapiDriver::DriverFollowUpTag : Swift::Hashable {}
+extension IdsvrHaapiDriver::DriverFollowUpTag : Swift::RawRepresentable {}
+extension IdsvrHaapiDriver::JWTAsymmetricAlgorithm : Swift::Equatable {}
+extension IdsvrHaapiDriver::JWTAsymmetricAlgorithm : Swift::Hashable {}
+extension IdsvrHaapiDriver::JWTAsymmetricAlgorithm : Swift::RawRepresentable {}
+extension IdsvrHaapiDriver::JWTSymmetricAlgorithm : Swift::Equatable {}
+extension IdsvrHaapiDriver::JWTSymmetricAlgorithm : Swift::Hashable {}
+extension IdsvrHaapiDriver::JWTSymmetricAlgorithm : Swift::RawRepresentable {}
+extension IdsvrHaapiDriver::RetryCondition : Swift::Equatable {}
+extension IdsvrHaapiDriver::RetryCondition : Swift::Hashable {}
+extension IdsvrHaapiDriver::LogType : Swift::Equatable {}
+extension IdsvrHaapiDriver::LogType : Swift::Hashable {}
+extension IdsvrHaapiDriver::LogType : Swift::RawRepresentable {}
