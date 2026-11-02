@@ -460,32 +460,37 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver38ClientAuthenticationMethodJWTSymmetric")
 @end
 
 @class KeyPinning;
-/// MTLS client authentication method configuration..
+/// Mutual TLS client authentication with server pinning.
+/// The client identity from a PKCS#12 file is presented when the server asks for it. The server is accepted only when
+/// the platform validates its certificate chain and a certificate of that chain matches the configured pin; requests
+/// to non-https URLs are refused. Details, defaults and diagnostics: the “Server pinning” section of the
+/// IdsvrHaapiDriver documentation.
 SWIFT_CLASS("_TtC16IdsvrHaapiDriver30ClientAuthenticationMethodMTLS")
 @interface ClientAuthenticationMethodMTLS : NSObject <ClientAuthenticationMethod>
-/// Creates a client authentication method for MTLS.
-/// \param pkcs12Filename The pkcs12 filename.
+/// Creates a mutual TLS client authentication method that pins a server certificate from a PEM file.
+/// \param pkcs12Filename The PKCS#12 file holding the client identity, without the <code>.p12</code> extension.
 ///
-/// \param pkcs12Passphrase The pkcs12 passphrase.
+/// \param pkcs12Passphrase The passphrase of the PKCS#12 file.
 ///
-/// \param serverPEMFilename The server PEM filename.
+/// \param serverPEMFilename The PEM file holding the certificate to pin, without the <code>.pem</code> extension.
 ///
-/// \param isValidatingHostname A Bool that indicates whether the certificate of the server PEM should be restrictived against the hostname.
+/// \param isValidatingHostname Whether the server’s certificate must name the connection host. <code>false</code> skips only
+/// that check; the chain is still validated and the pin must then be the server’s own certificate.
 ///
-/// \param bundle The bundle where the pkcs12 file and server PEM are. <code>Bundle.main</code> is the default value
+/// \param bundle The bundle holding both files. <code>Bundle.main</code> is the default value.
 ///
 ///
 /// throws:
 /// <code>CryptoImportError</code>
 - (nullable instancetype)initWithPkcs12Filename:(NSString * _Nonnull)pkcs12Filename pkcs12Passphrase:(NSString * _Nonnull)pkcs12Passphrase serverPEMFilename:(NSString * _Nonnull)serverPEMFilename isValidatingHostname:(BOOL)isValidatingHostname bundle:(NSBundle * _Nonnull)bundle error:(NSError * _Nullable * _Nullable)error;
-/// Creates a client authentication method for MTLS.
-/// \param pkcs12Filename The pkcs12 filename.
+/// Creates a mutual TLS client authentication method that pins server public keys per host.
+/// \param pkcs12Filename The PKCS#12 file holding the client identity, without the <code>.p12</code> extension.
 ///
-/// \param pkcs12Passphrase The pkcs12 passphrase.
+/// \param pkcs12Passphrase The passphrase of the PKCS#12 file.
 ///
-/// \param serverKeyPinnings A list of <code>KeyPinning</code>
+/// \param serverKeyPinnings The pins, one or more per host.
 ///
-/// \param bundle The bundle where the pkcs12 file and server PEM are. <code>Bundle.main</code> is the default value
+/// \param bundle The bundle holding the PKCS#12 file. <code>Bundle.main</code> is the default value.
 ///
 ///
 /// throws:
@@ -733,7 +738,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL isSensitiveValueMasked;)
 /// A <code>HaapiTokenManager</code> instance can be <code>closed</code> via the <code>HaapiTokenManager.close</code> method. This will remove the lock to underlying resources and
 /// allow other instances to use the same alias.
 /// When trying to use the access token of a closed HaapiTokenManager an <code>HaapiError.haapiTokenManagerIsClosed</code> is thrown.
-/// Note that a call to <code>HaapiTokenManager.close</code> may block if the instance is being used.
+/// Closing an instance that is already closed has no effect.
 /// Once an instance of the <code>HaapiTokenManager</code> is created, it can be used to obtain a HAAPI token. Once a HAAPI token is obtained, the <code>HaapiTokenManager</code>
 /// can provide a client through the <code>createClient()</code> method. This client can be instructed to use a provided <code>URLSession</code> to make its requests, or use an internal
 /// <code>URLSession</code> instead.
@@ -798,6 +803,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver17HaapiTokenManager")
 - (void)getHaapiTokenWithForceFresh:(BOOL)forceFresh completionHandler:(void (^ _Nonnull)(DpopAccessTokenInfo * _Nullable, NSError * _Nullable))completionHandler;
 /// Closes this HAAPI Token Manager and frees the name of this manager to be used by another instance.
 /// It is an error to use this manager after calling close(), and will cause undefined behavior.
+/// Closing it again has no effect.
 - (void)close;
 /// Clears all state of this manager pertaining to DeviceCheck attestation and access tokens.
 - (void)clearState;
@@ -858,10 +864,10 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver24HaapiTokenManagerBuilder")
 ///
 - (HaapiTokenManagerBuilder * _Nonnull)setApplicationBundle:(NSBundle * _Nullable)bundle SWIFT_UNAVAILABLE_MSG("'setApplicationBundle' has been renamed to 'setRiskAssessmentConfiguration(_:)': Use setRiskAssessmentConfiguration(_:) instead.");
 /// Build a new <code>HaapiTokenManager</code> instance from the state that is created inside the <code>Builder</code>
-/// This method can abort your application if the desired name for a <code>HaapiTokenManager</code> already exists within the current context.
 ///
 /// throws:
-/// <code>HaapiError</code> if the configuration is incorrect.
+/// <code>HaapiError</code> if the configuration is incorrect, and <code>HaapiError.haapiTokenManagerAlreadyExists</code> while an open
+/// <code>HaapiTokenManager</code> uses the same name.
 - (HaapiTokenManager * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -914,13 +920,15 @@ typedef SWIFT_ENUM(NSInteger, JWTSymmetricAlgorithm, open) {
   JWTSymmetricAlgorithmHs512 = 2,
 };
 
-/// The configuration for MTLS that is used to pin the server public key for a defined  <code>hostname</code>.
+/// A server public key pinned for one host: the base64 SHA-256 of the certificate’s SubjectPublicKeyInfo.
+/// Any certificate of the server’s validated chain can be pinned, and several pins may share a host. How to compute
+/// a pin and which certificate to pin: the “Server pinning” section of the IdsvrHaapiDriver documentation.
 SWIFT_CLASS("_TtC16IdsvrHaapiDriver10KeyPinning")
 @interface KeyPinning : NSObject
-/// Initialize a KeyPinning that is used to pin the server public key for a defined <code>hostname</code>.
-/// \param hostname The hostname.
+/// Creates a pin for one host.
+/// \param hostname The host the pin applies to, matched without regard to letter case.
 ///
-/// \param publicKeyHash The public key hash for the <code>hostname</code>.
+/// \param publicKeyHash The pin.
 ///
 - (nonnull instancetype)initWithHostname:(NSString * _Nonnull)hostname publicKeyHash:(NSString * _Nonnull)publicKeyHash OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1404,32 +1412,37 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver38ClientAuthenticationMethodJWTSymmetric")
 @end
 
 @class KeyPinning;
-/// MTLS client authentication method configuration..
+/// Mutual TLS client authentication with server pinning.
+/// The client identity from a PKCS#12 file is presented when the server asks for it. The server is accepted only when
+/// the platform validates its certificate chain and a certificate of that chain matches the configured pin; requests
+/// to non-https URLs are refused. Details, defaults and diagnostics: the “Server pinning” section of the
+/// IdsvrHaapiDriver documentation.
 SWIFT_CLASS("_TtC16IdsvrHaapiDriver30ClientAuthenticationMethodMTLS")
 @interface ClientAuthenticationMethodMTLS : NSObject <ClientAuthenticationMethod>
-/// Creates a client authentication method for MTLS.
-/// \param pkcs12Filename The pkcs12 filename.
+/// Creates a mutual TLS client authentication method that pins a server certificate from a PEM file.
+/// \param pkcs12Filename The PKCS#12 file holding the client identity, without the <code>.p12</code> extension.
 ///
-/// \param pkcs12Passphrase The pkcs12 passphrase.
+/// \param pkcs12Passphrase The passphrase of the PKCS#12 file.
 ///
-/// \param serverPEMFilename The server PEM filename.
+/// \param serverPEMFilename The PEM file holding the certificate to pin, without the <code>.pem</code> extension.
 ///
-/// \param isValidatingHostname A Bool that indicates whether the certificate of the server PEM should be restrictived against the hostname.
+/// \param isValidatingHostname Whether the server’s certificate must name the connection host. <code>false</code> skips only
+/// that check; the chain is still validated and the pin must then be the server’s own certificate.
 ///
-/// \param bundle The bundle where the pkcs12 file and server PEM are. <code>Bundle.main</code> is the default value
+/// \param bundle The bundle holding both files. <code>Bundle.main</code> is the default value.
 ///
 ///
 /// throws:
 /// <code>CryptoImportError</code>
 - (nullable instancetype)initWithPkcs12Filename:(NSString * _Nonnull)pkcs12Filename pkcs12Passphrase:(NSString * _Nonnull)pkcs12Passphrase serverPEMFilename:(NSString * _Nonnull)serverPEMFilename isValidatingHostname:(BOOL)isValidatingHostname bundle:(NSBundle * _Nonnull)bundle error:(NSError * _Nullable * _Nullable)error;
-/// Creates a client authentication method for MTLS.
-/// \param pkcs12Filename The pkcs12 filename.
+/// Creates a mutual TLS client authentication method that pins server public keys per host.
+/// \param pkcs12Filename The PKCS#12 file holding the client identity, without the <code>.p12</code> extension.
 ///
-/// \param pkcs12Passphrase The pkcs12 passphrase.
+/// \param pkcs12Passphrase The passphrase of the PKCS#12 file.
 ///
-/// \param serverKeyPinnings A list of <code>KeyPinning</code>
+/// \param serverKeyPinnings The pins, one or more per host.
 ///
-/// \param bundle The bundle where the pkcs12 file and server PEM are. <code>Bundle.main</code> is the default value
+/// \param bundle The bundle holding the PKCS#12 file. <code>Bundle.main</code> is the default value.
 ///
 ///
 /// throws:
@@ -1677,7 +1690,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL isSensitiveValueMasked;)
 /// A <code>HaapiTokenManager</code> instance can be <code>closed</code> via the <code>HaapiTokenManager.close</code> method. This will remove the lock to underlying resources and
 /// allow other instances to use the same alias.
 /// When trying to use the access token of a closed HaapiTokenManager an <code>HaapiError.haapiTokenManagerIsClosed</code> is thrown.
-/// Note that a call to <code>HaapiTokenManager.close</code> may block if the instance is being used.
+/// Closing an instance that is already closed has no effect.
 /// Once an instance of the <code>HaapiTokenManager</code> is created, it can be used to obtain a HAAPI token. Once a HAAPI token is obtained, the <code>HaapiTokenManager</code>
 /// can provide a client through the <code>createClient()</code> method. This client can be instructed to use a provided <code>URLSession</code> to make its requests, or use an internal
 /// <code>URLSession</code> instead.
@@ -1742,6 +1755,7 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver17HaapiTokenManager")
 - (void)getHaapiTokenWithForceFresh:(BOOL)forceFresh completionHandler:(void (^ _Nonnull)(DpopAccessTokenInfo * _Nullable, NSError * _Nullable))completionHandler;
 /// Closes this HAAPI Token Manager and frees the name of this manager to be used by another instance.
 /// It is an error to use this manager after calling close(), and will cause undefined behavior.
+/// Closing it again has no effect.
 - (void)close;
 /// Clears all state of this manager pertaining to DeviceCheck attestation and access tokens.
 - (void)clearState;
@@ -1802,10 +1816,10 @@ SWIFT_CLASS("_TtC16IdsvrHaapiDriver24HaapiTokenManagerBuilder")
 ///
 - (HaapiTokenManagerBuilder * _Nonnull)setApplicationBundle:(NSBundle * _Nullable)bundle SWIFT_UNAVAILABLE_MSG("'setApplicationBundle' has been renamed to 'setRiskAssessmentConfiguration(_:)': Use setRiskAssessmentConfiguration(_:) instead.");
 /// Build a new <code>HaapiTokenManager</code> instance from the state that is created inside the <code>Builder</code>
-/// This method can abort your application if the desired name for a <code>HaapiTokenManager</code> already exists within the current context.
 ///
 /// throws:
-/// <code>HaapiError</code> if the configuration is incorrect.
+/// <code>HaapiError</code> if the configuration is incorrect, and <code>HaapiError.haapiTokenManagerAlreadyExists</code> while an open
+/// <code>HaapiTokenManager</code> uses the same name.
 - (HaapiTokenManager * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1858,13 +1872,15 @@ typedef SWIFT_ENUM(NSInteger, JWTSymmetricAlgorithm, open) {
   JWTSymmetricAlgorithmHs512 = 2,
 };
 
-/// The configuration for MTLS that is used to pin the server public key for a defined  <code>hostname</code>.
+/// A server public key pinned for one host: the base64 SHA-256 of the certificate’s SubjectPublicKeyInfo.
+/// Any certificate of the server’s validated chain can be pinned, and several pins may share a host. How to compute
+/// a pin and which certificate to pin: the “Server pinning” section of the IdsvrHaapiDriver documentation.
 SWIFT_CLASS("_TtC16IdsvrHaapiDriver10KeyPinning")
 @interface KeyPinning : NSObject
-/// Initialize a KeyPinning that is used to pin the server public key for a defined <code>hostname</code>.
-/// \param hostname The hostname.
+/// Creates a pin for one host.
+/// \param hostname The host the pin applies to, matched without regard to letter case.
 ///
-/// \param publicKeyHash The public key hash for the <code>hostname</code>.
+/// \param publicKeyHash The pin.
 ///
 - (nonnull instancetype)initWithHostname:(NSString * _Nonnull)hostname publicKeyHash:(NSString * _Nonnull)publicKeyHash OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;

@@ -105,6 +105,70 @@ public enum HaapiError : IdsvrHaapiDriver::IdsvrError, Swift::Error, Swift::Send
     get
   }
 }
+public struct HaapiRedirectRefusal : Swift::Error, Swift::Equatable, Swift::Sendable {
+  public let statusCode: Swift::Int
+  public static func == (a: IdsvrHaapiDriver::HaapiRedirectRefusal, b: IdsvrHaapiDriver::HaapiRedirectRefusal) -> Swift::Bool
+}
+extension IdsvrHaapiDriver::HaapiRedirectRefusal : Swift::CustomStringConvertible, Foundation::LocalizedError {
+  public var description: Swift::String {
+    get
+  }
+  public var errorDescription: Swift::String? {
+    get
+  }
+}
+public struct HaapiAttestationLimitRefusal : Swift::Error, Swift::Equatable, Swift::Sendable {
+  public let nextAttemptAfter: Foundation::Date?
+  public static func == (a: IdsvrHaapiDriver::HaapiAttestationLimitRefusal, b: IdsvrHaapiDriver::HaapiAttestationLimitRefusal) -> Swift::Bool
+}
+extension IdsvrHaapiDriver::HaapiAttestationLimitRefusal : Swift::CustomStringConvertible, Foundation::LocalizedError {
+  public var description: Swift::String {
+    get
+  }
+  public var errorDescription: Swift::String? {
+    get
+  }
+  public var failureReason: Swift::String? {
+    get
+  }
+}
+public struct HaapiInsecureTransportRefusal : Swift::Error, Swift::Equatable, Swift::Sendable {
+  public let scheme: Swift::String
+  public let host: Swift::String
+  public static func == (a: IdsvrHaapiDriver::HaapiInsecureTransportRefusal, b: IdsvrHaapiDriver::HaapiInsecureTransportRefusal) -> Swift::Bool
+}
+extension IdsvrHaapiDriver::HaapiInsecureTransportRefusal : Swift::CustomStringConvertible, Foundation::LocalizedError {
+  public var description: Swift::String {
+    get
+  }
+  public var errorDescription: Swift::String? {
+    get
+  }
+}
+public struct HaapiInsecureConfigurationRefusal : Swift::Error, Swift::Equatable, Swift::Sendable {
+  public enum Address : Swift::Sendable {
+    case baseURL
+    case authorizationEndpoint
+    case tokenEndpoint
+    case revocationEndpoint
+    case clientRegistrationEndpoint
+    public static func == (a: IdsvrHaapiDriver::HaapiInsecureConfigurationRefusal.IdsvrHaapiDriver::Address, b: IdsvrHaapiDriver::HaapiInsecureConfigurationRefusal.IdsvrHaapiDriver::Address) -> Swift::Bool
+    public func hash(into hasher: inout Swift::Hasher)
+    public var hashValue: Swift::Int {
+      get
+    }
+  }
+  public let address: IdsvrHaapiDriver::HaapiInsecureConfigurationRefusal.IdsvrHaapiDriver::Address
+  public static func == (a: IdsvrHaapiDriver::HaapiInsecureConfigurationRefusal, b: IdsvrHaapiDriver::HaapiInsecureConfigurationRefusal) -> Swift::Bool
+}
+extension IdsvrHaapiDriver::HaapiInsecureConfigurationRefusal : Swift::CustomStringConvertible, Foundation::LocalizedError {
+  public var description: Swift::String {
+    get
+  }
+  public var errorDescription: Swift::String? {
+    get
+  }
+}
 @objc @_hasMissingDesignatedInitializers @objcMembers final public class Dpop : ObjectiveC::NSObject, Swift::Codable, Swift::Sendable {
   @objc final public var jwkThumbprint: Swift::String {
     @objc get
@@ -304,7 +368,7 @@ extension Foundation::URLRequest {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc final public class ClientAuthenticationMethodSecret : ObjectiveC::NSObject, IdsvrHaapiDriver::ClientAuthenticationMethod {
+@objc @_hasMissingDesignatedInitializers final public class ClientAuthenticationMethodSecret : ObjectiveC::NSObject, IdsvrHaapiDriver::ClientAuthenticationMethod {
   @objc public init(secret: Swift::String)
   @objc deinit
 }
@@ -512,6 +576,8 @@ public protocol FollowUpTag : Swift::Sendable {
   @objc public func build() throws -> IdsvrHaapiDriver::HaapiTokenManager
   @objc deinit
 }
+extension IdsvrHaapiDriver::HaapiInsecureConfigurationRefusal.IdsvrHaapiDriver::Address : Swift::Equatable {}
+extension IdsvrHaapiDriver::HaapiInsecureConfigurationRefusal.IdsvrHaapiDriver::Address : Swift::Hashable {}
 extension IdsvrHaapiDriver::MimeTypes : Swift::Equatable {}
 extension IdsvrHaapiDriver::MimeTypes : Swift::Hashable {}
 extension IdsvrHaapiDriver::MimeTypes : Swift::RawRepresentable {}
